@@ -2,12 +2,21 @@
     background-image: url(books.jpeg);
     background-size: cover;
     background-repeat: repeat-y;
+    box-sizing: border-box;
 }
 
 section {
     background-color: white;
     opacity: 0.8;
-    width: 1000px;
+    width: 1200px;
     margin: 90px auto;
+
+}
+section>* {
+    
+    font-size: 80px;
+    border: 2px solid black;
+    font-weight: 600;
+
 
 }
