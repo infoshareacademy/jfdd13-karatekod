@@ -10,24 +10,34 @@ section {
     background-color: white;
     border: 2px solid black;
     display: flex;
+    /* flex-direction: column;   muted- come back when media query */
     justify-content: space-between;
     margin: 90px auto;
     /* opacity: 0.8; */              /*muted for better visibility while working */
     width: 100%;
-
+    justify-content: space-around;
+   
     
 
 }
 .features {
-    float: left;
+    
     border: 2px solid black;
     padding: 5px;
     margin: 5px 5px;
-    justify-content: space-between;
+    
+    
+
+}
+.box1 {
+width: 45%
 
 }
 
+.box2 {
 
+width: 45%;
+}
 
 
 
