@@ -10,13 +10,26 @@ section {
     opacity: 0.8;
     width: 1200px;
     margin: 90px auto;
+    display: flex;
+    
+    
+
+
 
 }
-section>* {
+
+
+
+
+
+
+
+
+/* section>* {
     
     font-size: 80px;
     border: 2px solid black;
     font-weight: 600;
+                                this one here refers to fontello. Probably not needed anymore
 
-
-}
+} */
