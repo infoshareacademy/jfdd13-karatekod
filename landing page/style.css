@@ -25,6 +25,9 @@ section {
     border: 2px solid black;
     padding: 5px;
     margin: 5px 5px;
+    border-radius: 20px;
+    display: flex;
+
     
     
 
@@ -39,6 +42,18 @@ width: 45%
 width: 45%;
 }
 
+img, p {
+    
+   /* display: inline; */
+}
+
+p {
+    font-size: 40px;
+}
+
+.toChange {
+    flex-direction: row-reverse;
+}
 
 
 
