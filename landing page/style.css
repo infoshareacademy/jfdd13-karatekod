@@ -1,23 +1,31 @@
 :root {
-    background-image: url(books.jpeg);
-    background-size: cover;
-    background-repeat: repeat-y;
+    /* background-image: url(books.jpeg);   background muted */
+    /* background-size: cover; */
+    /* background-repeat: repeat-y; */
     box-sizing: border-box;
+    background-color: black;
 }
 
 section {
     background-color: white;
-    opacity: 0.8;
-    width: 1200px;
-    margin: 90px auto;
+    border: 2px solid black;
     display: flex;
-    
-    
+    justify-content: space-between;
+    margin: 90px auto;
+    /* opacity: 0.8; */              /*muted for better visibility while working */
+    width: 100%;
 
-
+    
 
 }
+.features {
+    float: left;
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px 5px;
+    justify-content: space-between;
 
+}
 
 
 
