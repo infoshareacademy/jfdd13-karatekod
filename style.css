@@ -1,16 +1,83 @@
-:root {
-    background-image: url(img/books.jpeg);
-    background-size: cover;
-    box-sizing: border-box;  
-}
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Helvetica, arial, sans-serif;
+ }
+ 
+ /* :root {
+    background-image: url(img/books.jpeg); 
+    background-size: cover; 
+   box-sizing: border-box;  */  zamienić na body!!
+    
+}  
 
-section {
+
+ section {
     background-color: white;
     font-weight: 800;
-    font-size: 60px;
-    margin: 90px auto;
-    opacity: 0.8;
+    margin: 90px 0;
+    opacity: 0.9;
     text-align: center;
-    width: 1200px;     
+    width: 100%;    
+ 
+    
+ }
+
+.menu {
+    position: fixed;
+    background-color: lawngreen;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+
+p {
+    color: white;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: ;
+
+}
+
+.text {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     
 }
+
+.text h1 {
+    
+   }
+
+.text h3 {
+   
+
+}
+
+.image-hero {
+    display: flex;
+
+    width: 40%;
+    text-align: center;
+      /*  background-image: url(img/BookSwapperLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
+.image-hero img {
+    max-width: 100%;
+    height: auto;
+      /*  background-image: url(img/BookSwapperLogo.png);
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+
