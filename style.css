@@ -12,5 +12,11 @@ section {
     opacity: 0.8;
     text-align: center;
     width: 1200px;     
+}
+
+.HowItWorks {
+    padding: 40px;
+    text-align: left;
+    font-size: 40px;
     
 }
