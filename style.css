@@ -2,15 +2,14 @@
 body{
     margin: 0 auto;
     height: 100%;
-    
+    box-sizing: border-box;
 
-    font-family: 'Nunito Sans', sans-serif;
+    font-family:'Sanchez', arial, sans-serif;
 
 
 }
 
 main{
-    padding-bottom: 2.5rem;
     
     margin: 0 auto;
    
@@ -43,20 +42,20 @@ section {
 }
 
 
-
+/* 
 
 footer{
     bottom: 0;
     width: 100%;
    height: auto;
-    background-color:  #ffff4d; 
+    background-color:  #ffaa80; 
     
 }
 
 .footer{
     width: 1200px;
     margin: 0 auto;
-    padding: 10px 20px;
+    
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -68,6 +67,9 @@ footer{
 .icon-facebook-rect,
 .icon-instagram-filled{
     font-size: 30px;
+    color:  #331100;
+    
+
 
 }
 
@@ -76,7 +78,99 @@ footer{
     justify-content: space-between;
 }
 
+a:hover{
+    opacity: 0.8;
+}
+
+.logoo{
+
+}
+
 .bottom{
-padding-bottom: 10px;
+height: 20px;
+background-color:  #b33c00;
 text-align: center;
+}
+
+.copyright{
+    margin-bottom: 0;
+} */
+
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: white;
+
+
+}
+
+.footer .footer-main{
+    display: flex;
+    justify-content: space-evenly;
+
+    
+
+}
+
+.footer .footer-main .footer-section{
+    flex: 1;
+    padding: 15px;
+
+}
+
+]h2{
+font-weight: bold;
+
+}
+
+input, textarea{
+    width: 250px;
+    background: yellow;
+    color: black;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: .7rem 1.2rem;
+    border-radius: 8px;
+    border: 3px solid black;
+}
+
+
+
+.footer .footer-main .icons a{
+    
+    align-items: center;
+
+
+}
+form{
+    clear: both;
+}
+
+form>input{
+    display: block;
+}
+
+.footer .footer-bottom{
+    background:  grey;
+    text-align: center;
+  
+    
+}
+
+
+
+.icon-mail-alt,
+.icon-facebook-rect,
+.icon-instagram-filled{
+    font-size: 30px;
+    color:  red;
+    
+
+
+}
+
+
+a:hover{
+    opacity: 0.8;
 }
