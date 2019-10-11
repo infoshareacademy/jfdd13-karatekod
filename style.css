@@ -5,12 +5,12 @@
      font-family:'Sanchez', arial, sans-serif; /*Imported 'Sanchez' font */
  }
  
- :root {
+ /* :root {
     background-image: url(img/books.jpeg); 
     background-size: cover; 
     box-sizing: border-box; 
     
-}  
+}  */ 
 
 
  section {
@@ -53,7 +53,7 @@
     align-self: center;
       letter-spacing: 1px; 
    color: rgb(255, 0, 43);
-     font-size: 1.5rem;
+     font-size: 1.8rem;
    padding-bottom: 1.8rem;
     
    }
@@ -61,7 +61,7 @@
    .text h2 {
         align-self: center;
    letter-spacing: 1px;
-   color: rrgb(255, 0, 43);
+   color: black;
    margin-bottom: 0.8rem;
    font-size: 1.2rem;
     
@@ -165,12 +165,22 @@ p {
         color: rgb(255, 0, 43);
         margin-top: 2rem;
         margin-bottom: 2rem;
+        font-size: 2.4rem;
         
+       }
+
+       .text h2 {
+           font-size: 1.5rem;
        }
     
        .section__a--signup {
         margin-top: 3rem;
                 
+    }
+
+    .text h3 {
+        font-size: 1.3rem;
+        padding: 0 2rem 0 2rem;
     }
 
    .hero {
