@@ -2,7 +2,7 @@
      margin: 0;
      padding: 0;
      box-sizing: border-box;
-     font-family:'Sanchez', arial, sans-serif;
+     font-family:'Sanchez', arial, sans-serif; /*Imported 'Sanchez' font */
  }
  
  :root {
@@ -14,34 +14,34 @@
 
 
  section {
-    background-image: url(img/side-books-blurred.jpg);
-    background-size: cover;
+    background-image: url(img/side-books-blurred.jpg); /* Added side-books-blurred for section background image */
+    background-size: cover; 
     background-position-y: 40%;
-    background-position-x: 70%;
+    background-position-x: 70%; /* these positions are for better looking background image */
     background-repeat: no-repeat;
-    font-weight: 800;
-    padding: 6rem 1rem 3rem 1rem;
-       text-align: center;
-    width: 100%;    
+    font-weight: 800; 
+    padding: 6rem 1rem 3rem 1rem; 
+    text-align: center;
+    width: 100%;    /* section now takes 100% of parent's width */
    
      
     
  }
 
  .hero {
-    display: flex;
+    display: flex; 
     flex-direction: column;
-    justify-content: center;
+    justify-content: center; /* display flex -> column --> looks good on mobiles (vertical view) */
     align-items: center;
     width: 100%;
     background-color: white;
-    height: 100vh;
+    height: 100vh; /* section takes 100% of viewports high */
 
 }
 
 .text {
-    width: 100%;   
-    display: flex;
+    width: 100%;   /* text width 100% */
+    display: flex; 
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,7 @@
 
 .text h1 {
     align-self: center;
-      letter-spacing: 1px;
+      letter-spacing: 1px; 
    color: rgb(255, 0, 43);
      font-size: 1.5rem;
    padding-bottom: 1.8rem;
