@@ -59,7 +59,7 @@ div.text-box {
 
 }
 
-
+/*
 @media all and (min-width: 601px) and (max-width: 900px) {
 
 section {
@@ -123,7 +123,7 @@ div.text-box {
         background-size: unset;
         border-radius: 20PX; 
 }  */
-
+/*
 a.column1,
 a.column2 {
 
@@ -194,9 +194,9 @@ a.column2 > p {
 
 
 }
+*/
 
-
-@media all and (min-width: 900px) {
+@media all and (min-width: 601px) {
     section {
     
         border: 2px solid black;
@@ -231,22 +231,25 @@ a.column2 > p {
             font-weight: 500;
             align-self: stretch;
            
-            background-image: url(bckgrnd1.jpg);
-            background-size: cover;
-            font-size: 20px;
+            
             
     }
+
+    
     .div.text-box > p {
     
         font-family: sans-serif;
     }
            
     
-     /* div.text-box::after {
+     div.text-box::after {
             
-             content: "";
-            background: url(bckgrnd1.jpg); 
-            background-image: url(background1.jpg);
+            content: "";
+            
+            background-image: url(bckgrnd1.jpg);
+            background-size: cover;
+            width: 100%;
+            height: auto;
             opacity: 0.9;
             top: 0;
             left: 0;
@@ -254,9 +257,9 @@ a.column2 > p {
             right: 0;
             position: absolute;
             z-index: -1; 
-            background-size: unset;
+            
             border-radius: 20PX; 
-    }  */
+    }  
     
     a.column1,
     a.column2 {
@@ -271,6 +274,7 @@ a.column2 > p {
             justify-content: space-around;
             
             background-color: rgba(241, 25, 176, 0.459);
+            flex-direction: column;
            
     
     } 
