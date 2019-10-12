@@ -1,18 +1,14 @@
 
+*{box-sizing: border-box;}
+
 body{
-    margin: 0 auto;
     height: 100%;
-    box-sizing: border-box;
-
+    width: 100%;
     font-family:'Sanchez', arial, sans-serif;
+    padding: 0;
+    margin: 0;
 
 
-}
-
-main{
-    
-    margin: 0 auto;
-   
 }
 
 
@@ -36,141 +32,182 @@ section {
 }
 
 .team-info {
-
-
-
-}
-
-
-/* 
-
-footer{
-    bottom: 0;
     width: 100%;
-   height: auto;
-    background-color:  #ffaa80; 
-    
+    background: white;
+    height: 400px;
+
+
 }
 
-.footer{
-    width: 1200px;
-    margin: 0 auto;
-    
-    height: auto;
+
+.team-info h1{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    padding-top: 20px;
+   
 }
-
-
-
-.icon-mail-alt,
-.icon-facebook-rect,
-.icon-instagram-filled{
-    font-size: 30px;
-    color:  #331100;
-    
-
-
-}
-
-.icons{
+.team-info-photos {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+ figure figcaption{
+   display: flex;
+    margin-top: 10px;
+ flex-direction: column;
+ align-items: center;
+    font-weight: bold;
+    font-size: 25px;
+} 
+
+.emoji1{
+    width: 180px;
+    height: 180px;
+}
+ figcaption .lnkd-gh-icons{ 
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    width: 30px;    
+    height: 30px;
+    justify-content: space-around;
+    
+}
+
+a{
+    
+    transition: all 0.3s ease 0s;
+
 }
 
 a:hover{
     opacity: 0.8;
+    transition: all 0.3s ease 0s;
+    
 }
 
-.logoo{
-
+.our-team{
+    font-weight: bold; 
 }
 
-.bottom{
-height: 20px;
-background-color:  #b33c00;
-text-align: center;
+.gh{
+    margin-left: 20px;
 }
 
-.copyright{
-    margin-bottom: 0;
-} */
-
-
-.footer{
-    width: 100%;
-    height: auto;
-    background-color: white;
-
-
+footer{
+    background-color: yellow;
+    height: 300px;
+    
 }
 
-.footer .footer-main{
+footer .footer-main{
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
 
     
-
 }
 
-.footer .footer-main .footer-section{
-    flex: 1;
-    padding: 15px;
 
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
 }
 
-]h2{
-font-weight: bold;
+.media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 15px;
+}
 
+
+
+
+
+.facelogo, .instalogo{
+    width: 40px;
+    height: 40px;
+}
+
+.h2-footer-right{
+    color:   #262626;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    
+    
 }
 
 input, textarea{
-    width: 250px;
-    background: yellow;
+    width: 325px;
+    background: white;
     color: black;
-    margin-bottom: 10px;
-    line-height: 1.5rem;
-    padding: .7rem 1.2rem;
     border-radius: 8px;
-    border: 3px solid black;
-}
-
-
-
-.footer .footer-main .icons a{
+    border: 3px solid   #262626;
     
-    align-items: center;
-
-
-}
-form{
-    clear: both;
 }
 
-form>input{
-    display: block;
+.contact-input{
+    margin-bottom: 10px;
+    height: 30px;
 }
 
-.footer .footer-bottom{
-    background:  grey;
+.message-input{
+    margin-bottom: 5px;
+    height: 90px;
+}
+
+input::placeholder {
+    font-family:'Sanchez', arial, sans-serif;
+    font-size: 15px;
+  }
+
+  textarea::placeholder{
+    font-family:'Sanchez', arial, sans-serif;
+    font-size: 15px;
+  }
+
+.footer-button{
+    border: 2px solid  #262626;
+    color:  #262626;
+    border-radius: 8px;
+    font-family:'Sanchez', arial, sans-serif;
+    background: #d9d9d9 ;
+    width: 90px;
+    margin-left: 20px;
+    font-weight: bold;
+
+}
+
+
+footer .footer-bottom{
     text-align: center;
+    background:   #ffcc00;
+    
+
+}
+
+
   
-    
-}
 
-
-
-.icon-mail-alt,
-.icon-facebook-rect,
-.icon-instagram-filled{
-    font-size: 30px;
-    color:  red;
-    
-
-
-}
-
-
-a:hover{
-    opacity: 0.8;
-}
