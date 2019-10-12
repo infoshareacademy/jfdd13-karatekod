@@ -21,39 +21,48 @@ section {
 
 .box1 {
     
-    flex: 2;
+    flex: 2 2 40%;
     
 }
     
 .box2 {
     
     
-    flex: 2;
+    flex: 2 2 40%;
 }
 
 div.text-box {
         padding: 20px;
         text-align: justify;
-        border-radius: 10px;
+        border-radius: 20px;
         border: 1px solid black;
-        flex: 1;     
+        flex: 1 1 40%;     
         margin: 10px 5px; 
         position: relative; 
-        padding: 60px;
+        padding: 20;
         font-weight: 600;
+        align-self: stretch;
+       
+        background-image: url(bckgrnd1.jpg);
+        background-size: cover;
+        font-size: 20px;
        
 }
-div.text-box::after {
-  content: "";
-  background: url(bckgrnd1.jpg);
-  opacity: 0.2;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1; 
-}
+ div.text-box::after {
+        
+        /* content: "";
+        /* background: url(bckgrnd1.jpg); */
+        /* background-image: url(background1.jpg)
+        opacity: 0.9;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1; 
+        background-size: unset;
+        border-radius: 20PX; */
+} 
 
 a.column1,
 a.column2 {
