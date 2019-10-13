@@ -93,14 +93,13 @@ div.text-box {
             border: 1px solid black;
             flex: 1 1 40%;     
             margin: 5px 2px; 
-            /* position: relative;  */
+            
             font-weight: 500;
             align-self: stretch;
            
             background-image: url(bckgrnd1.jpg);
             background-size: cover;
-            width: 100%;
-            
+            width: 100%;            
     }
    
     
@@ -111,24 +110,7 @@ div.text-box {
     }
            
     
-     /* div.text-box::after {
-            
-            content: "";
-            
-            background-image: url(bckgrnd1.jpg);
-            background-size: cover;
-            width: 100%;
-            height: auto;
-            opacity: 0.9;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            right: 0;
-            position: absolute;
-            z-index: -1; 
-            
-            border-radius: 20PX;  */
-    }  
+     
     
     a.column1,
     a.column2 {
