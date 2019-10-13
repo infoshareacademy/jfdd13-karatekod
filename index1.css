@@ -87,27 +87,26 @@ div.text-box {
     }
     
     div.text-box {
-            padding: 40px;
+            padding: 0px;
             text-align: justify;
             border-radius: 20px;
             border: 1px solid black;
             flex: 1 1 40%;     
             margin: 5px 2px; 
-            
+            padding: 30px;
             font-weight: 500;
             align-self: stretch;
-           
+            font-size: 30px;
+            font-weight: 600;
+            text-align: justify;
             background-image: url(bckgrnd1.jpg);
             background-size: cover;
-            width: 100%;            
+            font-family: sans-serif;
+            
     }
    
     
-    
-    .div.text-box > p {
-    
-        font-family: sans-serif;
-    }
+   
            
     
      
