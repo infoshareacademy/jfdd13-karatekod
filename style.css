@@ -249,7 +249,7 @@ form{
 
 }
 
-/*.HowItWorks {
+.HowItWorks {
     padding: 50px;
     font-size: 25px;
     display: flex;
@@ -259,7 +259,7 @@ form{
     min-height: 50px;
     max-height: 80px;
    
-} */
+} 
 
 .nav__a--logo  {
 /* width: 35%; */
