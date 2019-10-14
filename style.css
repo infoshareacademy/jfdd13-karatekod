@@ -107,7 +107,8 @@ a:hover{
 
 footer{
     background-color: yellow;
-    height: 300px;
+    
+    /* height: 300px; */
     
 }
 
@@ -115,7 +116,9 @@ footer .footer-main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding-top: 15px;
+    margin-bottom: 15px;
+   
+    /* padding-top: 15px; */
 
     
 }
@@ -203,11 +206,20 @@ input::placeholder {
 
 footer .footer-bottom{
     text-align: center;
-    background:   #ffcc00;
+    background:   #ccc;
+    margin: 0 auto;
+ 
+    
     
 
 }
 
 
   
+.footer-bottom-copyright{
+
+    margin: 0;
+}
+
+    
 
