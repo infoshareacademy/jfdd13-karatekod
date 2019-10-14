@@ -16,5 +16,8 @@ section {
 
 .HowItWorks {
     padding: 50px;
-    font-size: 30px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+
 }
