@@ -395,6 +395,7 @@ display: none;
         display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.1rem;
 
     
     
@@ -459,7 +460,7 @@ footer .footer-bottom{
 .nav__menu a {
     text-decoration: none;
     color: black;
-    font-size: 1.8rem;
+    
     text-decoration: none;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
@@ -534,8 +535,11 @@ nav .nav__a--signup {
         }
         .nav__menu a {
            margin-right: 0.9rem;
+          
      
     }
+
+   
         
 
 
