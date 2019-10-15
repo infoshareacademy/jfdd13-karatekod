@@ -1,5 +1,6 @@
 
-*{box-sizing: border-box;
+* {
+box-sizing: border-box;
 margin: 0;
 padding: 0;
 
@@ -140,6 +141,117 @@ footer .footer-main{
 
 
 
+/*-----------------------section functionality styling-- flexbox 2 columns-------------*/
+
+@media all and (max-width: 599px) {
+
+    .mediaq600 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    div.flex {
+        display: flex;
+        background-color: lightgray;
+        border-radius: 40px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        align-content: center;
+    }
+    
+    div.flex .img {
+        flex-basis: 30%;
+        width: 100%;
+        padding: 10px;
+    
+    }
+    div.flex div.description {
+        flex-basis: 70%;
+    }
+    
+    }
+    
+    
+    
+    
+    
+     @media all and (min-width: 600px) {
+    
+    #functionality {
+        
+        margin: 0 auto;
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    
+    .column1{
+    flex-basis: 40%;
+    
+    }
+    
+    .column2 {
+    flex-basis: 40%;
+    }
+    
+    
+    
+    
+    
+    
+    /* text-styling: */
+    .description {
+        padding: 10px 2px 2px 5px;
+    
+    }
+    .description p{
+        text-align: justify;
+        padding: 10px 2px 2px 5px;
+    }
+    
+    .description p:first-child {
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 2px;
+    }
+    .description p:nth-child(2) {
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    
+    
+    
+    
+    /* flex box elements */
+    
+    div.flex {
+        display: flex;
+        background-color: lightgray;
+        border-radius: 40px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        
+        
+    }
+    
+    div.flex .img {
+        flex-basis: 25%;
+        width: 100%;
+        padding: 10px;
+    
+    }
+    div.flex div.description {
+        flex-basis: 70%;
+    }
+    }
+
+
+    /*---------------------------------------------end of funcionality styling ----------------------*/
+
+
+
 .facelogo, .instalogo{
     width: 40px;
     height: 40px;
@@ -252,12 +364,20 @@ form{
     background-color:  white;
     width: 100%;
     text-align: center;
+
+}
+
+.HowItWorks {
+    padding: 50px;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
     height: 8vh;
     background-color:white;
     min-height: 50px;
     max-height: 80px;
    
-}
+} 
 
 .nav__a--logo  {
 /* width: 35%; */
@@ -328,14 +448,7 @@ footer .footer-bottom{
     text-align: center;
     background:   #ccc;
     margin: 0 auto;
- 
-    
-    
-
 }
-
-
-
 
   
 .footer-bottom-copyright{
@@ -466,7 +579,6 @@ nav .nav__a--signup {
         padding-top: 3.5rem;
         height: 100vh;
    }
-       
 
 
 .team-info-photos{
