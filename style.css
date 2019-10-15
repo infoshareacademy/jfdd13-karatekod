@@ -2,7 +2,10 @@
 *{box-sizing: border-box;
 margin: 0;
 padding: 0;
-font-family:'Sanchez', arial, sans-serif; /*Imported 'Sanchez' font */
+
+font-family: 'Raleway', sans-serif;
+
+
 
 }
 
@@ -27,7 +30,7 @@ section.hero{
 .team-info {
     width: 100%;
     background: white;
-    height: 400px;
+    /* height: 400px; */
 
 
 }
@@ -41,8 +44,10 @@ section.hero{
 }
 .team-info-photos {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
-    margin: 0;
+    margin: 15px 0;
     padding: 0;
 }
 
@@ -73,7 +78,7 @@ figure {
     flex-direction: row;
     margin-top: 10px;
     width: 30px;    
-    height: 30px;
+    /* height: 30px; */
     justify-content: space-around;
     
 }
@@ -100,6 +105,7 @@ a:hover{
 
 footer{
     background-color: yellow;
+    padding-top: 30px;
     
     /* height: 300px; */
     
@@ -141,6 +147,7 @@ footer .footer-main{
 
 .h2-footer-right{
     color:   #262626;
+    margin-bottom: 15px;
 }
 form{
     display: flex;
@@ -178,7 +185,7 @@ form{
 .text h1 {
     align-self: center;
       letter-spacing: 1px; 
-   color: rgb(255, 0, 43);
+   color: #c2185b;
      font-size: 1.8rem;
    padding-bottom: 1.8rem;
     
@@ -222,7 +229,7 @@ form{
     align-self: center;
     font-size: 1rem;
     color: white;
-    background-color: rgb(255, 0, 43);
+    background-color: #c2185b;
     border-radius: 0.5rem;
     margin-top: 3rem;
     padding: 0.5rem;
@@ -276,7 +283,7 @@ display: none;
 
 
 input, textarea{
-    width: 325px;
+    /* width: 325px; */
     background: white;
     color: black;
     border-radius: 8px;
@@ -353,7 +360,7 @@ footer .footer-bottom{
 
 
 nav .nav__a--signup {
-    background-color:rgb(255, 0, 43);
+    background-color:#c2185b;
     color: white;
     text-decoration: none;
     padding: 0 0.5rem 0 0.5rem;
@@ -362,13 +369,28 @@ nav .nav__a--signup {
 
 .nav__a--signup:hover {
     background-color:white;
-    color: rgb(255, 0, 43);
+    color: #c2185b;
    
     
 }
 
 
 
+
+
+.emoji1,
+
+{
+   max-width: 100%;
+   height: auto;
+}
+
+
+
+
+.footer-right{
+    display: none;
+}
 
 @media (min-width: 600px){
 
@@ -415,7 +437,7 @@ nav .nav__a--signup {
 
     .text h1 {
         padding-bottom: 0.5rem;
-        color: rgb(255, 0, 43);
+        color: #c2185b;
         margin-top: 2rem;
         margin-bottom: 2rem;
         font-size: 3.6rem;
@@ -446,4 +468,18 @@ nav .nav__a--signup {
    }
        
 
+
+.team-info-photos{
+    flex-direction: row;
+    margin: 30px 0;
 }
+   
+
+
+.footer-right{
+    display: block;
+}
+
+}
+
+
