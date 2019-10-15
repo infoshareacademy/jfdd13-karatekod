@@ -370,15 +370,12 @@ form{
 }
 
 .HowItWorks {
+    display: flex;
     padding: 50px;
     font-size: 25px;
-    display: flex;
-    flex-direction: row;
-    height: 8vh;
+    flex-direction: column;
     background-color:white;
-    min-height: 50px;
-    max-height: 80px;
-   
+    min-height: 50px;  
 } 
 
 .nav__a--logo  {
@@ -537,11 +534,8 @@ nav .nav__a--signup {
         }
         .nav__menu a {
            margin-right: 0.9rem;
- 
-
-        
-  
-}
+     
+    }
         
 
 
@@ -581,6 +575,11 @@ nav .nav__a--signup {
         padding-top: 3.5rem;
         height: 100vh;
    }
+
+   .HowItWorks {
+    flex-direction: row;
+   }
+
 
 
 .team-info-photos{
