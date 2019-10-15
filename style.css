@@ -362,8 +362,10 @@ form{
     justify-content: center;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
-    width: 100%;
+    width: 100%; 
+    min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    
 
 }
 
