@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 * {
 box-sizing: border-box;
@@ -363,21 +366,20 @@ form{
     justify-content: center;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
-    width: 100%;
+    width: 100%; 
+    min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    
 
 }
 
 .HowItWorks {
+    display: flex;
     padding: 50px;
     font-size: 25px;
-    display: flex;
-    flex-direction: row;
-    height: 8vh;
+    flex-direction: column;
     background-color:white;
-    min-height: 50px;
-    max-height: 80px;
-   
+    min-height: 50px;  
 } 
 
 .nav__a--logo  {
@@ -397,6 +399,7 @@ display: none;
         display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.6rem;
 
     
     
@@ -467,7 +470,7 @@ footer .footer-bottom{
 .nav__menu a {
     text-decoration: none;
     color: black;
-    font-size: 1.0rem;
+    
     text-decoration: none;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
@@ -577,11 +580,11 @@ form{
         }
         .nav__menu a {
            margin-right: 0.9rem;
- 
+          
+     
+    }
 
-        
-  
-}
+   
         
 
 
@@ -621,6 +624,11 @@ form{
         padding-top: 3.5rem;
         height: 100vh;
    }
+
+   .HowItWorks {
+    flex-direction: row;
+   }
+
 
 
 .team-info-photos{
