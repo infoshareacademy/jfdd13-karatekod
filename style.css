@@ -74,6 +74,7 @@ figure {
 } 
 
 .emoji1{
+    border-radius: 50%;
     width: 180px;
     height: 180px;
 }
@@ -346,7 +347,7 @@ form{
     font-size: 1rem;
     color: white;
     background-color: #c2185b;
-    border-radius: 8px;
+    border-radius: 20px;
     margin-top: 3rem;
     padding: 0.5rem;
     
@@ -375,12 +376,36 @@ form{
 
 .HowItWorks {
     display: flex;
-    padding: 50px;
+    padding: 40px;
     font-size: 25px;
     flex-direction: column;
     background-color:white;
     min-height: 50px;  
+    justify-content: center;
+    text-align: center;
 } 
+
+.HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
+    display: flex;
+    flex-direction: column;
+    border: black;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 2%;
+    width: 100%;
+    margin: 1%;
+}
+
+.DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+}
+
+.as {
+    flex-basis: 70%;
+}
 
 .nav__a--logo  {
 /* width: 35%; */
@@ -444,11 +469,12 @@ input::placeholder {
     
     font-family:'Sanchez', arial, sans-serif;
     color: white;
-    width: 90px;
-    margin-left: 20px;
-    font-weight: bold;
+    width: 50%;
+  
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
 
 }
 
@@ -487,7 +513,8 @@ nav .nav__a--signup {
     color: white;
     text-decoration: none;
     padding: 0 0.5rem 0 0.5rem;
-    border-radius: 8px;
+    border-radius: 20px;
+    padding: 10px 30px;
 }
 
 .nav__a--signup:hover {
@@ -624,13 +651,29 @@ form{
         padding-top: 3.5rem;
         height: 100vh;
    }
+/*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
+   
 
-   .HowItWorks {
+.HowItWorks {
     flex-direction: row;
-   }
+}
 
+.HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
+    display: flex;
+    flex-direction: column;
+    border: black;
+    border-style: solid;
+    border-radius: 30px;
+    padding: 2%;
+    width: 22%;
+    margin: 1%;
+}
 
+.DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
+    width: 50%;
+}
 
+/*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
 .team-info-photos{
     flex-direction: row;
     margin: 30px 0;
@@ -655,6 +698,16 @@ form{
     width: 50%;
 }
 
+.newsletter-button{
+    margin-top: 10px;
+    color: white;
+    background-color: #c2185b;
+    border: none;
+    padding: 10px 0;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 25px;
+}
 
 }
 
