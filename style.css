@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 
 * {
 box-sizing: border-box;
@@ -105,8 +108,9 @@ a:hover{
 }
 
 footer{
-    background-color: yellow;
+    background-color: #f8bbd0;
     padding-top: 30px;
+    color: white;
     
     /* height: 300px; */
     
@@ -153,7 +157,7 @@ footer .footer-main{
     div.flex {
         display: flex;
         background-color: lightgray;
-        border-radius: 40px;
+        border-radius: 8px;
         margin-bottom: 10px;
         margin-top: 10px;
         align-content: center;
@@ -229,7 +233,7 @@ footer .footer-main{
     div.flex {
         display: flex;
         background-color: lightgray;
-        border-radius: 40px;
+        border-radius: 8px;
         margin-bottom: 10px;
         margin-top: 10px;
         
@@ -342,7 +346,7 @@ form{
     font-size: 1rem;
     color: white;
     background-color: #c2185b;
-    border-radius: 0.5rem;
+    border-radius: 8px;
     margin-top: 3rem;
     padding: 0.5rem;
     
@@ -362,8 +366,10 @@ form{
     justify-content: center;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
-    width: 100%;
+    width: 100%; 
+    min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    
 
 }
 
@@ -417,6 +423,7 @@ display: none;
         display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 1.6rem;
 
     
     
@@ -425,10 +432,14 @@ display: none;
 
 input, textarea{
     /* width: 325px; */
-    background: white;
+    background: #f8bbd0;
     color: black;
-    border-radius: 8px;
-    border: 3px solid   #262626;
+   
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px solid   #c2185b;
+
     
 }
 
@@ -453,14 +464,15 @@ input::placeholder {
   }
 
 .footer-button{
-    border: 2px solid  #262626;
-    color:  #262626;
-    border-radius: 8px;
+    background:  #c2185b;
+    
     font-family:'Sanchez', arial, sans-serif;
-    background: #d9d9d9 ;
+    color: white;
     width: 90px;
     margin-left: 20px;
     font-weight: bold;
+    border: none;
+    border-radius: 8px;
 
 }
 
@@ -469,6 +481,7 @@ footer .footer-bottom{
     text-align: center;
     background:   #ccc;
     margin: 0 auto;
+    color: black;
 }
 
   
@@ -481,7 +494,7 @@ footer .footer-bottom{
 .nav__menu a {
     text-decoration: none;
     color: black;
-    font-size: 1.0rem;
+    
     text-decoration: none;
     padding-left: 0.6rem;
     padding-right: 0.6rem;
@@ -498,7 +511,7 @@ nav .nav__a--signup {
     color: white;
     text-decoration: none;
     padding: 0 0.5rem 0 0.5rem;
-    border-radius: 0.5rem;
+    border-radius: 8px;
 }
 
 .nav__a--signup:hover {
@@ -524,6 +537,41 @@ nav .nav__a--signup {
 
 .footer-right{
     display: none;
+}
+
+.newsletter-form{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    margin: 10px;
+}
+
+.sign-in{
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.sign-in-text{
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.sign-in-contact-input{
+    border-bottom: 3px solid #c2185b;
+    background: #F8BBD0;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+  width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    
+
 }
 
 @media (min-width: 600px){
@@ -556,8 +604,11 @@ nav .nav__a--signup {
         }
         .nav__menu a {
            margin-right: 0.9rem;
+          
      
     }
+
+   
         
 
 
@@ -630,6 +681,20 @@ nav .nav__a--signup {
 .footer-right{
     display: block;
 }
+
+
+
+.newsletter-form{
+    display: flex;
+    flex-direction: column;
+    margin: 40px;
+}
+
+.news-form{
+    margin: 10px;
+    width: 50%;
+}
+
 
 }
 
