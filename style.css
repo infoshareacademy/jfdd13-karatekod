@@ -32,7 +32,7 @@ section.hero{
  }
 
 .team-info {
-    width: 100%;
+    /* width: 100%; */
     background: white;
     /* height: 400px; */
 
@@ -59,8 +59,9 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 0;
-    padding: 0;
+    padding: 0 15px;
 }
 
 
@@ -76,7 +77,8 @@ figure {
 .emoji1{
     border-radius: 50%;
     width: 180px;
-    height: 180px;
+    max-width: 100%;
+    height: auto;
 }
  figcaption .lnkd-gh-icons{ 
     display: flex;
@@ -86,6 +88,20 @@ figure {
     /* height: 30px; */
     justify-content: space-around;
     
+}
+
+
+
+
+.newsletter-button{
+    margin-top: 10px;
+    color: white;
+    background-color: #c2185b;
+    border: none;
+    padding: 10px 0;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 15px;
 }
 
 
@@ -183,7 +199,12 @@ footer .footer-main{
         font-size: 20px;
         letter-spacing: 3px;
     }
-    
+
+
+    /* figcaption p{
+        width: 25%;
+    }
+     */
     }
     
     
@@ -544,14 +565,15 @@ nav .nav__a--signup {
 
 
 
-.emoji1,
+.emoji1{
 
-{
-   max-width: 100%;
+  
    height: auto;
 }
 
 
+
+=
 
 
 .footer-right{
@@ -627,6 +649,8 @@ form{
      
     }
 
+
+    
    
         
 
