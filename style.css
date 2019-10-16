@@ -34,6 +34,7 @@ section.hero{
 .team-info {
     width: 100%;
     background: white;
+    padding-top: 50px; /* added 
     /* height: 400px; */
 
 
@@ -504,6 +505,7 @@ footer .footer-bottom{
 .footer-bottom-copyright{
 
     margin: 0;
+    font-size: 0.7rem; /* changed font-size so it fits mobile screens */
 }
 
 
@@ -560,6 +562,7 @@ nav .nav__a--signup {
 .newsletter-form{
     display: flex;
     flex-direction: column;
+    padding-top: 25px; /* added top padding so navigation works */
 }
 
 form{
