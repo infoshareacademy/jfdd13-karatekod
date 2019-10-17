@@ -13,7 +13,7 @@ html {
 
 
 section.hero{
-    background-image: url(img/side-books-blurred.jpg); /* Added side-books-blurred for section background image */
+    background-image: url(img/side-books.jpg); /* Added side-books-blurred for section background image */
     background-size: cover; 
     background-position-y: 40%;
     background-position-x: 70%; /* these positions are for better looking background image */
@@ -26,6 +26,10 @@ section.hero{
 
 .team-info {
     background: white;
+    padding-top: 50px; /* added 
+    /* height: 400px; */
+
+
 }
 
 
@@ -408,12 +412,13 @@ form{
 .nav {
     display: flex;
     position: fixed;
-    justify-content: center;
+    justify-content: space-between;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
     width: 100%; 
     min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    box-shadow: 0px 1px 10px;
     
 
 }
@@ -421,7 +426,7 @@ form{
 .HowItWorks {
     display: flex;
     padding: 40px;
-    font-size: 25px;
+    font-size: 20px;
     flex-direction: column;
     background-color:white;
     min-height: 50px;  
@@ -447,6 +452,10 @@ form{
     width: 100px;
 }
 
+.DownloadIcon img {
+    max-width: 100%;
+}
+
 .as {
     flex-basis: 70%;
 }
@@ -469,10 +478,20 @@ display: none;
     justify-content: space-between;
     align-items: center;
     font-size: 1.6rem;
+    padding-left:0px;
+    padding-right:10px;
+    width: 100%;
 
-    
-    
+        
 }
+
+nav__menu:nth-child(1) {
+    color: blue;
+}
+
+
+
+
 
 
 input, textarea{
@@ -540,6 +559,7 @@ footer .footer-bottom{
 .footer-bottom-copyright{
 
     margin: 0;
+    font-size: 0.7rem; /* changed font-size so it fits mobile screens */
 }
 
 
@@ -586,10 +606,6 @@ nav .nav__a--signup {
 }
 
 
-
-=
-
-
 .footer-right{
     display: none;
 }
@@ -597,6 +613,7 @@ nav .nav__a--signup {
 .newsletter-form{
     display: flex;
     flex-direction: column;
+    padding-top: 25px; /* added top padding so navigation works */
 }
 
 form{
@@ -637,6 +654,11 @@ form{
 
 
 @media (min-width: 600px){
+.nav {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: space-between;
+}
 
     .nav__a--logo  {
         /* width: 35%; */
@@ -661,15 +683,12 @@ form{
             justify-content: flex-end;
             align-items: center;
             width: 60%;
+            padding-right: 0px;
+            padding-left: 0px;
                   
             
         }
-        .nav__menu a {
-           margin-right: 0.9rem;
-          
-     
-    }
-
+        
 
     
    
@@ -713,10 +732,11 @@ form{
         height: 100vh;
    }
 /*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
-   
+
 
 .HowItWorks {
     flex-direction: row;
+    font-size: 23px;
 }
 
 .HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
@@ -730,8 +750,10 @@ form{
     margin: 1%;
 }
 
+
+
 .DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
-    width: 50%;
+    max-width: 100%;
 }
 
 /*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
@@ -780,6 +802,6 @@ form{
     
 }
 }
-}
+
 
 
