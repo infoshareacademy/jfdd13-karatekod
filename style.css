@@ -401,7 +401,7 @@ form{
 .nav {
     display: flex;
     position: fixed;
-    justify-content: center;
+    justify-content: space-between;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
     width: 100%; 
@@ -466,10 +466,20 @@ display: none;
     justify-content: space-between;
     align-items: center;
     font-size: 1.6rem;
+    padding-left:0px;
+    padding-right:10px;
+    width: 100%;
 
-    
-    
+        
 }
+
+nav__menu:nth-child(1) {
+    color: blue;
+}
+
+
+
+
 
 
 input, textarea{
@@ -619,6 +629,11 @@ form{
 }
 
 @media (min-width: 600px){
+.nav {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: space-between;
+}
 
     .nav__a--logo  {
         /* width: 35%; */
@@ -643,15 +658,12 @@ form{
             justify-content: flex-end;
             align-items: center;
             width: 60%;
+            padding-right: 0px;
+            padding-left: 0px;
                   
             
         }
-        .nav__menu a {
-           margin-right: 0.9rem;
-          
-     
-    }
-
+        
 
     
    
