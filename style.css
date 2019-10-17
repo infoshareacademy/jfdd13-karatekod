@@ -163,16 +163,18 @@ footer .footer-main{
     .mediaq600 {
         display: flex;
         flex-direction: column;
+        margin: 5px 10px;
     }
     
     div.flex {
         display: flex;
-        background: rgb(245,187,208);
-        background: linear-gradient(288deg, rgba(245,187,208,1) 84%, rgba(252,132,176,1) 100%);
-        border-radius: 60px;
+        
+        
+        border-radius: 40px;
         margin-bottom: 10px;
         margin-top: 10px;
         align-content: center;
+        justify-content: space-between;
     }
     
     div.flex .img {
@@ -185,7 +187,7 @@ footer .footer-main{
         flex-basis: 70%;
     }
     .description p:first-child {
-        font-family: serif;
+        
         font-weight: 700;
         padding: 5px 5px;
         font-size: 20px;
@@ -227,9 +229,9 @@ footer .footer-main{
     
     #functionality {
         
-        margin: 0 auto;
+        margin: 0 40px;
         
-        padding: 30px;
+        
         
         
     }
@@ -262,7 +264,7 @@ footer .footer-main{
         font-size: 20px;
         font-weight: 800;
         letter-spacing: 2px;
-        font-family: serif;
+       
     }
     .description p:nth-child(2) {
         font-size: 16px;
@@ -280,22 +282,21 @@ footer .footer-main{
     div.flex {
         display: flex;
         /* background-color: #f5bbd0; */
-        border-radius: 40px;
+        border-radius: 30px;
         margin-bottom: 10px;
         margin-top: 10px;
         justify-content: space-between;
-        background: rgb(245,187,208);
-        background: linear-gradient(288deg, rgba(245,187,208,1) 84%, rgba(252,132,176,1) 100%);
+        border: 1px solid black;
         
     }
     
-    div.flex .img {
+    .flex .img {
         flex-basis: 25%;
         width: 100%;
         padding: 10px;
     
     }
-    div.flex div.description {
+    .flex div.description {
         flex-basis: 70%;
     }
     }
