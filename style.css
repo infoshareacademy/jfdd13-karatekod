@@ -414,7 +414,7 @@ form{
 .HowItWorks {
     display: flex;
     padding: 40px;
-    font-size: 25px;
+    font-size: 20px;
     flex-direction: column;
     background-color:white;
     min-height: 50px;  
@@ -438,6 +438,10 @@ form{
     margin-left: auto;
     margin-right: auto;
     width: 100px;
+}
+
+.DownloadIcon img {
+    max-width: 100%;
 }
 
 .as {
@@ -574,10 +578,6 @@ nav .nav__a--signup {
 }
 
 
-
-=
-
-
 .footer-right{
     display: none;
 }
@@ -695,10 +695,11 @@ form{
         height: 100vh;
    }
 /*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
-   
+
 
 .HowItWorks {
     flex-direction: row;
+    font-size: 23px;
 }
 
 .HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
@@ -712,8 +713,10 @@ form{
     margin: 1%;
 }
 
+
+
 .DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
-    width: 50%;
+    max-width: 100%;
 }
 
 /*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
