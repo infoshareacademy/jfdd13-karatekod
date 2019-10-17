@@ -3,21 +3,17 @@ html {
 }
 
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-
-font-family: 'Raleway', sans-serif;
-
-
-
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 
 
 
 section.hero{
-    background-image: url(img/side-books-blurred.jpg); /* Added side-books-blurred for section background image */
+    background-image: url(img/side-books.jpg); /* Added side-books-blurred for section background image */
     background-size: cover; 
     background-position-y: 40%;
     background-position-x: 70%; /* these positions are for better looking background image */
@@ -26,13 +22,9 @@ section.hero{
     padding: 6rem 1rem 3rem 1rem; 
     text-align: center;
     width: 100%;    /* section now takes 100% of parent's width */
-   
-     
-    
- }
+}
 
 .team-info {
-    /* width: 100%; */
     background: white;
     padding-top: 50px; /* added 
     /* height: 400px; */
@@ -66,11 +58,11 @@ figure {
 }
 
 
- figure figcaption{
-   display: flex;
+figure figcaption{
+    display: flex;
     margin-top: 10px;
- flex-direction: column;
- align-items: center;
+    flex-direction: column;
+    align-items: center;
     font-weight: bold;
     font-size: 25px;
 } 
@@ -81,14 +73,13 @@ figure {
     max-width: 100%;
     height: auto;
 }
+
  figcaption .lnkd-gh-icons{ 
     display: flex;
     flex-direction: row;
     margin-top: 10px;
     width: 30px;    
-    /* height: 30px; */
-    justify-content: space-around;
-    
+    justify-content: space-around;   
 }
 
 
@@ -103,19 +94,17 @@ figure {
     width: 50%;
     border-radius: 20px;
     font-size: 15px;
+    cursor: pointer;
 }
 
 
 a{
-    
     transition: all 0.3s ease 0s;
-
 }
 
 a:hover{
     opacity: 0.8;
-    transition: all 0.3s ease 0s;
-    
+    transition: all 0.3s ease 0s;  
 }
 
 .our-team{
@@ -130,10 +119,7 @@ footer{
     background-color: #f8bbd0;
     padding-top: 30px;
     color: white;
-    width: 100%;
-    
-    /* height: 300px; */
-    
+    width: 100%;   
 }
 
 footer .footer-main{
@@ -142,9 +128,6 @@ footer .footer-main{
     justify-content: space-around;
     margin-bottom: 15px;
    
-    /* padding-top: 15px; */
-
-    
 }
 
 
@@ -161,9 +144,17 @@ footer .footer-main{
     margin-top: 15px;
 }
 
+.sign-in-contact-input:focus{
+    outline: none;
+}
 
+.contact-input:focus{
+    outline: none;
+}
 
-
+.message-input:focus{
+    outline: none;
+}
 
 /*-----------------------section functionality styling-- flexbox 2 columns-------------*/
 
@@ -201,6 +192,26 @@ footer .footer-main{
         letter-spacing: 3px;
     }
 
+
+    .sign-in-contact-input::placeholder {
+        font-family:'Sanchez', arial, sans-serif;
+        font-size: 30px;
+    }
+    .message-input::placeholder {
+        font-family:'Sanchez', arial, sans-serif;
+        font-size: 15px;
+      }
+
+      .contact-input:: placeholder{
+        font-family:'Sanchez', arial, sans-serif;
+        font-size: 15px;
+
+      }
+    
+      textarea::placeholder{
+        font-family:'Sanchez', arial, sans-serif;
+        font-size: 15px;
+      }
 
     /* figcaption p{
         width: 25%;
@@ -401,12 +412,13 @@ form{
 .nav {
     display: flex;
     position: fixed;
-    justify-content: center;
+    justify-content: space-between;
    z-index: 1; /* Z-INDEX ! */ 
     background-color:  white;
     width: 100%; 
     min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    box-shadow: 0px 1px 10px;
     
 
 }
@@ -472,10 +484,20 @@ display: none;
     justify-content: space-between;
     align-items: center;
     font-size: 1.6rem;
+    padding-left:0px;
+    padding-right:10px;
+    width: 100%;
 
-    
-    
+        
 }
+
+nav__menu:nth-child(1) {
+    color: blue;
+}
+
+
+
+
 
 
 input, textarea{
@@ -517,7 +539,7 @@ input::placeholder {
     font-family:'Sanchez', arial, sans-serif;
     color: white;
     width: 50%;
-  
+  cursor: pointer;
     border: none;
     border-radius: 20px;
     padding: 5px;
@@ -525,12 +547,18 @@ input::placeholder {
 
 }
 
+.footer-button:hover{
+    background-color:white;
+    color: black;
+    transition: all 0.3s ease 0s;
+
+}
 
 footer .footer-bottom{
     text-align: center;
-    background:   #ccc;
+    background:   #757575;
     margin: 0 auto;
-    color: black;
+    color: #F8BBD0;
 }
 
   
@@ -620,11 +648,23 @@ form{
   width: 100%;
     height: 100px;
     margin-top: 10px;
+    font-size: 1.4rem;
     
 
 }
+.sign-in-contact-input:focus{
+    outline: none;
+}
+
+
+
 
 @media (min-width: 600px){
+.nav {
+    padding-right: 40px;
+    padding-left: 40px;
+    justify-content: space-between;
+}
 
     .nav__a--logo  {
         /* width: 35%; */
@@ -649,15 +689,12 @@ form{
             justify-content: flex-end;
             align-items: center;
             width: 60%;
+            padding-right: 0px;
+            padding-left: 0px;
                   
             
         }
-        .nav__menu a {
-           margin-right: 0.9rem;
-          
-     
-    }
-
+        
 
     
    
@@ -761,6 +798,16 @@ form{
     font-size: 25px;
 }
 
+
+.newsletter-button:hover{
+    
+    background-color:white;
+    color: black;
+    transition: all 0.3s ease 0s;
+
+    
 }
+}
+
 
 
