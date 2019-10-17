@@ -413,7 +413,7 @@ form{
 
 .HowItWorks {
     display: flex;
-    padding: 40px;
+    padding: 10px;
     font-size: 20px;
     flex-direction: column;
     background-color:white;
@@ -421,6 +421,12 @@ form{
     justify-content: center;
     text-align: center;
 } 
+
+.hiw-title {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 80px;
+}
 
 .HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
     display: flex;
@@ -430,7 +436,7 @@ form{
     border-radius: 30px;
     padding: 2%;
     width: 100%;
-    margin: 1%;
+    margin-top: 10px;
 }
 
 .DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
