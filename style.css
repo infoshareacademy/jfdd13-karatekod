@@ -17,7 +17,7 @@ font-family: 'Raleway', sans-serif;
 
 
 section.hero{
-    background-image: url(img/side-books-blurred.jpg); /* Added side-books-blurred for section background image */
+    background-image: url(img/side-books.jpg); /* Added side-books-blurred for section background image */
     background-size: cover; 
     background-position-y: 40%;
     background-position-x: 70%; /* these positions are for better looking background image */
