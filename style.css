@@ -407,6 +407,7 @@ form{
     width: 100%; 
     min-height: 68px; /* added this for better menu on mobile */
     text-align: center;
+    box-shadow: 0px 1px 10px;
     
 
 }
