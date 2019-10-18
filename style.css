@@ -1,12 +1,15 @@
 html{
     scroll-behavior: smooth;
-}
+        }
 
+/* 8px solid #F8BBD0 */
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    color: #212121;
+    
 }
 
 section.hero{
@@ -361,6 +364,7 @@ footer .footer-main{
     .text h3 {
         align-self: flex-start;
         align-self: center;
+        color: white;
     }
 
     .image-hero {
