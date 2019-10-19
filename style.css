@@ -795,5 +795,161 @@ footer .footer-main{
   } 
 }
 
+/* ----------------------------functionality---------------------------------- */
+
+#functionality {
+    
+    margin: 20px 40px;
+    
+}
+
+@media all and (max-width: 599px) 
+
+{
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8 auto);
+    grid-row-gap: 5px;
+    perspective: 3000px;  /*determinuje wyglad ef.3d im mniejsza liczba tym wiekszy efekt */
+    padding-top: 20px;
+}
+
+}
+
+@media all and (min-width: 600px) {
+
+
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-column-gap: 10%;
+        grid-row-gap: 5%;
+        perspective: 3000px;  /*determinuje wyglad ef.3d im mniejsza liczba tym wiekszy efekt */
+        padding-top: 20px;
+    
+    }
+    }
+
+
+
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card";
+    transform-style: preserve-3d; /*bezp.dzieci maja efekt 3d*/
+    transition: 2s all ease-in-out;
+}
+
+
+
+
+
+
+.front,
+.back {     
+      
+    backface-visibility: hidden; /*dzieki temu nie widzimy spodu karty*/
+    border-radius: 20px;
+    display: flex;
+    grid-area: card;
+
+}
+
+.front {
+    
+    box-shadow: 0px 0px 15px 5px rgba(245, 187, 208, 1);
+    border: 2px solid #c4395c;
+    
+    
+    
+}
+
+
+.front .photo {
+     max-width: 20%;
+
+    
+}
+.back .photo {
+    max-width: 10%;
+}
+
+
+.back .photo,
+.front .photo {
+    min-width: 80px;    
+    align-self: center;
+    justify-self: center;
+    padding: 10px;
+
+}
+
+.front img,
+.back img {
+    width: 100%;
+}
+
+.front > p, 
+.back > p {
+    
+    align-self: center;
+    justify-self: center;
+    padding: 5px 10px;
+    
+    
+    
+ 
+}
+.front > p {
+    font-size: 35px;
+    
+    letter-spacing: 2px;
+
+}
+.back > p {
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    font-weight: 700px;
+    letter-spacing: 1px;
+
+
+}
+.back {
+    display: flex;
+    background-color: #f5bbd0;
+    transform: rotateX(180deg);
+    
+   
+}
+.turnAround {
+    
+    transform: rotateX(180deg);
+}
+.container div.card div.front:hover {
+    cursor: pointer;
+    color: grey;
+    text-shadow: 2px 2px 2px grey;
+    box-shadow: 0px 0px 30px 5px rgba(215,207,184,1);
+    border: 1px solid lightgray;
+    opacity: 0.7;
+}
+.container div.card div.back:hover {
+    cursor: pointer;
+   
+
+}
+#functionality > p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
 
 
