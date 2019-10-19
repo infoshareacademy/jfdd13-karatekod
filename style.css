@@ -797,15 +797,18 @@ footer .footer-main{
 
 /* ----------------------------functionality---------------------------------- */
 
+
+
+@media all and (max-width: 599px) {
+
+
 #functionality {
-    
-    margin: 20px 40px;
+
+    margin: 20px 10px;
     
 }
 
-@media all and (max-width: 599px) 
 
-{
 .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -819,19 +822,24 @@ footer .footer-main{
 
 @media all and (min-width: 600px) {
 
+#functionality {
 
-
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-column-gap: 10%;
-        grid-row-gap: 5%;
-        perspective: 3000px;  /*determinuje wyglad ef.3d im mniejsza liczba tym wiekszy efekt */
-        padding-top: 20px;
+    margin: 20px 40px;
     
-    }
-    }
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10%;
+    grid-row-gap: 5px;
+    perspective: 3000px;  /*determinuje wyglad ef.3d im mniejsza liczba tym wiekszy efekt */
+    padding-top: 20px;
+
+}
+}
 
 
 
@@ -870,27 +878,27 @@ footer .footer-main{
 
 
 .front .photo {
-     max-width: 20%;
+    max-width: 20%;
 
-    
+   
 }
 .back .photo {
-    max-width: 10%;
+   max-width: 10%;
 }
 
 
 .back .photo,
 .front .photo {
-    min-width: 80px;    
-    align-self: center;
-    justify-self: center;
-    padding: 10px;
+   min-width: 80px;    
+   align-self: center;
+   justify-self: center;
+   padding: 10px;
 
 }
 
 .front img,
 .back img {
-    width: 100%;
+   width: 100%;
 }
 
 .front > p, 
