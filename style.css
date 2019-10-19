@@ -833,8 +833,8 @@ footer .footer-main{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-column-gap: 10%;
-    grid-row-gap: 5px;
+    grid-column-gap: 5%;
+    grid-row-gap: 8px;
     perspective: 3000px;  
     padding-top: 20px;
 
@@ -913,7 +913,7 @@ footer .footer-main{
  
 }
 .front > p {
-    font-size: 35px;
+    font-size: 30px;
     
     letter-spacing: 2px;
 
