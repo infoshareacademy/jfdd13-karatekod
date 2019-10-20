@@ -3,7 +3,7 @@ html{
         }
 
 /* 8px solid #F8BBD0 */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -465,6 +465,8 @@ footer .footer-main{
     .nav__a--logo img{
         max-width: 100%;
         max-height: 100%;
+        width: 60px;
+    
     }
 
     .nav__menu{
