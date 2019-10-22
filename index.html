@@ -6,11 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-
-
     <title>Book-Swap-App</title>
     <link rel="stylesheet" href="fontello-08258d8a/css/fontello.css">
     <link rel="stylesheet" href="style.css">
@@ -27,9 +23,11 @@
     <nav class="nav">
         <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"></a>
         <div class="nav__menu">
-            <a href="#how-it-works">Features</a>
-            <a href="#about">About</a>
-            <a class="nav__a--signup" href="#signup">Sign up</a>
+            <div class="btn-container">
+                <a class="btn nav__a--features" href="#how-it-works">Features</a>
+                <a class="btn nav__a--about" href="#about">About</a>
+                <a class="btn nav__a--signup" href="#signup">Sign up</a>
+            </div>
         </div>
     </nav>
 
@@ -46,7 +44,6 @@
             <div class="image-hero">
                 <img src="img/bookswapp-pic.png" alt="book-swapper">
             </div>
-            <!-- <img src="https://via.placeholder.com/300.png" alt="let there be books">-->
             </div>
 
 
@@ -354,6 +351,10 @@
             if (this.classList.contains('turnAround')) {this.classList.remove('turnAround')
             } else {this.classList.add('turnAround')}});
             }
+
+
+
+
     </script>
 
 
