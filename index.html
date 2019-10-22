@@ -346,6 +346,48 @@
 
 
     </footer>
+
+    <!-- ----------------------------------------modal window for cookies--------------------------------------------- -->
+
+    <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p>We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
+                    By clicking “I accept” or “X” on this banner or using our site, you consent to the use of cookies unless you have disabled them.
+                    </p>
+
+                <form action="" class="ModalButtons">
+                
+                 <button id="accept">I accept</button>
+                 <button id="condition">Show Terms</button>
+
+                
+                
+                
+                
+                </form>
+            
+            
+            
+            
+            
+            
+            </div>
+          
+          </div>
+
+
+
+
+
+<!-- ----------------------------------------------end of modal---------------------------------------------------------- -->
+
+
+
+
+
     <script>
         var cards = document.querySelectorAll('.card');
             for (i=0;i<8;i++) {
@@ -354,6 +396,57 @@
             if (this.classList.contains('turnAround')) {this.classList.remove('turnAround')
             } else {this.classList.add('turnAround')}});
             }
+
+
+
+
+//------------------------------------------------------- cookies----------------
+
+
+
+
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+    user = prompt("Please enter your name:", "");
+    if (user != "" && user != null) {
+      setCookie("username", user, 365);
+    }
+  }
+}
+    
+    
+    
+    
+    
+           
+
+
+
     </script>
 
 
