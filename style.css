@@ -971,6 +971,10 @@ width: 112px;
 }
 /* -------------------------------------------modal window---------------------------------------------------- */
 
+
+@media all and (min-width: 600px) {
+
+
 .modal {
     display: block; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -990,7 +994,7 @@ width: 112px;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;/* Could be more or less, depending on screen size */
   }
   
   /* The Close Button */
@@ -1008,6 +1012,22 @@ width: 112px;
     cursor: pointer;
   }
 
-  .modalButons {
+  .ModalButtons {
       display: flex;
+      flex-direction: row;
+      padding: 10px 20%;
   }
+
+  .ModalButtons > button {
+
+            height: 40px;
+            border-radius: 15px;
+            background-color: #c2185b;
+            width: 40%;
+
+  }
+
+
+
+
+/* } ------------------------------end of media min 600------------------------ */
