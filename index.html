@@ -6,7 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
+
     <title>Book-Swap-App</title>
     <link rel="stylesheet" href="fontello-08258d8a/css/fontello.css">
     <link rel="stylesheet" href="style.css">
@@ -24,11 +28,9 @@
         <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text" src="img/bookswap-text.png" alt="teext"></a>
         <a class="nav__a--logo" href="#hero"></a>
         <div class="nav__menu">
-            <div class="btn-container">
-                <a class="btn nav__a--features" href="#how-it-works">Features</a>
-                <a class="btn nav__a--about" href="#about">About</a>
-                <a class="btn nav__a--signup" href="#signup">Sign up</a>
-            </div>
+            <a href="#how-it-works">Features</a>
+            <a href="#about">About</a>
+            <a class="nav__a--signup" href="#signup">Sign up</a>
         </div>
     </nav>
 
@@ -43,12 +45,7 @@
                 </a>
             </div>
             <div class="image-hero">
-<<<<<<< HEAD
                 <img src="img/bookswap-text.png" alt="book-swapper">
-=======
-                <img src="img/bookswapp-pic.png" alt="book-swapper">
-            </div>
->>>>>>> 5ad9a416f391f660e98dd18dec75a32322e90908
             </div>
             
 
@@ -105,7 +102,7 @@
             <div class="container">
 
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/chat.svg" alt="chat cloud"></div>
                         <p>CHAT WITH OTHERS</p>
@@ -117,7 +114,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/localisation.svg" alt="globe"></div>
                         <p>LOOK AROUND YOU</p>
@@ -129,7 +126,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/wishlist 1.svg" alt="list"></div>
                         <p>MAKE A WISH LIST</p>
@@ -141,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/network.svg" alt="social network"></div>
                         <p>MAKE IT SOCIAL</p>
@@ -153,7 +150,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/trophy1.svg" alt="trophy"></div>
                         <p>ARE YOU A SUPER READER?</p>
@@ -165,7 +162,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/notification.svg" alt="bell"></div>
                         <p>GET NOTIFIED</p>
@@ -177,7 +174,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/evaluate.svg" alt="ratings"></div>
                         <p>RATE A USER</p>
@@ -189,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="card" >
+                <div class="card" onclick="func(this, 'turnAround')">
                     <div class="front">
                         <div class="photo"><img src="img/pen.svg" alt="pen"></div>
                         <p>BECOME A CRITIC</p>
@@ -350,17 +347,15 @@
 
     </footer>
     <script>
-        var cards = document.querySelectorAll('.card');
-            for (i=0;i<8;i++) {
-            flip = cards[i];
-            flip.addEventListener('click', function () { 
-            if (this.classList.contains('turnAround')) {this.classList.remove('turnAround')
-            } else {this.classList.add('turnAround')}});
+        function func(el, trn) {
+
+            if (el.classList.contains('turnAround')) {
+                el.classList.remove('turnAround')
+            } else {
+                el.classList.add(trn)
             }
 
-
-
-
+        }
     </script>
 
 
