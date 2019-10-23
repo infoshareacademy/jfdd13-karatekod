@@ -733,9 +733,7 @@ width: 112px;
 .HowItWorksDownload, .HowItWorksPreferences, .HowItWorksBooks, .HowItWorksExchange {
     display: flex;
     flex-direction: column;
-    border: black;
-    border-style: solid;
-    border-radius: 30px;
+   
     padding: 2%;
     width: 22%;
     
