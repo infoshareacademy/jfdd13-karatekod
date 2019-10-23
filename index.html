@@ -348,8 +348,8 @@
     </footer>
 
     <!-- ----------------------------------------modal window for cookies--------------------------------------------- -->
-    <div class="fadeIn">
-    <div id="myModal" class="modal">
+    
+    <div id="myModal" class="modal fadeIn">
 
             <!-- Modal content -->
             <div class="modal-content fadeInTop">
@@ -361,8 +361,8 @@
                 <form action="" class="ModalButtons">
                 
                 
-                    <button id="condition">Show Terms</button>
-                 <button id="accept">I accept</button>
+                    <button id="condition" type="button">Show Terms</button>
+                 <button id="accept" type="button">I accept</button>
                  
 
                 
@@ -379,9 +379,24 @@
             </div>
           
           </div>
+       
+<div class="modal1">
+
+        <div class="terms">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perferendis repudiandae nesciunt quaerat qui numquam nihil, at asperiores similique consequatur velit unde dolores quod quae obcaecati explicabo dolorum. Sed, soluta? We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
+                By clicking “I accept” or “X” on this banner or using our site, you consent to the use of cookies unless you have disabled them.
+                </p>
+
+            <form action="" class="ModalButtons">
+            
+            
+            
+             <button id="accept" type="button">I accept</button>
+
+
         </div>
 
-
+</div>
 
 
 <!-- ----------------------------------------------end of modal---------------------------------------------------------- -->
@@ -450,6 +465,12 @@ function checkCookie() {
     
     
     function showTerms () {
+        var terms = document.querySelector('.terms')
+        terms.style.display= 'block';
+        document.querySelector('.modal').style.display = 'none';
+        document.querySelector('.modal1').style.display = 'block';
+
+        terms.classList.add('termsShowUp');
 
 
     }
