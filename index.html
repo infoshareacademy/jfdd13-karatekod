@@ -355,14 +355,14 @@
             <div class="modal-content fadeInTop">
               
               <p>We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
-                    By clicking “I accept” or “X” on this banner or using our site, you consent to the use of cookies unless you have disabled them.
+                    By clicking “I accept” or using our site, you consent to the use of cookies unless you have disabled them.
                     </p>
 
                 <form action="" class="ModalButtons">
                 
                 
                     <button id="condition" type="button">Show Terms</button>
-                 <button id="accept" type="button">I accept</button>
+                    <button id="accept1" type="button">I accept</button>
                  
 
                 
@@ -391,7 +391,7 @@
             
             
             
-             <button id="accept" type="button">I accept</button>
+             <button id="accept2" type="button">I accept</button>
 
 
         </div>
@@ -422,7 +422,7 @@
 
 
 
-function setCookie(cname, cvalue, exdays) {
+function setCookies(cname, cvalue, exdays) {
   var d = new Date();
   d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
   var expires = "expires="+d.toUTCString();
@@ -457,7 +457,8 @@ function checkCookie() {
 }
     
     
-    var buttonAccept = document.querySelector('#accept');
+    var buttonAccept1 = document.querySelector('#accept1');
+    var buttonAccept2 = document.querySelector('#accept2');
 
     var buttonTerms = document.querySelector('#condition');
 
@@ -475,22 +476,46 @@ function checkCookie() {
 
     }
     
-
-
+    function endOfModal1() {
+        document.querySelector('.modal').style.display='none';
+    }
+    function endOfModal2() {
+        document.querySelector('.modal1').style.display='none';
+    }
     function modalPopup() {
         var PopUp = document.querySelector('.modal')
         PopUp.style.display= 'block'
     }
 
+    function setCookie1() {
+        var modalBox = document.querySelector('.modal')
+        modalBox.classList.add('accepted');
+        // modalBox.style.display='none';
+        setTimeout(endOfModal1, 1900)
+
+
+
+    }
+    function setCookie2() {
+        var modalBox = document.querySelector('.modal1')
+        modalBox.classList.add('accepted');
+        // modalBox.style.display='none';
+        setTimeout(endOfModal2, 1900)
+
+
+
+    }
 
     
     
     
     window.addEventListener('load', modalPopup)
-
-    buttonAccept.addEventListener('click', setCookie)
-    
     buttonTerms.addEventListener('click', showTerms)
+    buttonAccept1.addEventListener('click', setCookie1)
+    buttonAccept2.addEventListener('click', setCookie2)
+
+    
+    
            
     
 

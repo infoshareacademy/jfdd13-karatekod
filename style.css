@@ -1090,7 +1090,18 @@ width: 112px;
     5% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
 }
 
+.accepted { 
+animation: accepted 2s;
+}
 
+
+@keyframes accepted {
+    95% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
+    to {
+        transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
+        opacity: 0;
+    }
+}
 
 
 
