@@ -348,20 +348,22 @@
     </footer>
 
     <!-- ----------------------------------------modal window for cookies--------------------------------------------- -->
-
+    <div class="fadeIn">
     <div id="myModal" class="modal">
 
             <!-- Modal content -->
-            <div class="modal-content">
-              <span class="close">&times;</span>
+            <div class="modal-content fadeInTop">
+              
               <p>We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
                     By clicking “I accept” or “X” on this banner or using our site, you consent to the use of cookies unless you have disabled them.
                     </p>
 
                 <form action="" class="ModalButtons">
                 
+                
+                    <button id="condition">Show Terms</button>
                  <button id="accept">I accept</button>
-                 <button id="condition">Show Terms</button>
+                 
 
                 
                 
@@ -377,7 +379,7 @@
             </div>
           
           </div>
-
+        </div>
 
 
 
@@ -456,14 +458,14 @@ function checkCookie() {
 
     function modalPopup() {
         var PopUp = document.querySelector('.modal')
-        PopUp.
+        PopUp.style.display= 'block'
     }
 
 
     
     
     
-    document.addEventListener('load', modalPopup)
+    window.addEventListener('load', modalPopup)
 
     buttonAccept.addEventListener('click', setCookie)
     
