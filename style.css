@@ -32,6 +32,8 @@ section.hero{
 .active{
     background: pink;
 }
+
+
 .team-info h1{
     display: flex;
     justify-content: center;
