@@ -438,8 +438,7 @@
 
             function checkCookies() {
                               
-                var stringCookie = decodeURIComponent(document.cookie);
-                if (stringCookie.indexOf('www.bookswap.com') !== -1)  {modalPopup()}  
+                if (document.cookie.length == 0) modalPopup();
                 console.log('check cookies- onload')           
             }
 
