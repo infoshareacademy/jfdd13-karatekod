@@ -437,14 +437,14 @@
             }
 
             function checkCookies() {
-                if (document.cookie.length != 0) {break;
-                    } else { modalPopup();
-                    }
-                        console.log('check cookies- onload')           
+                              
+                var stringCookie = decodeURIComponent(document.cookie);
+                if (stringCookie.indexOf('www.bookswap.com') !== -1)  {modalPopup()}  
+                console.log('check cookies- onload')           
             }
 
             function setCookie1() {
-                document.cookie = "owner=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
+                document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
                 var modalBox = document.querySelector('.modal');
                 modalBox.classList.add('accepted');
                 console.log('set cookie 1');
@@ -460,7 +460,7 @@
             }
 
             function setCookie2() {
-                document.cookie = "owner=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
+                document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
                 var modalBox = document.querySelector('.modal1');
                 modalBox.classList.add('accepted');
                 console.log('set cookie 2');
