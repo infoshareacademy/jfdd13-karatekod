@@ -12,6 +12,49 @@ html{
     
 }
 
+/* ADDING FOR 3D ORBIT ROTATE IN TEAM PHOTOS */
+
+
+
+#mirror {
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+
+#one {
+  grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  
+}
+
+#two {
+    grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  backface-visibility: hidden;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 section.hero{
     background-image: url(img/side-books\ \(copy\).jpg); 
     background-size: cover; 
@@ -70,6 +113,7 @@ figure figcaption{
     width: 180px;
     max-width: 100%;
     height: auto;
+
 }
 
  figcaption .lnkd-gh-icons{ 

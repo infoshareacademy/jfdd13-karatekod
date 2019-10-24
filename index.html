@@ -25,7 +25,8 @@
 
 
     <nav class="nav">
-        <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text" src="img/bookswap-text.png" alt="teext"></a>
+        <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text"
+                src="img/bookswap-text.png" alt="teext"></a>
         <a class="nav__a--logo" href="#hero"></a>
         <div class="nav__menu">
             <a href="#how-it-works">Features</a>
@@ -47,7 +48,7 @@
             <div class="image-hero">
                 <img src="img/bookswap-text.png" alt="book-swapper">
             </div>
-            
+
 
 
 
@@ -236,8 +237,13 @@
             <div class="team-info-photos">
 
 
-                <figure><img src="img/portrait2.jpg" class="emoji1" alt="Karol">
-                    <figcaption>
+
+
+
+                <figure id="mirror">
+                    <div id="one">
+                    <img src="img/portrait2.jpg" class="emoji1" alt="Karol">
+                    <!--<figcaption>
                         <p>Karol Antonowicz</p>
                         <div class="lnkd-gh-icons">
                             <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/"><img src="img/lnkd1.png"
@@ -247,9 +253,16 @@
                         </div>
 
 
-                    </figcaption>
-
+                    </figcaption> -->
+                </div>
+                <div id="two">
+                        <img src="img/linkedin-back.png" class="emoji1" alt="Tuomas">
+                </div>
                 </figure>
+
+
+
+
 
 
                 <figure><img src="img/portrait3.jpg" class="emoji1" alt="Karolina">
@@ -346,11 +359,8 @@
 
 
     </footer>
-
-<script src="./kantonowicz.js"></script>
-
     <script>
-        function func(el, trn) {
+        function func(el, trn) {   
 
             if (el.classList.contains('turnAround')) {
                 el.classList.remove('turnAround')
@@ -359,6 +369,22 @@
             }
 
         }
+    </script>
+
+<script>
+       const mirror = document.getElementById("mirror");
+       const mirrorStyleTransform = mirror.style.transform;
+       function mirrorRotate() {
+           if (mirror.style.transform === mirrorStyleTransform) {
+                mirror.style.transform = `rotateY(180deg)`;
+           } else {
+               mirror.style.transform = mirrorStyleTransform
+           }         
+        }
+
+        document.addEventListener('click', mirrorRotate)
+    
+    
     </script>
 
 
