@@ -240,10 +240,16 @@
 
 
 
-                <figure id="mirror">
+                <figure>
+                        <figure id="mirror">
                     <div id="one">
-                    <img src="img/portrait2.jpg" class="emoji1" alt="Karol">
-                    <!--<figcaption>
+                        <img src="img/portrait2.jpg" class="emoji1" alt="Karol">
+                    </div>
+                    <div id="two">
+                        <img src="img/linkedin-back.png" class="emoji1" alt="Tuomas">
+                    </div>
+                        </figure>
+                    <figcaption>
                         <p>Karol Antonowicz</p>
                         <div class="lnkd-gh-icons">
                             <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/"><img src="img/lnkd1.png"
@@ -251,13 +257,7 @@
                             <a href="https://github.com/karol-antonowicz"><img src="img/gh1.png" class="gh"
                                     alt="github"></a>
                         </div>
-
-
-                    </figcaption> -->
-                </div>
-                <div id="two">
-                        <img src="img/linkedin-back.png" class="emoji1" alt="Tuomas">
-                </div>
+                    </figcaption>
                 </figure>
 
 
@@ -360,7 +360,7 @@
 
     </footer>
     <script>
-        function func(el, trn) {   
+        function func(el, trn) {
 
             if (el.classList.contains('turnAround')) {
                 el.classList.remove('turnAround')
@@ -371,20 +371,19 @@
         }
     </script>
 
-<script>
-       const mirror = document.getElementById("mirror");
-       const mirrorStyleTransform = mirror.style.transform;
-       function mirrorRotate() {
-           if (mirror.style.transform === mirrorStyleTransform) {
+    <script>
+        const mirror = document.getElementById("mirror");
+        const mirrorStyleTransform = mirror.style.transform;
+
+        function mirrorRotate() {
+            if (mirror.style.transform === mirrorStyleTransform) {
                 mirror.style.transform = `rotateY(180deg)`;
-           } else {
-               mirror.style.transform = mirrorStyleTransform
-           }         
+            } else {
+                mirror.style.transform = mirrorStyleTransform
+            }
         }
 
         document.addEventListener('click', mirrorRotate)
-    
-    
     </script>
 
 

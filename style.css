@@ -18,10 +18,10 @@ html{
 
 #mirror {
     display: grid;
-    grid-template-rows: 1;
-    grid-template-columns: 1;
     transform-style: preserve-3d;
     transition: 2s;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #one {
