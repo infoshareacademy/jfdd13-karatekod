@@ -28,9 +28,9 @@
         <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text" src="img/bookswap-text.png" alt="teext"></a>
         <a class="nav__a--logo" href="#hero"></a>
         <div class="nav__menu">
-            <a href="#how-it-works">Features</a>
-            <a href="#about">About</a>
-            <a class="nav__a--signup" href="#signup">Sign up</a>
+            <div class="colored"><a href="#how-it-works">Features</a></div>
+            <div class="colored"><a  href="#about">About</a></div>
+            <div class="colored"><a class="nav__a--signup" href="#signup">Sign up</a></div>
         </div>
     </nav>
 
@@ -311,8 +311,8 @@
                 <img src="img/bookswapp_logo-13.png" class="logo-squish-footer">
 
                 <div class="media">
-                    <a href="#"><img class="facelogo" src="img/face1.png"></a>
-                    <a href="#"><img class="instalogo" src="img/insta1.png"></a>
+                    <a href="https://www.facebook.com/BookSwapp-110938070331360/?modal=admin_todo_tour"><img class="facelogo" src="img/face1.png"></a>
+                    <a href="https://www.instagram.com/book___swapp/?hl=pl"><img class="instalogo" src="img/insta1.png"></a>
                 </div>
 
 
@@ -348,20 +348,30 @@
     </footer>
     <script>
         function func(el, trn) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 02dd2631f1b510ca5ba23028f2ad689bdeadf761
             if (el.classList.contains('turnAround')) {
                 el.classList.remove('turnAround')
             } else {
                 el.classList.add(trn)
             }
-<<<<<<< HEAD
-=======
 
->>>>>>> 02dd2631f1b510ca5ba23028f2ad689bdeadf761
         }
+
+
+        var elements = document.getElementsByClassName('colored');
+    for(var i=0; i < elements.length; i++){
+    elements[i].onclick = function(){
+    var el = elements[0];
+    while(el){
+    if(el.tagName === "DIV"){
+    el.classList.remove('active');
+    }
+    el = el.nextSibling;
+
+    }
+    this.classList.add('active');
+    };
+    }
+
     </script>
 
 

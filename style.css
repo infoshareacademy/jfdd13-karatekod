@@ -24,6 +24,11 @@ section.hero{
     width: 100%; 
 }
 
+
+.active{
+    background: pink;
+}
+
 .team-info{
     background: white;
     padding-top: 80px;
