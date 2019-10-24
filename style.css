@@ -13,7 +13,7 @@ html{
 }
 
 section.hero{
-    background-image: url(img/side-books\ \(copy\).jpg); 
+    /* background-image: url(img/side-books\ \(copy\).jpg);  */
     background-size: cover; 
     background-position-y: 40%;
     background-position-x: 70%; 
@@ -22,6 +22,25 @@ section.hero{
     padding: 6rem 1rem 3rem 1rem; 
     text-align: center;
     width: 100%; 
+}
+
+.heroSlides{
+
+    width: 95vw;
+    height: 85%;
+    position: absolute;
+    top: 80px;
+    z-index: 1;
+}
+
+.heroSlide1 {
+    background: url('img/books.jpeg') no-repeat;
+    background-size: cover;
+}
+
+.heroSlide2 {
+    background: url('img/side-books (copy).jpg') no-repeat;
+    background-size: cover;
 }
 
 .team-info{
@@ -349,6 +368,7 @@ width: 112px;
         justify-content: center;
         align-items: center;
         margin-bottom: 0;
+        z-index: 2;
     }
 
     .text h1 {
