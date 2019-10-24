@@ -419,50 +419,31 @@
 
 //------------------------------------------------------- cookies----------------
 
+            
+    function checkCookies() {
 
-
-
-function setCookies(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-  var expires = "expires="+d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
-
-function getCookie(cname) {
-  var name = cname + "=";
-  var ca = document.cookie.split(';');
-  for(var i = 0; i < ca.length; i++) {
-    var c = ca[i];
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1);
+        if (document.cookie.indexOf('www.bookswap.com') == -1) {
+            modalPopup()
+        }
     }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length);
+    
+    // function setCookie1() {
+    //     console.log('cok');
+    //     document.cookie = "username=www.bookswap.com; expires=Thu, 18 Jan 2019 12:00:00 UTC;"
+    // }
+    
+    function setCookie2() {
+        document.cookie = "username=www.bookswap.com; expires=Thu, 18 Jan 2019 12:00:00 UTC;"
     }
-  }
-  return "";
-}
 
-function checkCookie() {
-  var user = getCookie("username");
-  if (user != "") {
-    alert("Welcome again " + user);
-  } else {
-    user = prompt("Please enter your name:", "");
-    if (user != "" && user != null) {
-      setCookie("username", user, 365);
-    }
-  }
-}
     
     
     var buttonAccept1 = document.querySelector('#accept1');
     var buttonAccept2 = document.querySelector('#accept2');
-
     var buttonTerms = document.querySelector('#condition');
 
     
+
     
     
     function showTerms () {
@@ -488,8 +469,10 @@ function checkCookie() {
     }
 
     function setCookie1() {
+        document.cookie = "username=www.bookswap.com; expires=Thu, 18 Jan 2020 12:00:00 UTC;";
         var modalBox = document.querySelector('.modal')
         modalBox.classList.add('accepted');
+        console.log('ssksksk')
         // modalBox.style.display='none';
         setTimeout(endOfModal1, 1900)
 
@@ -509,7 +492,7 @@ function checkCookie() {
     
     
     
-    window.addEventListener('load', modalPopup)
+    window.addEventListener('load', checkCookies);  //zmienione z ModalPopup
     buttonTerms.addEventListener('click', showTerms)
     buttonAccept1.addEventListener('click', setCookie1)
     buttonAccept2.addEventListener('click', setCookie2)
