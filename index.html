@@ -350,32 +350,39 @@
     <!-- ----------------------------------------modal window for cookies--------------------------------------------- -->
     
     <div class="modal fadeIn">
+        <div class="modal-content fadeInTop">
+            <p>We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
+                By clicking “I accept” or using our site, you consent to the use of cookies unless you have disabled them.
+            </p>
 
-           
-            <div class="modal-content fadeInTop">
-              <p>We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
-                    By clicking “I accept” or using our site, you consent to the use of cookies unless you have disabled them.
-                    </p>
-
-                <form action="" class="ModalButtons">       
-                    <button id="condition" type="button">Show Terms</button>
-                    <button id="accept1" type="button">I accept</button>
-                </form>
+            <div action="" class="ModalButtons">       
+                <button id="condition" type="button">Learn More</button>
+                <button id="accept1" type="button">Accept Cookie</button>
             </div>
+        </div>
     </div>
        
     <div class="modal1">
 
         <div class="terms">
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, perferendis repudiandae nesciunt quaerat qui numquam nihil, at asperiores similique consequatur velit unde dolores quod quae obcaecati explicabo dolorum. Sed, soluta? We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
-                By clicking “I accept” or “X” on this banner or using our site, you consent to the use of cookies unless you have disabled them.
-                </p>
+            <p> 
+                <b>Cookies Policy</b> <br>
+                    <em>How We Use Cookies</em><br>
+                    
+                    The cookies we use do not store personally identifiable information nor can they harm your computer. We want our website to be informative, personal, and as user friendly as possible and cookies help us to achieve that goal.
+                    
+                    By using our website, you agree to the use of cookies. We appreciate some users may like more individual control over their visit to our website and can adjust their settings accordingly. You can read all about this here: <a href="https://www.allaboutcookies.org/manage-cookies/clear-cookies-installed.html" class="link-to-cookies"> "How to control and delete cookies"</a>. If you do not agree to such use, please refrain from using the website. <br>
+                    
+                    <em>What are Cookies?</em><br>
+                    
+                    A cookie is a small file and holds a certain amount of data, which our website can send to your browser. It may then be stored on your computer's hard drive and can be accessed by our web server. This cookie data can then be retrieved and can allow us to customise our web pages and services accordingly. It is important to clarify that cookies do not collect any personal data stored on your hard drive or computer.
+            </p>
 
-            <form action="" class="ModalButtons1">
-            <button id="accept2" type="button">I accept</button>
+            <div class="ModalButtons1">
+                <button id="accept2" type="button">Accept Cookie</button>
+            </div>
         </div>
-</div>
-
+    </div>
 
 <!-- ----------------------------------------------end of modal---------------------------------------------------------- -->
 
@@ -386,11 +393,15 @@
     <script>
         var cards = document.querySelectorAll('.card');
             for (i=0;i<8;i++) {
-            flip = cards[i];
-            flip.addEventListener('click', function () { 
-            if (this.classList.contains('turnAround')) {this.classList.remove('turnAround')
-            } else {this.classList.add('turnAround')}});
-            }
+                    flip = cards[i];
+                        flip.addEventListener('click', function () { 
+                            if (this.classList.contains('turnAround')) {
+                        this.classList.remove('turnAround')
+                    } else {
+                this.classList.add('turnAround')}
+                        }
+                    );
+                }       
 
 
 
