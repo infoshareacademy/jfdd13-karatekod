@@ -241,14 +241,36 @@
 
 
                 <figure>
-                        <figure id="mirror">
-                    <div id="one">
-                        <img src="img/portrait2.jpg" class="emoji1" alt="Karol">
-                    </div>
-                    <div id="two">
-                        <img src="img/linkedin-back.png" class="emoji1" alt="Tuomas">
-                    </div>
-                        </figure>
+                    <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/">
+                        <div id="mirror">
+                            <div id="one">
+                                <img src="img/portrait2.jpg" class="emoji1" alt="Karol">
+                            </div>
+                            <div id="two">
+                                
+                                    <!-- element.style {
+                                    width: 100%;
+                                    height: 100%;
+                                }-->
+                                    <div class="dupa1"></div>
+                                    <!--element.style {
+    width: 10px;
+    height: 10ox;
+    height: 10px;
+    background: red;-->
+                                    <div class="dupa2"></div>
+                                    <!--
+    element.style {
+        width: 10px;
+        height: 10ox;
+        height: 10px;
+        background: #5c5861;-->
+
+                                
+
+                            </div>
+                        </div>
+                    </a>
                     <figcaption>
                         <p>Karol Antonowicz</p>
                         <div class="lnkd-gh-icons">
@@ -265,7 +287,10 @@
 
 
 
-                <figure><img src="img/portrait3.jpg" class="emoji1" alt="Karolina">
+
+
+                <figure>
+                    <img src="img/portrait3.jpg" class="emoji1" alt="Karolina">
                     <figcaption>
                         <p>Karolina Michalak</p>
                         <div class="lnkd-gh-icons">
@@ -372,8 +397,10 @@
     </script>
 
     <script>
-        const mirror = document.getElementById("mirror");
+        const mirror = document.getElementById("one");
+        const mirror2 = document.getElementById("two");
         const mirrorStyleTransform = mirror.style.transform;
+        const mirrorStyleTransform2 = mirror2.style.transform;
 
         function mirrorRotate() {
             if (mirror.style.transform === mirrorStyleTransform) {
@@ -381,6 +408,13 @@
             } else {
                 mirror.style.transform = mirrorStyleTransform
             }
+
+            if (mirror2.style.transform === mirrorStyleTransform2) {
+                mirror2.style.transform = `rotateY(0)`;
+            } else {
+                mirror2.style.transform = mirrorStyleTransform2
+            }
+
         }
 
         document.addEventListener('click', mirrorRotate)
