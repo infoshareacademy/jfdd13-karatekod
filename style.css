@@ -1131,7 +1131,10 @@ animation: accepted 2s;
 .link-to-cookies {
     color: #c2185b;
 }
+.cookiePolicy {
+    text-align: justify;
 
+}
 
 
 
