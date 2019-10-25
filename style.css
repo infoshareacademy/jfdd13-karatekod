@@ -322,7 +322,7 @@ width: 112px;
     }
     form{
         display: flex;
-        flex-direction: column;
+        /* lex-difrection: column; */
         justify-content: space-between;
     }
 
@@ -972,39 +972,61 @@ width: 112px;
 /* -------------------------------------------modal window---------------------------------------------------- */
 
 
-@media all and (min-width: 600px) {
 
 
+@media all and (min-width: 600px){
+
+  .modal-content{  
+    margin-top: 35vh;  
+    min-width: 500px;
+    max-width: 33%;
+  }
+
+  .terms {
+    min-width: 500px;
+    max-width: 33%;
+    margin-top: 30vh;
+
+  }
+}
+
+@media all and (max-width: 599px) {
+
+    .modal-content{  
+        margin-top: 30vh;
+        max-width: 90%;
+    }
+    .terms {
+        max-width: 90%;
+        margin-top: 15vh;
+      }
+
+
+
+}
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; 
+    position: fixed; 
     z-index: 2;
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
-   
-   background-color: rgba(0,0,0,0.4); 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
   }
   
-  /* Modal Content/Box */
+  
   .modal-content {
     background-color: #fefefe;
-    margin-top: 15%;
+    
     margin-right: auto;
     margin-left: auto; 
     padding: 20px;
     border: 1px solid #888;
-    max-width: 600px;/* Could be more or less, depending on screen size */
+    
   }
   
-  
-  
-
-
-  }
-
   .ModalButtons {
       display: flex;
       flex-direction: row;
@@ -1013,10 +1035,12 @@ width: 112px;
 
   .ModalButtons > button {
 
-            height: 40px;
-            border-radius: 15px;
-            background-color: #c2185b;
-            width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #c2185b;
+    width: 40%;
+    color:white;
+
 
   }
 
@@ -1051,16 +1075,16 @@ width: 112px;
 }
 
 .modal1 {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none; 
+    position: fixed; 
     z-index: 2;
     left: 0;
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow: auto; /* Enable scroll if needed */
-   
-   background-color: rgba(0,0,0,0.4); 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+
   }
 
 
@@ -1069,12 +1093,12 @@ width: 112px;
 .terms {
     display: none;
     background-color: #fefefe;
-    margin-top: 15%;
     margin-right: auto;
     margin-left: auto; 
     padding: 20px;
     border: 1px solid #888;
-    max-width: 600px;
+    
+    
 
 }
 
@@ -1097,18 +1121,23 @@ animation: accepted 2s;
 
 @keyframes accepted {
     95% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
-    to {
+        to {
         transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
         opacity: 0;
     }
+}
+
+.ModalButtons1 > button {
+
+    height: 40px;
+    border-radius: 10px;
+    background-color: #c2185b;
+    width: 40%;
+    color:white;
+
 }
 
 
 
 
 
-
-
-
-
-/* } ------------------------------end of media min 600------------------------ */
