@@ -36,29 +36,45 @@
             <div class="hero-slideshow-container">
 
                 <div class="heroSlides heroSlide1">
+                    <div class="text">
+                        <h1 class="hero-first-text-line">Register</h1>
+                        <h2>Specify your book prefs</h2>
+                        <h2>Setup your location</h2>
+                    </div>
                 </div>
             
                 <div class="heroSlides heroSlide2">
-                </div>
-<!--             
-                <div class="heroSlides">
-                    <img src="img/tuomas.jpg" style="width:100%">
-                </div> -->
-                    
+                    <div class="text">
+                        <h1 class="hero-first-text-line">Download app</h1>
+                        <h2>Add your books</h2>
+                        <h2>Serach for books</h2>
+                    </div>
+                </div>    
+
+                <div class="heroSlides heroSlide2">
+                    <div class="text">
+                        <h1 class="hero-first-text-line">Use App</h1>
+                        <h2>Read books</h2>
+                        <h2>ENJOY !</h2>
+                    </div>
+                </div> 
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
             </div>
             <br>
 
-            <div style="text-align:center">
-              <span class="dot"></span> 
+            <div class="dots">
+              <span class="dot" onclick="currentSlide(1)"></span> 
               <span class="dot"></span> 
               <span class="dot"></span> 
             </div>
 
             <div class="text">
-                <h1 class="hero-first-text-line">Read your favourite books.</h1>
-                <h1 class="hero-first-text-line">Do something else.</h1>
+                <!-- <h1 class="hero-first-text-line">Read your favourite books.</h1>
                 <h2>Share your thoughts.</h2>
-                <h2>Start book-swapping!</h2>
+                <h2>Start book-swapping!</h2> -->
                 <a class="section__a--signup" href="#signup">
                     <h3>Sign up</h3>
                 </a>
@@ -66,9 +82,17 @@
 
             <script>
                 var slideIndex = 0;
-                showSlides();
-                
-                function showSlides() {
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
                     var i;
                     var slides = document.getElementsByClassName("heroSlides");
                     var dots = document.getElementsByClassName("dot");
