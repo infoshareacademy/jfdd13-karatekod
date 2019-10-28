@@ -299,60 +299,60 @@
 
 
                 <figure>
-                        <div class="mirror">
-                            <div class="one">
-                                <img src="img/tuomas.jpg" class="emoji1" alt="Tuomas Juhanila">
-                            </div>
-                            <div class="two">
-                                <a href="">
-                                    <div class="dupa1"></div>
-                                </a>
-    
-                                <a href="">
-                                    <div class="dupa2"></div>
-                                </a>
-                            </div>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/tuomas.jpg" class="emoji1" alt="Tuomas Juhanila">
                         </div>
-                        </a>
-                        <figcaption>
-                            <p>Tuomas Juhanila</p>
-                            <div class="lnkd-gh-icons">
-                                <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/"><img src="img/lnkd1.png"
-                                        class="lnkd" alt="linkedin"></a>
-                                <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
-                                        alt="github"></a>
-                            </div>
-                        </figcaption>
-                    </figure>
+                        <div class="two">
+                            <a href="">
+                                <div class="dupa1"></div>
+                            </a>
 
-
-
-                        <figure>
-                        <div class="mirror">
-                            <div class="one">
-                                <img src="img/portrait1.jpg" class="emoji1" alt="Karol Andracki">
-                            </div>
-                            <div class="two">
-                                <a href="">
-                                    <div class="dupa1"></div>
-                                </a>
-    
-                                <a href="">
-                                    <div class="dupa2"></div>
-                                </a>
-                            </div>
+                            <a href="">
+                                <div class="dupa2"></div>
+                            </a>
                         </div>
-                        </a>
-                        <figcaption>
-                            <p>Karol Andracki</p>
-                            <div class="lnkd-gh-icons">
-                                <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181"><img src="img/lnkd1.png"
-                                        class="lnkd" alt="linkedin"></a>
-                                <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
-                                        alt="github"></a>
-                            </div>
-                        </figcaption>
-                    </figure>
+                    </div>
+                    </a>
+                    <figcaption>
+                        <p>Tuomas Juhanila</p>
+                        <div class="lnkd-gh-icons">
+                            <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/"><img src="img/lnkd1.png"
+                                    class="lnkd" alt="linkedin"></a>
+                            <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
+                                    alt="github"></a>
+                        </div>
+                    </figcaption>
+                </figure>
+
+
+
+                <figure>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/portrait1.jpg" class="emoji1" alt="Karol Andracki">
+                        </div>
+                        <div class="two">
+                            <a href="">
+                                <div class="dupa1"></div>
+                            </a>
+
+                            <a href="">
+                                <div class="dupa2"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
+                    <figcaption>
+                        <p>Karol Andracki</p>
+                        <div class="lnkd-gh-icons">
+                            <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181"><img src="img/lnkd1.png"
+                                    class="lnkd" alt="linkedin"></a>
+                            <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
+                                    alt="github"></a>
+                        </div>
+                    </figcaption>
+                </figure>
 
 
 
@@ -420,52 +420,75 @@
     </script>
 
     <script>
-        // ONLY FOR KAROL
-        const karol1 = document.getElementsByClassName('one')[0]
-        const karol2 = document.getElementsByClassName('two')[0]
-        const karolStyleTransform1 = karol1.style.transform;
-        const karolStyleTransform2 = karol2.style.transform;
+        // for all
+        function createRotate(index) {
+            const el1 = document.getElementsByClassName('one')[index]
+            const el2 = document.getElementsByClassName('two')[index]
+            const StyleTransform1 = el1.style.transform;
+            const StyleTransform2 = el2.style.transform;
 
-        function karolRotate() {
-            if (karol1.style.transform === karolStyleTransform1) {
-                karol1.style.transform = `rotateY(180deg)`;
-            } else {
-                karol1.style.transform = karolStyleTransform1
-            }
+            return function rotateBitch() {
+                if (el1.style.transform === StyleTransform1) {
+                    el1.style.transform = `rotateY(180deg)`;
+                } else {
+                    el1.style.transform = StyleTransform1
+                }
 
-            if (karol2.style.transform === karolStyleTransform2) {
-                karol2.style.transform = `rotateY(0)`;
-            } else {
-                karol2.style.transform = karolStyleTransform2
-            }
-        }
-        document.addEventListener('click', karolRotate)
-
-
-        //ONLY FOR KAROLINA
-        const karolina1 = document.getElementsByClassName('one')[1]
-        const karolina2 = document.getElementsByClassName('two')[1]
-        const karolinaStyleTransform1 = karolina1.style.transform;
-        const karolinaStyleTransform2 = karolina2.style.transform;
-
-        function karolinaRotate() {
-            if (karolina1.style.transform === karolinaStyleTransform1) {
-                karolina1.style.transform = `rotateY(180deg)`;
-            } else {
-                karolina1.style.transform = karolinaStyleTransform1
-            }
-
-            if (karolina2.style.transform === karolinaStyleTransform2) {
-                karolina2.style.transform = `rotateY(0)`;
-            } else {
-                karolina2.style.transform = karolinaStyleTransform2
+                if (el2.style.transform === StyleTransform2) {
+                    el2.style.transform = `rotateY(0)`;
+                } else {
+                    el2.style.transform = StyleTransform2
+                }
             }
         }
-        document.addEventListener('click', karolinaRotate)
 
-        //ONLY FOR TUOMAS
+        document.addEventListener('click', createRotate(0))
+        document.addEventListener('click', createRotate(1))
+        document.addEventListener('click', createRotate(2))
+        document.addEventListener('click', createRotate(3))
 
-        //ONLY FOR KAROL ANDRACKI
+
+
+     
+
+     /*   function checkPosition(index) {
+            const figura = document.getElementsByTagName('figure')
+        const currentPosition = window.scrollY;
+            console.log('ballbla')
+            if (document.getElementsByTagName('figure')[index].offsetTop < currentPosition + window.outerHeight) {
+                console.log('ok!')
+            }
+        } 
+        */
+
+        document.addEventListener('scroll', () => {  
+        const figura = document.getElementsByTagName('figure')
+        const currentPosition = window.scrollY;
+            console.log('ballbla')
+            if (document.getElementsByTagName('figure')[0].offsetTop < currentPosition + window.outerHeight) {
+                console.log('ok!')
+            }})
+
+
+        /*
+                function scrollDown() {
+                    var element = document.getElementsByTagName('figure')[0].offsetTop
+                    if (Math.round(element / 100) * 100 - 100 === Math.round(document.documentElement.scrollTop / 100) * 100) {
+                        console.log('ok')
+                    }
+                }
+                scrollDown();
+        */
+        /*
+                window.addEventListener('scroll', function() {
+                    const currentPosition = window.scrollY;
+                    console.log(currentPosition)
+                    console.log(document.getElementsByTagName('figure')[0].offsetTop)
+               if (document.getElementsByTagName('figure')[0].offsetTop < window.scrollY + window.outerHeight) {
+                   console.log('ok!')
+               }
+            })
+            */
     </script>
 
 
