@@ -442,33 +442,39 @@
             }
         }
 
-        document.addEventListener('click', createRotate(0))
-        document.addEventListener('click', createRotate(1))
-        document.addEventListener('click', createRotate(2))
-        document.addEventListener('click', createRotate(3))
-
-
-
-     
-
-     /*   function checkPosition(index) {
-            const figura = document.getElementsByTagName('figure')
-        const currentPosition = window.scrollY;
-            console.log('ballbla')
-            if (document.getElementsByTagName('figure')[index].offsetTop < currentPosition + window.outerHeight) {
-                console.log('ok!')
-            }
-        } 
-        */
-
-        document.addEventListener('scroll', () => {  
         const figura = document.getElementsByTagName('figure')
         const currentPosition = window.scrollY;
-            console.log('ballbla')
-            if (document.getElementsByTagName('figure')[0].offsetTop < currentPosition + window.outerHeight) {
-                console.log('ok!')
-            }})
 
+        function checkPosition() {
+           for (index=0; index<4; index++)
+            if (figura[index].offsetTop + figura[index].offsetHeight/2 < window.scrollY + window.outerHeight) {
+                createRotate(index)()
+            }
+        }
+        document.addEventListener('scroll', checkPosition)
+       
+
+        /*   function checkPosition(index) {
+               const figura = document.getElementsByTagName('figure')
+           const currentPosition = window.scrollY;
+               console.log('ballbla')
+               if (document.getElementsByTagName('figure')[index].offsetTop < currentPosition + window.outerHeight) {
+                   console.log('ok!')
+               }
+           } 
+           */
+        /*
+                document.addEventListener('scroll', () => {
+                    const figura = document.getElementsByTagName('figure')
+                    const currentPosition = window.scrollY;
+                    if (document.getElementsByTagName('figure')[0].offsetTop + document.getElementsByTagName('figure')[
+                            0].offsetHeight < currentPosition + window.outerHeight) {
+                        console.log('ok!')
+                    }
+                })
+
+
+                */
 
         /*
                 function scrollDown() {
