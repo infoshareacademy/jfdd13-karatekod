@@ -1121,6 +1121,24 @@ animation: accepted 2s;
         opacity: 0;
     }
 }
+
+.accepted1 { 
+    animation: accepted1 2s;
+    }
+    
+    @keyframes accepted1 {
+        from { opacity: 1; }
+            to {
+            
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
 .ModalButtons1 {
     display: flex;
     justify-content: flex-end;

@@ -50,9 +50,9 @@ var cards = document.querySelectorAll('.card');
     function setCookie1() {
         document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
         var modalBox = document.querySelector('.modal');
-        modalBox.classList.add('accepted');
+        modalBox.classList.add('accepted1');   
         console.log('set cookie 1');
-        setTimeout(endOfModal1, 1900);
+        setTimeout(endOfModal1, 2000);
     }
     function showTerms () {
         var terms = document.querySelector('.terms');
