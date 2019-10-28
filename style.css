@@ -983,9 +983,9 @@ width: 112px;
 @media all and (min-width: 600px){
 
   .modal-content{  
-    margin-top: 35vh;  
-    min-width: 500px;
-    max-width: 33%;
+      
+    
+    max-width: 100%;
   }
 
   .terms {
@@ -999,14 +999,17 @@ width: 112px;
 @media all and (max-width: 599px) {
 
 .modal-content{  
-    margin-top: 30vh;
-    max-width: 90%;
+    
+    width: 100%;
 }
 .terms {
     max-width: 90%;
     margin-top: 10vh;
 }
 }
+
+/* -------------------------------------------------------------- */
+
 .modal {
     display: none; 
     position: fixed; 
@@ -1016,13 +1019,14 @@ width: 112px;
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.4); 
+     
   }
   
   
 .modal-content {
     background-color: #fefefe;
-    
+    position: absolute;
+    bottom: 0%;
     margin-right: auto;
     margin-left: auto; 
     padding: 20px;
@@ -1033,8 +1037,8 @@ width: 112px;
 .ModalButtons {
     display: flex;
     flex-direction: row;
-    padding: 10px 20%;
-    justify-content: space-between;
+    padding-right: 20px;
+    justify-content: flex-end;
   }
 
 .ModalButtons > button {
@@ -1042,7 +1046,7 @@ width: 112px;
     height: 40px;
     border-radius: 10px;
     background-color: #c2185b;
-    width: 40%;
+    width: 100px;
     color:white;
 }
 
@@ -1069,8 +1073,8 @@ width: 112px;
     animation: fadeInTop 2s;
  }
 @keyframes fadeInTop {
-    from { transform: translateY(-100%) }
-    30% { transform: translateY(100px) }
+    from { opacity: 0; }
+    to { opacity: 1 }
 }
 
 .modal1 {
