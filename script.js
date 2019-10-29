@@ -75,10 +75,7 @@ var cards = document.querySelectorAll('.card');
 
 
 
-    window.addEventListener('load', checkCookies); 
-    buttonTerms.addEventListener('click', showTerms);
-    buttonAccept1.addEventListener('click', setCookie1);
-    buttonAccept2.addEventListener('click', setCookie2);
+    
 
     
     
@@ -127,18 +124,31 @@ var cards = document.querySelectorAll('.card');
         document.documentElement.scrollTop = 0;
     })
 
+///------------------------------------------------------------slider
+
+    const range = document.getElementById('range');
+    const months = document.getElementById('months')
+    months.innerHTML = range.value;
+    range.oninput = function() {
+        months.innerHTML = this.value;
+    }
+
+    function changeSliderColor() {
+        var x = range.value;
+        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*8}%, rgb(245, 187, 208) ${x*8}%)`
+        range.style.background = color; 
+    }
 
 
 
 
 
 
-
-
-    // window.addEventListener('load', checkCookies); 
-    // buttonTerms.addEventListener('click', showTerms);
-    // buttonAccept1.addEventListener('click', setCookie1);
-    // buttonAccept2.addEventListener('click', setCookie2);
+    window.addEventListener('load', checkCookies); 
+    range.addEventListener('mousemove', changeSliderColor)
+    buttonTerms.addEventListener('click', showTerms);
+    buttonAccept1.addEventListener('click', setCookie1);
+    buttonAccept2.addEventListener('click', setCookie2);
 
     
     
