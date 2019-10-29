@@ -134,7 +134,7 @@ a{
 }
 
 a:hover{
-    opacity: 0.8;
+    /* opacity: 0.8; */
     transition: all 0.3s ease 0s;  
 }
 
@@ -604,8 +604,9 @@ width: 112px;
     }
 
     .nav__a--signup:hover {
-        background-color:#FF9800;
+        background-color: #c2185b;
         color: #c2185b;  
+        
     }
 
 
@@ -670,7 +671,6 @@ width: 112px;
 }
 
     .nav__a--logo  {
-        /* width: 35%; */
         display: initial;
         align-self: left;
         display: flex;
