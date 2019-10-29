@@ -35,7 +35,7 @@
         <section class="hero" id="hero">
             <div class="hero-slideshow-container">
 
-                <div class="heroSlides heroSlide1">
+                <div class="heroSlides heroSlide1 herofade">
                     <div class="text">
                         <h1 class="hero-first-text-line">Register</h1>
                         <h2>Specify your book prefs</h2>
@@ -43,15 +43,15 @@
                     </div>
                 </div>
             
-                <div class="heroSlides heroSlide2">
+                <div class="heroSlides heroSlide2 herofade">
                     <div class="text">
                         <h1 class="hero-first-text-line">Download app</h1>
                         <h2>Add your books</h2>
-                        <h2>Serach for books</h2>
+                        <h2>Search for books</h2>
                     </div>
                 </div>    
 
-                <div class="heroSlides heroSlide2">
+                <div class="heroSlides heroSlide3 herofade">
                     <div class="text">
                         <h1 class="hero-first-text-line">Use App</h1>
                         <h2>Read books</h2>
@@ -59,16 +59,16 @@
                     </div>
                 </div> 
 
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
 
             </div>
             <br>
 
             <div class="dots">
+              <span class="dot" onclick="currentSlide(0)"></span> 
               <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot"></span> 
-              <span class="dot"></span> 
+              <span class="dot" onclick="currentSlide(2)"></span> 
             </div>
 
             <div class="text">
@@ -84,9 +84,9 @@
                 var slideIndex = 0;
                 showSlides(slideIndex);
 
-                function plusSlides(n) {
-                showSlides(slideIndex += n);
-                }
+                // function plusSlides(n) {
+                // showSlides(slideIndex += n);
+                // }
 
                 function currentSlide(n) {
                 showSlides(slideIndex = n);
@@ -106,7 +106,7 @@
                     }
                     slides[slideIndex-1].style.display = "block";  
                     dots[slideIndex-1].className += " active";
-                    setTimeout(showSlides, 6000);
+                    setTimeout(showSlides, 5000);
                 }
             </script>
 
