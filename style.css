@@ -107,12 +107,12 @@ section.hero{
   }
 
   @-webkit-keyframes herocolorchange3 {
-    from {background-color: 212121;}
+    from {background-color: #212121;}
     to {background-color: #c2185b;}
   }
   
   @keyframes herocolorchange3 {
-    from {background-color: 212121;}
+    from {background-color: #212121;}
     to {background-color: #c2185b;}
   }
   
