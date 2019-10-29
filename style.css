@@ -39,7 +39,7 @@ html{
     bottom: 0;
     left: 0;
     right: 0;
-    transition: 2s;
+    transition: 1s;
 
     /* grid-row-end: 1; */
     backface-visibility: hidden;
@@ -52,7 +52,7 @@ html{
     bottom: 0;
     left: 0;
     right: 0;
-    transition: 2s;
+    transition: 1s;
 
     grid-column-start: 0;
     /* grid-column-start: 1; */

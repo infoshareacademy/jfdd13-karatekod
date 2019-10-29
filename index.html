@@ -246,11 +246,11 @@
                             <img src="img/portrait2.jpg" class="emoji1" alt="Karol Antonowicz">
                         </div>
                         <div class="two">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/">
                                 <div class="dupa1"></div>
                             </a>
 
-                            <a href="">
+                            <a href="https://github.com/karol-antonowicz">
                                 <div class="dupa2"></div>
                             </a>
                         </div>
@@ -258,12 +258,6 @@
                     </a>
                     <figcaption>
                         <p>Karol Antonowicz</p>
-                        <div class="lnkd-gh-icons">
-                            <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/karol-antonowicz"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
                 </figure>
 
@@ -275,11 +269,11 @@
                             <img src="img/portrait3.jpg" class="emoji1" alt="Karolina Michalak">
                         </div>
                         <div class="two">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/karolina-michalak-94b394196/">
                                 <div class="dupa1"></div>
                             </a>
 
-                            <a href="">
+                            <a href="https://github.com/karolina-michalak">
                                 <div class="dupa2"></div>
                             </a>
                         </div>
@@ -287,12 +281,6 @@
                     </a>
                     <figcaption>
                         <p>Karolina Michalak</p>
-                        <div class="lnkd-gh-icons">
-                            <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/karolina-michalak"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
                 </figure>
 
@@ -304,11 +292,11 @@
                             <img src="img/tuomas.jpg" class="emoji1" alt="Tuomas Juhanila">
                         </div>
                         <div class="two">
-                            <a href="">
+                            <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/">
                                 <div class="dupa1"></div>
                             </a>
 
-                            <a href="">
+                            <a href="https://github.com/TuomasJuhanila">
                                 <div class="dupa2"></div>
                             </a>
                         </div>
@@ -316,12 +304,6 @@
                     </a>
                     <figcaption>
                         <p>Tuomas Juhanila</p>
-                        <div class="lnkd-gh-icons">
-                            <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
                 </figure>
 
@@ -333,11 +315,11 @@
                             <img src="img/portrait1.jpg" class="emoji1" alt="Karol Andracki">
                         </div>
                         <div class="two">
-                            <a href="">
+                            <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181">
                                 <div class="dupa1"></div>
                             </a>
 
-                            <a href="">
+                            <a href="https://github.com/karol-andracki">
                                 <div class="dupa2"></div>
                             </a>
                         </div>
@@ -345,12 +327,6 @@
                     </a>
                     <figcaption>
                         <p>Karol Andracki</p>
-                        <div class="lnkd-gh-icons">
-                            <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
                 </figure>
 
@@ -420,81 +396,56 @@
     </script>
 
     <script>
-        // for all
-        function createRotate(index) {
-            const el1 = document.getElementsByClassName('one')[index]
-            const el2 = document.getElementsByClassName('two')[index]
-            const StyleTransform1 = el1.style.transform;
-            const StyleTransform2 = el2.style.transform;
+        //SCRIPT FOR ANIMATED PICTURES //
 
-            return function rotateBitch() {
-                if (el1.style.transform === StyleTransform1) {
-                    el1.style.transform = `rotateY(180deg)`;
+        let bull = [false, false, false, false]                         // tworzę tablicę bull, w której są 4 elementy, początkowo każdy ma wartość false
+                                                                        // będzie to służyć jako dodatkowy warunek niżej
+        function createRotate(index, fliped) {                           // funkcja createRotate przyjmuje dwa argumenty  index elementu i stan fliped (back lub front)                      
+            const el1 = document.getElementsByClassName('one')[index]    // łapie element o klasie 'one' i indeksie z paremtru
+            const el2 = document.getElementsByClassName('two')[index]   // łapie element o klasie 'two' i indeksie z parametru
+            const StyleTransform1 = "";                                 // tworzy 'pusty' styl - bez obrotu
+            const StyleTransform2 = "";
+                // dla elementu 
+                if (fliped === 'back') {                                // jesli stan jest back to 
+                    el1.style.transform = `rotateY(180deg)`;            // zmienia style.transform na rotateY180
                 } else {
-                    el1.style.transform = StyleTransform1
+                    el1.style.transform = StyleTransform1                  //w inntn wypadku zmienia styl transform na ""
+                    console.log(el1.style.transform)
                 }
 
-                if (el2.style.transform === StyleTransform2) {
-                    el2.style.transform = `rotateY(0)`;
+                if (fliped === 'back') {                                // jesli styl jest back to 
+                    el2.style.transform = `rotateY(0)`;                    // zmienia style.transform na rotateY0
+                    console.log(el2.style.transform)                    
                 } else {
-                    el2.style.transform = StyleTransform2
+                    el2.style.transform = StyleTransform2               // w innym wypadku zmienia styl transform na ""
+                    console.log(el2.style.transform)
                 }
             }
-        }
+        const figura = document.getElementsByTagName('figure')      // lapie elementy o tagu figure [tablica]
+        const currentPosition = window.scrollY;                     // wrzucam do zmiennej window.scrollY czyli polozenie scrolla wzgl. gory ekranu
 
-        const figura = document.getElementsByTagName('figure')
-        const currentPosition = window.scrollY;
+        function checkPosition() {                              // funkcja checkPosition sprawdza położenie uzytkownika na stronie 
+           for (let index=0; index<4; index++) {                // iteruje od 0 do 3 bo 
+            let a = figura[index].offsetTop + figura[index].offsetHeight/2 < window.scrollY + window.outerHeight // tworzy a, ktory przyjmuje prawda czy falsz w zaleznosci od tego polozenia na stronie
+            if (!bull[index]  && a) {   // jesli element tablicy bull o indeksie takim jak tutaj indeks jest false i a jest true to
+                bull[index] = true;     // zmienia wartosc na true elementu o indeksie jak index tablicy bull i 
+               //createRotate(index)  
+               // przy spelnieniu tych warunkow jw. odpala sie funkcja createRotate z opoznieniem zaleznym od indexu i 'back'
+               setTimeout(createRotate,0 + 100*index, index, 'back')    // ustawia setTimeout i odpala createRotate, dla kolejnych zdjec z opoznieniem bo inny index                   
+                                                                        // window.setTimeout(funkcja, opóźnienie[, param1, param2, ...]);
 
-        function checkPosition() {
-           for (index=0; index<4; index++)
-            if (figura[index].offsetTop + figura[index].offsetHeight/2 < window.scrollY + window.outerHeight) {
-                createRotate(index)()
-            }
+
+                //createRotate(index)                                                          
+               setTimeout( () => {                                      
+                createRotate(index, 'front');                           // odpala createRotate z parametrami index i 'front' 
+                document.querySelectorAll('.mirror')[index].addEventListener('mouseenter', function(){ createRotate(index, 'back')})    // łapie element 'mirror na stronie o indexie, dodaje mu eventlistener po najechaniu myszka odpala sie funkcja createRotate z indexem i back
+                document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', function(){ createRotate(index, 'front')})   // łapie element 'mirror na stronie o indexie, dodaje mu eventlistener po najechaniu myszka odpala sie funkcja createRotate z indexem i front
+               },1000 + 100*index)            // opoznienie zalezne od indexu
+            }    
         }
+    }
         document.addEventListener('scroll', checkPosition)
-       
 
-        /*   function checkPosition(index) {
-               const figura = document.getElementsByTagName('figure')
-           const currentPosition = window.scrollY;
-               console.log('ballbla')
-               if (document.getElementsByTagName('figure')[index].offsetTop < currentPosition + window.outerHeight) {
-                   console.log('ok!')
-               }
-           } 
-           */
-        /*
-                document.addEventListener('scroll', () => {
-                    const figura = document.getElementsByTagName('figure')
-                    const currentPosition = window.scrollY;
-                    if (document.getElementsByTagName('figure')[0].offsetTop + document.getElementsByTagName('figure')[
-                            0].offsetHeight < currentPosition + window.outerHeight) {
-                        console.log('ok!')
-                    }
-                })
-
-
-                */
-
-        /*
-                function scrollDown() {
-                    var element = document.getElementsByTagName('figure')[0].offsetTop
-                    if (Math.round(element / 100) * 100 - 100 === Math.round(document.documentElement.scrollTop / 100) * 100) {
-                        console.log('ok')
-                    }
-                }
-                scrollDown();
-        */
-        /*
-                window.addEventListener('scroll', function() {
-                    const currentPosition = window.scrollY;
-                    console.log(currentPosition)
-                    console.log(document.getElementsByTagName('figure')[0].offsetTop)
-               if (document.getElementsByTagName('figure')[0].offsetTop < window.scrollY + window.outerHeight) {
-                   console.log('ok!')
-               }
-            })
-            */
     </script>
 
 
