@@ -72,11 +72,73 @@ var cards = document.querySelectorAll('.card');
 
     }
 
-    
+
+
+
     window.addEventListener('load', checkCookies); 
     buttonTerms.addEventListener('click', showTerms);
     buttonAccept1.addEventListener('click', setCookie1);
     buttonAccept2.addEventListener('click', setCookie2);
+
+    
+    
+
+    
+     //podświetlanie się buttonów w sekcji "nav" po scrollowaniu na konkretną sekcję
+     window.addEventListener('scroll', function () {
+        const currentPosition = window.scrollY + window.outerHeight / 2;
+
+        var navButtons = document.getElementsByClassName('colored');
+
+        const howItWorks = document.getElementById('how-it-works');
+
+        const signUp = document.getElementById('signup');
+
+        const about = document.getElementById('about');
+
+        for (var i = 0; i < navButtons.length; i++) {
+            navButtons[i].classList.remove('active')
+        }
+        if (currentPosition  >= howItWorks.offsetTop && currentPosition < signUp.offsetTop) {
+            navButtons[0].classList.add('active')
+        } else if (currentPosition >=  signUp.offsetTop && currentPosition <  about.offsetTop) {
+            navButtons[2].classList.add('active')
+        } else if (currentPosition >=  about.offsetTop) {
+            navButtons[1].classList.add('active')
+        }
+
+    });
+
+
+    //pojawianie się buttona "top" 
+    toTheTopButton = document.querySelector('.toTheTopButton');
+    var navButtons = document.getElementsByClassName('colored');
+
+    window.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            toTheTopButton.style.display = "block";
+        } else {
+            toTheTopButton.style.display = "none";
+        }
+    });
+
+    //button "top" powoduje powrót na górę strony
+    toTheTopButton.addEventListener('click', function () {
+        document.documentElement.scrollTop = 0;
+    })
+
+
+
+
+
+
+
+
+
+    // window.addEventListener('load', checkCookies); 
+    // buttonTerms.addEventListener('click', showTerms);
+    // buttonAccept1.addEventListener('click', setCookie1);
+    // buttonAccept2.addEventListener('click', setCookie2);
 
     
     
