@@ -801,11 +801,13 @@ width: 112px;
     flex-direction: column;
     margin: 40px;
     padding-top: 50px;
+    width: 50%;
+    margin-right: 10px;
 }
 
 .news-form{
     margin: 10px;
-    width: 50%;
+    width: 100%;
 }
 
 .newsletter-button{
@@ -1191,4 +1193,37 @@ animation: accepted 2s;
 }
 
 
+#formCalculator {
+    display: flex;
+    
+}
+#calculator {
+    width: 50%;
+    border: 1px solid black;
+    margin: 40px;
+    display: grid;
+    margin-left: 10px;
+    grid-template-areas: 
+    "description"
+    "radio"
+    "amount"
+    "slider";
 
+
+}
+#calc-description {
+
+    grid-area: description;
+}
+#calc-radio {
+
+    grid-area: radio;
+}
+#calc-amount {
+
+    grid-area: amount;
+}
+#calc-slider {
+
+    grid-area: slider;
+}
