@@ -48,11 +48,11 @@ section.hero{
     background-size: cover;
 }
 
-.herofade {
+/* .herofade {
     -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    -webkit-animation-duration: 1s;
     animation-name: fade;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
   }
   
   @-webkit-keyframes fade {
@@ -63,8 +63,59 @@ section.hero{
   @keyframes fade {
     from {opacity: .4} 
     to {opacity: 1}
+  } */
+
+  .heroHOne {
+    -webkit-animation-name: herocolorchange;
+    -webkit-animation-duration: 3s;
+    animation-name: herocolorchange;
+    animation-duration: 3s;
   }
 
+  @-webkit-keyframes herocolorchange {
+    from {color: black;}
+    to {color: #c2185b;}
+  }
+  
+  @keyframes herocolorchange {
+    from {color: black;}
+    to {color: #c2185b;}
+  }
+
+  .heroHTwo {
+    -webkit-animation-name: herocolorchange2;
+    -webkit-animation-duration: 4s;
+    animation-name: herocolorchange2;
+    animation-duration: 4s;
+  }
+
+  @-webkit-keyframes herocolorchange2 {
+    from {color: #c2185b;}
+    to {color: black;}
+  }
+  
+  @keyframes herocolorchange2 {
+    from {color: #c2185b;}
+    to {color: black;}
+  }
+
+  .section__a--signup {
+    -webkit-animation-name: herocolorchange3;
+    -webkit-animation-duration: 3s;
+    animation-name: herocolorchange3;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes herocolorchange3 {
+    from {background-color: black;}
+    to {background-color: #c2185b;}
+  }
+  
+  @keyframes herocolorchange3 {
+    from {background-color: black;}
+    to {background-color: #c2185b;}
+  }
+  
 /* .prev, .next {
     z-index: 1;
     cursor: pointer;
@@ -105,6 +156,7 @@ section.hero{
     position: relative;
     z-index: 3;
     width: 60%;
+    padding-top: 590px;
 }
 
 .dot{
@@ -784,7 +836,7 @@ width: 112px;
 
 
     .text {
-        margin-top: 0rem;
+        margin-top: 6rem;
         width: 60%;
         height: 75%;
         
