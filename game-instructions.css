@@ -1,0 +1,67 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+@media screen and (max-width:799px){
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+.book-swapp-logo{
+    max-height: 150px;
+    max-width: 50%;
+   
+}
+
+h1{
+    color: #c2185b;
+    text-align: center;
+   
+}
+
+p{
+    text-align: center
+}
+
+.enjoy{
+    color: #c2185b;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.button-start-game,
+.button-back{
+    border: 1px solid #c2185b;
+    color: white;
+    background-color: #c2185b;
+    width: 150px;
+    border-radius: 30px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+}
