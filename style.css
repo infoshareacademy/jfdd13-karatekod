@@ -84,25 +84,25 @@ html{
      transform: rotateY(180deg);
 }
 
-.dupa1{
+.linkedinButton{
     background-image: url(img/lnkd1.png); 
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     height: 50%;    
 }
-.dupa1:hover{
+.linkedinButton:hover{
     opacity: 0.8;
 
 }
-.dupa2{
+.githubButton{
     background-image: url(img/gh1.png);
     background-size: 50%;
     background-repeat: no-repeat;
     background-position: center;
     height: 50%;  
 }
-.dupa2:hover{
+.githubButton:hover{
     opacity: 0.8;
 
 }
