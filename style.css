@@ -99,7 +99,7 @@ section.hero{
     to {color: #212121;}
   }
 
-  .section__a--signup {
+  /* .section__a--signup {
     -webkit-animation-name: herocolorchange3;
     -webkit-animation-duration: 3s;
     animation-name: herocolorchange3;
@@ -114,7 +114,7 @@ section.hero{
   @keyframes herocolorchange3 {
     from {background-color: #212121;}
     to {background-color: #c2185b;}
-  }
+  } */
   
 /* .prev, .next {
     z-index: 1;
@@ -156,7 +156,7 @@ section.hero{
     position: relative;
     z-index: 3;
     width: 60%;
-    padding-top: 590px;
+
 }
 
 .dot{
@@ -551,6 +551,7 @@ width: 112px;
         margin-top: 3rem;
         padding: 0.5rem;
     }
+
     .section__a--signup:hover {
         background-color: #FF9800;
         color: black;
@@ -836,7 +837,7 @@ width: 112px;
 
 
     .text {
-        margin-top: 6rem;
+        margin-top: 3rem;
         width: 60%;
         height: 75%;
         
@@ -857,7 +858,7 @@ width: 112px;
        }
     
        .section__a--signup {
-        margin-top: 1.8rem;
+        margin-top: 8rem;
                 
     }
 
