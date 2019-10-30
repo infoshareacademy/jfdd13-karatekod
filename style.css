@@ -34,6 +34,117 @@ html{
   }
 
   
+/* ADDING FOR 3D ORBIT ROTATE IN TEAM PHOTOS */
+
+
+.socialRotate {
+    transform: rotateY(180deg);
+
+}
+
+.mirror {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    max-width: 180px;
+    transition: 2s;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.one {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+
+    /* grid-row-end: 1; */
+    backface-visibility: hidden;
+}
+
+.two {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+
+    grid-column-start: 0;
+    /* grid-column-start: 1; */
+    grid-row-start: 0;
+    /* grid-row-end: 1; */
+    backface-visibility: hidden;
+     transform: rotateY(180deg);
+}
+
+.dupa1{
+    background-image: url(img/lnkd1.png); 
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;    
+}
+.dupa1:hover{
+    opacity: 0.8;
+
+}
+.dupa2{
+    background-image: url(img/gh1.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;  
+}
+.dupa2:hover{
+    opacity: 0.8;
+
+}
+
+/* #mirror {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: 2s;
+    padding-left: 0;
+    padding-right: 0;
+} */
+
+/* #one {
+  grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  
+}
+
+#two {
+    grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  backface-visibility: hidden;
+   
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section.hero{
     background-image: url(img/side-books\ \(copy\).jpg); 
@@ -107,6 +218,7 @@ figure figcaption{
     width: 180px;
     max-width: 100%;
     height: auto;
+
 }
 
  figcaption .lnkd-gh-icons{ 
