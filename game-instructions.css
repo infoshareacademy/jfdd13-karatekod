@@ -14,6 +14,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    background: url("img/game-pattern1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center center;
+    
+
 }
 
 .instructions{
@@ -22,6 +30,25 @@
     justify-content: space-around;
     align-items: center;
     width: 80%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.game-instructions{
+    color: #ff9800;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.border{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    /* border: 1px solid #f8bbd0;
+    background: #f8bbd0; */
 }
 
 .book-swapp-logo{
@@ -37,17 +64,30 @@ h1{
 }
 
 p{
-    text-align: center
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.how-to{
+    color: #c2185b;
 }
 
 .enjoy{
+    font-size: 40px;
+    font-weight: bold;
     color: #c2185b;
-}
+} 
 
 .buttons{
     display: flex;
     flex-direction: row;
-    justify-content: center
+   
+}
+
+.button-start-game{
+    margin-right: 20px;
 }
 
 .button-start-game,
@@ -55,7 +95,7 @@ p{
     border: 1px solid #c2185b;
     color: white;
     background-color: #c2185b;
-    width: 150px;
+    width: 160px;
     border-radius: 30px;
     height: 40px;
     font-weight: bold;
@@ -63,5 +103,128 @@ p{
     cursor: pointer;
 }
 
+.button-start-game:hover,
+.button-back:hover{
+    background: #ff9800;
+    color: black;
+    border: 1px solid #ff9800;
+    transition: 0.3s
+
 
 }
+} 
+
+@media screen and (min-width: 800px){
+
+    
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("img/game-pattern1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    
+    
+
+}
+
+.instructions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    margin-top: 15px;
+}
+
+.game-instructions{
+    color: #ff9800;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.border{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+
+}
+
+.book-swapp-logo{
+    max-height: 150px;
+    max-width: 50%;
+   
+}
+
+h1{
+    color: #c2185b;
+    text-align: center;
+   
+}
+
+p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+.how-to{
+    color: #c2185b;
+    font-size: 30px;
+}
+
+.enjoy{
+    font-size: 40px;
+    font-weight: bold;
+    color: #c2185b;
+} 
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.button-start-game{
+    margin-right: 20px;
+}
+
+.button-start-game,
+.button-back{
+    border: 1px solid #c2185b;
+    color: white;
+    background-color: #c2185b;
+    width: 200px;
+    border-radius: 30px;
+    height: 60px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.button-start-game:hover,
+.button-back:hover{
+    background: #ff9800;
+    color: black;
+    border: 1px solid #ff9800;
+    transition: 0.3s;
+
+}
+
+}
+
+
+
+
+

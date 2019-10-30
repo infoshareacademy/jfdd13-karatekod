@@ -62,8 +62,6 @@ html{
     left: 0;
     right: 0;
     transition: 1s;
-
-    /* grid-row-end: 1; */
     backface-visibility: hidden;
 }
 
@@ -75,11 +73,8 @@ html{
     left: 0;
     right: 0;
     transition: 1s;
-
     grid-column-start: 0;
-    /* grid-column-start: 1; */
     grid-row-start: 0;
-    /* grid-row-end: 1; */
     backface-visibility: hidden;
      transform: rotateY(180deg);
 }
@@ -106,44 +101,6 @@ html{
     opacity: 0.8;
 
 }
-
-/* #mirror {
-    display: grid;
-    transform-style: preserve-3d;
-    transition: 2s;
-    padding-left: 0;
-    padding-right: 0;
-} */
-
-/* #one {
-  grid-column-start: 0;
-  grid-column-start: 1;
-  grid-row-start: 0;
-  grid-row-end: 1;
-  
-}
-
-#two {
-    grid-column-start: 0;
-  grid-column-start: 1;
-  grid-row-start: 0;
-  grid-row-end: 1;
-  backface-visibility: hidden;
-   
-}
-*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 section.hero{
@@ -246,7 +203,6 @@ a{
 }
 
 a:hover{
-    /* opacity: 0.8; */
     transition: all 0.3s ease 0s;  
 }
 
@@ -278,10 +234,6 @@ footer .footer-main{
 width: 112px;
 }
 
-
-
-
-
 .footer-left{
     display: flex;
     flex-direction: column;
@@ -311,7 +263,7 @@ width: 112px;
 
     margin: 0;
     font-size: 0.7rem;
-  }
+}
 
 
 .terms-of-service{
@@ -402,10 +354,6 @@ width: 112px;
     #functionality {
         
         margin: 0 40px;
-        
-        
-        
-        
     }
     
     .column {
@@ -440,7 +388,6 @@ width: 112px;
 
     div.flex {
         display: flex;
-        /* background-color: #f5bbd0; */
         border-radius: 30px;
         margin-bottom: 10px;
         margin-top: 10px;
@@ -469,11 +416,6 @@ width: 112px;
         color:   #262626;
         margin-bottom: 15px;
     }
-    /* form{
-        display: flex;
-        lex-difrection: column;
-        justify-content: space-between;
-    } */
 
     .inputs{
         display: flex;
@@ -869,7 +811,6 @@ width: 112px;
         padding-top: 3.5rem;
         height: 100vh;
    }
-/*88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
 
 
 .HowItWorks {
@@ -888,13 +829,10 @@ width: 112px;
     
 }
 
-
-
 .DownloadIcon, .PreferencesIcon, .BooksIcon, .ExchangeIcon {
     max-width: 100%;
 }
 
-/*888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888*/
 .team-info-photos{
     flex-direction: row;
     margin: 30px 0;
@@ -937,10 +875,8 @@ width: 112px;
     background-color:#FF9800;
     color: black;
     transition: all 0.3s ease 0s;
-
     
 }
-
 
 
 .sign-in-contact-input::placeholder {
