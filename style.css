@@ -34,6 +34,117 @@ html{
   }
 
   
+/* ADDING FOR 3D ORBIT ROTATE IN TEAM PHOTOS */
+
+
+.socialRotate {
+    transform: rotateY(180deg);
+
+}
+
+.mirror {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    max-width: 180px;
+    transition: 2s;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+.one {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+
+    /* grid-row-end: 1; */
+    backface-visibility: hidden;
+}
+
+.two {
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 1s;
+
+    grid-column-start: 0;
+    /* grid-column-start: 1; */
+    grid-row-start: 0;
+    /* grid-row-end: 1; */
+    backface-visibility: hidden;
+     transform: rotateY(180deg);
+}
+
+.dupa1{
+    background-image: url(img/lnkd1.png); 
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;    
+}
+.dupa1:hover{
+    opacity: 0.8;
+
+}
+.dupa2{
+    background-image: url(img/gh1.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 50%;  
+}
+.dupa2:hover{
+    opacity: 0.8;
+
+}
+
+/* #mirror {
+    display: grid;
+    transform-style: preserve-3d;
+    transition: 2s;
+    padding-left: 0;
+    padding-right: 0;
+} */
+
+/* #one {
+  grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  
+}
+
+#two {
+    grid-column-start: 0;
+  grid-column-start: 1;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  backface-visibility: hidden;
+   
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 section.hero{
     background-image: url(img/side-books\ \(copy\).jpg); 
@@ -107,6 +218,7 @@ figure figcaption{
     width: 180px;
     max-width: 100%;
     height: auto;
+
 }
 
  figcaption .lnkd-gh-icons{ 
@@ -357,11 +469,11 @@ width: 112px;
         color:   #262626;
         margin-bottom: 15px;
     }
-    form{
+    /* form{
         display: flex;
-        flex-direction: column;
+        lex-difrection: column;
         justify-content: space-between;
-    }
+    } */
 
     .inputs{
         display: flex;
@@ -886,7 +998,6 @@ width: 112px;
     
 }
 
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -898,9 +1009,6 @@ width: 112px;
 
 }
 }
-
-
-
 .card {
     display: grid;
     grid-template-columns: 1fr;
@@ -909,11 +1017,6 @@ width: 112px;
     transform-style: preserve-3d; 
     transition: 1s all ease-in-out;
 }
-
-
-
-
-
 
 .front,
 .back {     
@@ -1017,3 +1120,187 @@ width: 112px;
     text-transform: uppercase;
     padding: 10px 15px;
 }
+/* -------------------------------------------modal window---------------------------------------------------- */
+
+@media all and (min-width: 600px){
+ .terms {
+    min-width: 500px;
+    max-width: 33%;
+    margin-top: 20vh;
+
+  }
+
+
+}
+
+@media all and (max-width: 599px) {
+
+.terms {
+    max-width: 90%;
+    margin-top: 10vh;
+}
+
+}
+/* -------------------------------------------------------------- */
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2;
+    width: 100%;
+    bottom: 0%;
+      
+     
+     
+  }
+  
+  
+.modal-content {
+    background-color: #fefefe;
+    position: absolute;
+    bottom: 0%;
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 10px;
+    border: 1px solid #888;
+    
+  }
+  
+.ModalButtons {
+    display: flex;
+    flex-direction: row;
+    padding-right: 20px;
+    justify-content: center;
+    padding-top: 5px;
+   
+  }
+
+.ModalButtons > button {
+
+    height: 30px;
+    border-radius: 10px;
+    background-color: #c2185b;
+    width: 100px;
+    color:white;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    
+   
+}
+
+
+
+
+.fadeIn {
+    animation: FadeIn 1.5s;
+    
+}
+
+@keyframes FadeIn {
+
+    from { 
+        opacity: 0;
+        
+    }
+
+    to {
+        opacity: 1;
+        
+    }
+}
+
+.fadeInTop { 
+    animation: fadeInTop 2s;
+ }
+@keyframes fadeInTop {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+
+.modal1 {
+    display: none; 
+    position: fixed; 
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+
+  }
+
+.terms {
+    display: none;
+    background-color: #fefefe;
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 20px;
+    border: 1px solid #888;
+}
+.termsShowUp { 
+    z-index: 3;
+    animation: terms 1s;
+ }
+@keyframes terms {
+    from {
+        transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
+        opacity: 0;
+    }
+    5% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
+}
+
+.accepted { 
+animation: accepted 2s;
+}
+
+@keyframes accepted {
+    95% { transform: perspective(600px) translate3d(0, -60px, -1500px) rotateY(75deg) }
+        to {
+        transform: perspective(600px) translate3d(0, -60px, -2000px) rotateY(75deg);
+        opacity: 0;
+    }
+}
+
+.accepted1 { 
+    animation: accepted1 2s;
+    }
+    
+    @keyframes accepted1 {
+        from { opacity: 1; }
+            to {
+            
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
+.ModalButtons1 {
+    display: flex;
+    justify-content: center;
+}
+.ModalButtons1 > button {
+    height: 40px;
+    border-radius: 10px;
+    background-color: #c2185b;
+    width: 40%;
+    color:white;
+}
+.link-to-cookies {
+    color: #c2185b;
+}
+.cookiePolicy {
+    text-align: center;
+
+}
+.cookiePolicy1 {
+    text-align: justify;
+}
+
+
+
