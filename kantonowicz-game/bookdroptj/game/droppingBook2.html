@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<style>
+#container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    background: rgb(177, 177, 165);
+}
+#animate {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    background:url('pikachu.jpg') no-repeat;
+    background-size: cover;
+}
+</style>
+<body>
+
+<p><button onclick="myMove()">Start game</button></p> 
+
+<div id ="container">
+  <div id ="animate"></div>
+</div>
+
+<script>
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 530) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+    }
+  }
+}
+</script>
+
+</body>
+</html>

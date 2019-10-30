@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        main {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #000;
+            position: relative;
+            margin: 30px;
+        }
+        span {
+            display: block;
+            position: absolute;
+        }
+        .basket {
+            background:url('basket.jpg') no-repeat;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            left: 150px;
+            top: 568px;
+            z-index: 2;
+        }
+        .book {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background:url('book.jpg') no-repeat;
+            background-size: cover;
+            z-index: 1;
+        }
+        span.crashed,
+        .messages {
+            background: red;
+            color: white
+        }
+    </style>
+</head>
+
+<body>
+
+        <p><button onclick="myMove()">Start game</button></p> 
+
+    <p class="messages"></p>
+    <main>
+        <span class="basket"></span>
+        <span class="book"></span>
+    </main>
+
+    <script>
+        let box = document.querySelector('main'),
+            basket1 = document.querySelector('.basket'),
+            book1 = document.querySelector('.book'),
+            msgBox = document.querySelector('.messages');
+       
+        function myMove() {
+        var elem = document.querySelector(".book");   
+        var pos = 10;
+        var id = setInterval(frame, 10);
+        function frame() {
+            if (pos == 630) {
+                clearInterval(id);
+            } else {
+                pos++; 
+                elem.style.top = pos + "px"; 
+            }
+        }
+        }
+
+        function move(event,axis,direction,basket) {
+
+            if (event.key === 'ArrowLeft'){
+                basket1.style.left = basket1.offsetLeft - 10 + "px" 
+            }
+            else if (event.key === 'ArrowRight'){
+                basket1.style.left = basket1.offsetLeft + 10 + "px" 
+            }
+            checkCollision()
+            checkBorders(book1)
+        }
+
+        function checkCollision() {
+            if (book1.offsetTop < basket1.offsetTop + basket1.offsetWidth &&
+                book1.offsetTop + book1.offsetWidth > basket1.offsetTop &&
+                book1.offsetLeft < basket1.offsetLeft + basket1.offsetHeight &&
+                book1.offsetLeft + book1.offsetHeight > basket1.offsetLeft){
+                gameOver('collision')
+            } 
+        }
+
+        function checkBorders(book) {
+            if (book.offsetTop > 600 ||
+            book.offsetTop > box.offsetTop + box.offsetHeight
+                ) {
+                gameOver(book)
+            }
+        }
+
+        function gameOver(p) {
+            if (p === 'collision') {
+                msg = '1 point';
+                book1.classList.add('crashed')
+            } else {
+                msg = p.className + '. Book dropped';
+                p.classList.add('crashed')
+            }
+            msgBox.innerText = msg;
+        }
+        // eventListener
+        document.addEventListener('keydown',move)
+   </script>
+</body>
+
+</html>
