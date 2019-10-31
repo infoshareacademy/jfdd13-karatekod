@@ -31,11 +31,14 @@ section.hero{
     top: 0px;
     z-index: 1;
     left: 0;
+    display: none
 }
+
 
 .heroSlide1 {
     background: url('img/side-books.jpg') no-repeat;
     background-size: cover;
+    display: block;
 }
 
 .heroSlide2 {
