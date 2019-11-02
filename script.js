@@ -75,10 +75,7 @@ var cards = document.querySelectorAll('.card');
 
 
 
-    window.addEventListener('load', checkCookies); 
-    buttonTerms.addEventListener('click', showTerms);
-    buttonAccept1.addEventListener('click', setCookie1);
-    buttonAccept2.addEventListener('click', setCookie2);
+    
 
     
     
@@ -127,18 +124,56 @@ var cards = document.querySelectorAll('.card');
         document.documentElement.scrollTop = 0;
     })
 
+///------------------------------------------------------------slider
+
+    const range = document.getElementById('range');
+    const months = document.getElementById('months');
+    const monthPrice = document.getElementById('monthPrice');
+    const stutent = document.getElementById('student');
+    const nonStudent = document.getElementById('non-student');
+    months.innerHTML = range.value;
+    
+    
+    function startingValue() {
+        var x = range.value;
+        if (student.checked) {if (x<=3) {monthPrice.innerHTML = '4.75 &euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.60 &euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.50 &euro;'} else {monthPrice.innerHTML = '4.41 &euro;'}} 
+            
+        else if (nonStudent.checked) 
+        {if (x<=3) {monthPrice.innerHTML = '5 &euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.85 &euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.75 &euro;'} else {monthPrice.innerHTML = '4.65 &euro;'}} 
+    }
 
 
 
+    
+    range.oninput = function() {
+        months.innerHTML = this.value;
+        if (this.value == 13) {
+            months.innerHTML = this.value + ' and more';
+        }
+        startingValue();
+        }
+ 
+    
+    function changeSliderColor() {
+        var x = range.value;
+        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`
+        range.style.background = color; 
+       }
 
-
-
-
-
-    // window.addEventListener('load', checkCookies); 
-    // buttonTerms.addEventListener('click', showTerms);
-    // buttonAccept1.addEventListener('click', setCookie1);
-    // buttonAccept2.addEventListener('click', setCookie2);
+    
+    
+    window.addEventListener('load', checkCookies); 
+    range.addEventListener('mousemove', changeSliderColor)
+    buttonTerms.addEventListener('click', showTerms);
+    buttonAccept1.addEventListener('click', setCookie1);
+    buttonAccept2.addEventListener('click', setCookie2);
+    student.addEventListener('click', startingValue);
+    nonStudent.addEventListener('click', startingValue);
+    startingValue();
 
 
 
