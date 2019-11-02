@@ -1056,8 +1056,6 @@ width: 112px;
     margin-right: 10px;
 
 }
-
-
 }
 /* -------------------------------------------------------------- */
 
@@ -1067,12 +1065,7 @@ width: 112px;
     z-index: 2;
     width: 100%;
     bottom: 0%;
-      
-     
-     
-  }
-  
-  
+}
 .modal-content {
     background-color: #fefefe;
     position: absolute;
@@ -1081,8 +1074,7 @@ width: 112px;
     margin-left: auto; 
     padding: 10px;
     border: 1px solid #888;
-    
-  }
+}
   
 .ModalButtons {
     display: flex;
@@ -1090,8 +1082,7 @@ width: 112px;
     padding-right: 20px;
     justify-content: center;
     padding-top: 5px;
-   
-  }
+}
 
 .ModalButtons > button {
 
@@ -1103,12 +1094,7 @@ width: 112px;
     padding-top: 5px;
     padding-right: 10px;
     padding-bottom: 5px;
-    
-   
 }
-
-
-
 
 .fadeIn {
     animation: FadeIn 1.5s;
@@ -1194,11 +1180,6 @@ animation: accepted 2s;
         }
     }
 
-
-
-
-
-
 .ModalButtons1 {
     display: flex;
     justify-content: center;
@@ -1221,32 +1202,18 @@ animation: accepted 2s;
     text-align: justify;
 }
 
-
-
-    
-
 #calculator {
     
-    
-    
     display: flex;
-    
     align-items: center;
     justify-content: center;
     
-    
-   
-
+}
+#calc-slider {
+    width: 75%;
 
 }
-
-
-
-  #calc-slider {
-      width: 75%;
-
-  }
-  .range-slider {
+.range-slider {
     -webkit-appearance: none;
     width: 100%;
     height: 12px;
@@ -1258,11 +1225,11 @@ animation: accepted 2s;
     border-radius: 10px;
     box-shadow: 0px 1px 10px 1px rgb(230, 234, 233);
     border-bottom: none;
-  }
-  .range-slider:hover {
+}
+.range-slider:hover {
     opacity: 1;
-  }
-  .range-slider::-webkit-slider-thumb {
+}
+.range-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 30px;
@@ -1271,8 +1238,8 @@ animation: accepted 2s;
     border-radius: 50%;
     border: 2px solid white;
     cursor: pointer;
-  }
-  .range-slider::-moz-range-thumb {
+}
+.range-slider::-moz-range-thumb {
     appearance: none;
     width: 30px;
     height: 30px;
@@ -1280,8 +1247,8 @@ animation: accepted 2s;
     border-radius: 50%;
     border: 2px solid white;
     cursor: pointer;
-  }
-  #calc-slider p {
+}
+#calc-slider p {
       padding-top: 5px;
       opacity: 0.8;
       font-size: 15px;
@@ -1309,10 +1276,6 @@ animation: accepted 2s;
 #radio-selector > *{
     display: block;
 }
-
-
-
-
 
 #student,
 #non-student {
