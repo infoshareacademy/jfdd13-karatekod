@@ -127,18 +127,48 @@ var cards = document.querySelectorAll('.card');
 ///------------------------------------------------------------slider
 
     const range = document.getElementById('range');
-    const months = document.getElementById('months')
+    const months = document.getElementById('months');
+    const monthPrice = document.getElementById('monthPrice');
+    const stutent = document.getElementById('student');
+    const nonStudent = document.getElementById('non-student');
+    
+    
+    
     months.innerHTML = range.value;
     range.oninput = function() {
         months.innerHTML = this.value;
-    }
+        var x = range.value;
+        if (student.checked) {if (x<=3) {monthPrice.innerHTML = 5}
+         else if (x>3 && x<9) {monthPrice.innerHTML = 4} 
+         else {monthPrice.innerHTML = 3}} else if (nonStudent.checked) {if (x<=3) {monthPrice.innerHTML = 4}
+         else if (x>3 && x<9) {monthPrice.innerHTML = 3} 
+         else {monthPrice.innerHTML = 2}}
 
+         
+      }
+
+   
+
+   
+    
+    
+    
+    
+    
     function changeSliderColor() {
         var x = range.value;
         var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*8}%, rgb(245, 187, 208) ${x*8}%)`
         range.style.background = color; 
+       
     }
 
+    function startingValue() {
+        if (student.checked) {
+            monthPrice.innerHTML = 5;
+        } else if (nonStudent.checked) {
+            monthPrice.innerHTML = 4}
+        }
+    
 
 
 
@@ -149,6 +179,9 @@ var cards = document.querySelectorAll('.card');
     buttonTerms.addEventListener('click', showTerms);
     buttonAccept1.addEventListener('click', setCookie1);
     buttonAccept2.addEventListener('click', setCookie2);
+    student.addEventListener('click', startingValue);
+    nonStudent.addEventListener('click', startingValue);
+    startingValue();
 
     
     

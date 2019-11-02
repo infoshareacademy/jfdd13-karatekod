@@ -234,8 +234,17 @@
                     <div id="calc-descritpion">
                         Calculate your discount.
                     </div>
-                    <div id="calc-radio">here goes radio</div>
-                    <div id="calc-amount">here goes amount screen</div>
+                    <div id="radio-selector">
+                        <label>student/pensioner
+                            <input type="radio" id="student" name="radio">
+                        </label>
+                        <label>not a student/pensioner
+                            <input type="radio" id="non-student" name="radio" checked>
+                        </label>
+                       
+    
+                    </div>
+                    <div id="calc-amount">Your monthly price is: <span id="monthPrice"></span> $ </div>
                     <div id="calc-slider">
                         <input type="range" min="1" max="12" value="1" class="range-slider" id="range">
                         <p>Number of months: <span id="months"></span></p>
