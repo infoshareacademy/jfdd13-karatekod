@@ -1259,6 +1259,8 @@ animation: accepted 2s;
 }
 #calc-slider {
     width: 75%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 
 }
 .range-slider {
@@ -1351,7 +1353,7 @@ animation: accepted 2s;
       font-size: 20px;
       text-align: center;
       font-weight: 800;
-      padding: 5px 3px;
+      padding: 10px 3px;
       
   }
   #calc-descritpion p:nth-child(2) {
@@ -1364,6 +1366,7 @@ animation: accepted 2s;
   }
   #calc-amount {
       font-weight: 600;
+      padding-bottom: 5px;
   }
   #monthPrice {
       font-weight: 600;
@@ -1377,14 +1380,14 @@ animation: accepted 2s;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    
     font-size: 18px;
     background-color: #ffcb93;
 
   }
   #radio-selector {
       text-align: center;
-      padding-top: 10px;
-      padding-bottom: 10px;
+      padding-top: 12px;
+      padding-bottom: 20px;
       text-shadow: #757575;
   }

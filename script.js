@@ -167,7 +167,7 @@ var cards = document.querySelectorAll('.card');
     
     
     window.addEventListener('load', checkCookies); 
-    range.addEventListener('mousemove', changeSliderColor)
+    range.addEventListener('input', changeSliderColor)
     buttonTerms.addEventListener('click', showTerms);
     buttonAccept1.addEventListener('click', setCookie1);
     buttonAccept2.addEventListener('click', setCookie2);
