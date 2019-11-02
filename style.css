@@ -1020,6 +1020,9 @@ width: 112px;
 
   }
 
+  #formCalculator {
+    display: flex;
+  }
 
 }
 
@@ -1030,6 +1033,11 @@ width: 112px;
     margin-top: 10vh;
 }
 
+#formCalculator {
+    display: flex;
+    flex-direction: column-reverse;
+
+}
 }
 /* -------------------------------------------------------------- */
 
@@ -1194,10 +1202,9 @@ animation: accepted 2s;
 }
 
 
-#formCalculator {
-    display: flex;
+
     
-}
+
 #calculator {
     width: 50%;
     
@@ -1216,7 +1223,7 @@ animation: accepted 2s;
 
 
   #calc-slider {
-      width: 70%;
+      width: 75%;
 
   }
   .range-slider {
@@ -1271,7 +1278,7 @@ animation: accepted 2s;
     align-items: center;
     justify-content: space-around;
     width: 80%;
-    height: 60%;
+    height: 65%;
     border-radius: 20px;
     font-size: 20px;
     -webkit-box-shadow: 0px 2px 25px -6px rgba(196,57,92,1);
@@ -1315,21 +1322,22 @@ animation: accepted 2s;
       font-size: 20px;
       text-align: center;
       font-weight: 800;
+      padding: 5px 3px;
       
   }
   #calc-descritpion p:nth-child(2) {
       font-size: 14px;
       text-align: center;
-      padding-top: 5px;
+      padding: 5px 3px;
   }
   label.radioRange {
       font-size: 16px;
   }
   #calc-amount {
-      font-weight: 700;
+      font-weight: 600;
   }
   #monthPrice {
-      font-weight: 700;
+      font-weight: 600;
       
   }
   #promotion {
@@ -1344,4 +1352,10 @@ animation: accepted 2s;
     font-size: 18px;
     background-color: #ffcb93;
 
+  }
+  #radio-selector {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-shadow: #757575;
   }

@@ -152,7 +152,7 @@ var cards = document.querySelectorAll('.card');
     range.oninput = function() {
         months.innerHTML = this.value;
         if (this.value == 13) {
-            months.innerHTML = " more than " + this.value ;
+            months.innerHTML = this.value + ' and more';
         }
         startingValue();
         }
