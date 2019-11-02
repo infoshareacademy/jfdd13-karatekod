@@ -136,14 +136,14 @@ var cards = document.querySelectorAll('.card');
     
     function startingValue() {
         var x = range.value;
-        if (student.checked) {if (x<=3) {monthPrice.innerHTML = 4.75}
-         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.60'} 
-         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.50'} else {monthPrice.innerHTML = 4.41}} 
+        if (student.checked) {if (x<=3) {monthPrice.innerHTML = '4.75 &euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.60 &euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.50 &euro;'} else {monthPrice.innerHTML = '4.41 &euro;'}} 
             
         else if (nonStudent.checked) 
-        {if (x<=3) {monthPrice.innerHTML = 5}
-         else if (x>3 && x<=6) {monthPrice.innerHTML = 4.85} 
-         else if (x>6 && x<=12) {monthPrice.innerHTML = 4.75} else {monthPrice.innerHTML = 4.65}} 
+        {if (x<=3) {monthPrice.innerHTML = '5 &euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.85 &euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.75 &euro;'} else {monthPrice.innerHTML = '4.65 &euro;'}} 
     }
 
 
