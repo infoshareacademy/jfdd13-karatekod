@@ -134,21 +134,27 @@ var cards = document.querySelectorAll('.card');
     
     
     
+    function startingValue() {
+        var x = range.value;
+        if (student.checked) {if (x<=3) {monthPrice.innerHTML = 4.75}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = 4.60} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = 4.50} else {monthPrice.innerHTML = 4.41}} 
+            
+        else if (nonStudent.checked) 
+        {if (x<=3) {monthPrice.innerHTML = 5}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = 4.85} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = 4.75} else {monthPrice.innerHTML = 4.65}} 
+    }
+
+
+
     months.innerHTML = range.value;
     range.oninput = function() {
         months.innerHTML = this.value;
         if (this.value == 13) {
             months.innerHTML = this.value + " and more";
         }
-        var x = range.value;
-        if (student.checked) {if (x<=3) {monthPrice.innerHTML = 5}
-         else if (x>3 && x<9) {monthPrice.innerHTML = 4} 
-         else {monthPrice.innerHTML = 3}} else if (nonStudent.checked) {if (x<=3) {monthPrice.innerHTML = 4}
-         else if (x>3 && x<9) {monthPrice.innerHTML = 3} 
-         else {monthPrice.innerHTML = 2}}
-
-
-
+        startingValue();
         }
 
    
@@ -161,21 +167,14 @@ var cards = document.querySelectorAll('.card');
     
     function changeSliderColor() {
         var x = range.value;
-        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*8}%, rgb(245, 187, 208) ${x*8}%)`
+        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6}%, rgb(245, 187, 208) ${x*7.6}%)`
         range.style.background = color; 
        
         
        
     }
 
-    function startingValue() {
-        var x = range.value;
-        if (student.checked) {if (x<=3) {monthPrice.innerHTML = 5}
-         else if (x>3 && x<9) {monthPrice.innerHTML = 4} 
-         else {monthPrice.innerHTML = 3}} else if (nonStudent.checked) {if (x<=3) {monthPrice.innerHTML = 4}
-         else if (x>3 && x<9) {monthPrice.innerHTML = 3} 
-         else {monthPrice.innerHTML = 2}}
-    }
+    
     
 
 
