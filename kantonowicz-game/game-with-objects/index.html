@@ -7,6 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Game</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+            .basket {
+            background:url('basket.jpg') no-repeat;
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            left: 150px;
+            top: 568px;
+            z-index: 2;
+        }
+        .book {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            background:url('book.jpg') no-repeat;
+            background-size: cover;
+            z-index: 1;
+            background-color: red;
+        }
+
+        .btN {
+            margin: 20px auto;
+            text-align: center;
+        }
+        </style>
 </head>
 
 <body>
@@ -21,8 +46,10 @@
 
     </div>
     
+<span class="basket"></span>
+<span class="book"></span>
 </div>
-
+<p class="btN"><button onclick="myMove()">Start game</button></p> 
 
 
 
