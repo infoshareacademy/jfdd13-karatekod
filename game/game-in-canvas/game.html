@@ -45,6 +45,7 @@
         var tileList = [];
         var booksDrop = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
         var bombDrop = [0, 50, 100, 150, 200, 250, 300, 350, 400, 450];
+        var highScores = localStorage.getItem('userhighscore') || 0;
 
 
         var tileObject = {
@@ -252,6 +253,7 @@
 
                                         gameOver =
                                     function () { // funkcja gameover robi reset :P
+                                            
                                             ctx.save();
                                             ctx.globalAlpha = 0.6;
                                             drawObject(papyrus, 100, 100, 300, 300);
@@ -259,7 +261,8 @@
                                             ctx.strokeStyle = "#FFFFFF";
                                             ctx.font = "30px Calibri";
                                             ctx.strokeText("Game Over,", 180, 200)
-                                            ctx.strokeText("Click to Restart", 160, 250)
+                                            ctx.strokeText("Click to Restart", 160, 300);
+                                            ctx.strokeText('Highscores: '+highScores, 160, 250)
                                             ctx.restore();
                                             clearInterval(intervalvar);
                                             ctx.restore();
@@ -333,6 +336,10 @@
                                             for (var i in bookList) {
                                                 if (booksCatcherCollision(bookList[i])) {
                                                     score++
+                                                    if (score>highScores) {
+                                                        highScores=score;
+                                                        localStorage.setItem('userhighscore', highScores)
+                                                    }
                                                     if (score % 2 ==
                                                         0) { // co 2 złapania wzrasta poziom gry
                                                         level--;
@@ -371,6 +378,7 @@
                                             ctx.fillText(score, 465, 27);
                                             ctx.fillText("Level: " + (100 - level + 1), 10,
                                                 27)
+                                            ctx.fillText('HighScores: '+ highScores, 200, 27)
 
                                             updateBombPosition();
                                             updateBookPosition();
