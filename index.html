@@ -90,44 +90,70 @@
             </div>
 
             <script>
+                // var slideIndex = 0;
+                // manualSlides(slideIndex);
 
-                //(function handleSlides() {
-                    const slides = Array.from(document.getElementsByClassName("heroSlides"))
-                    const dots = document.getElementsByClassName("dot");
+                // const mouse = document.querySelector('.slideshow-container');
+                const herohover = document.querySelector('.hero');
 
-                    function changeSlide(n) {
-                        // changing the slide to n on demand
-                        // add CSS manipulation here
-                        slides[n].style.display = 'block'
-                        
-                    }
+                herohover.addEventListener("mouseenter", manualSlides);
+                herohover.addEventListener("mouseleave", showSlides);
+                // mouse.addEventListener("mouseover", manualSlides);
 
-                    function runSlidesAuto() {
-                        // this runs slides automatically
-                        // handle the n incrementation
-                        // setInterval(function() {
-                        //     // iterate and n++
-                        //     changeSlide(n)
+                // var timeOut;
+                // (function handleSlides() {
+                // const slides = Array.from(document.getElementsByClassName("heroSlides"))
+                // const dots = document.getElementsByClassName("dot");
 
-                        //     // handle the max slides!
-                        //     }
-                        // ,6000)
-                    }
+                // function changeSlide(n) {
+                // changing the slide to n on demand
+                // add CSS manipulation here
+                // slides[n].style.display = 'block'
+                // }
 
-                    runSlidesAuto()
-                    // addeventlistener for dots with changeSlide()
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                var slideIndex = 0;
+                showSlides(slideIndex);
+
+                function showSlides(n) {
+
+                var i;
+                var slides = document.getElementsByClassName("heroSlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 3000);
+                }
+
+                // this runs slides automatically
+                // handle the n incrementation
+                // setInterval(function() {
+                // iterate and n++
+                // changeSlide(n)
+
+                // handle the max slides!
+                // }
+                // ,6000)
+                    
+                // showSlides()
+                // addeventlistener for dots with changeSlide()
 
                // })()
-                // var slideIndex = 0;
-                // showSlides(slideIndex);
-
-                // // function plusSlides(n) {
-                // // showSlides(slideIndex += n);
-                // // }
-
-                // // function currentSlide(n) {
-                // // showSlides(slideIndex = n);
-                // // }
 
                 // function showSlides(n) {
                 //     var i;
