@@ -33,144 +33,48 @@
 
     <main>
         <section class="hero" id="hero">
-            <div class="hero-slideshow-container">
-
-                <div class="heroSlides heroSlide1 herofade">
-                    <div class="text">
-                        <h1 class="heroHOne">Register</h1>
-                        <h2 class="heroHTwo">Specify your book prefs</h2>
-                        <h2 class="heroHTwo">Setup your location</h2>
-                        <!-- <a class="section__a--signup" href="#signup">
-                            <h3>Sign up</h3>
-                        </a> -->
-                    </div>
-                </div>
-            
-                <div class="heroSlides heroSlide2 herofade">
-                    <div class="text">
-                        <h1 class="heroHOne">Download app</h1>
-                        <h2 class="heroHTwo">Add your books</h2>
-                        <h2 class="heroHTwo">Search for books</h2>
-                        <!-- <a class="section__a--signup" href="#signup">
-                            <h3>Sign up</h3>
-                        </a> -->
-                    </div>
-                </div>    
-
-                <div class="heroSlides heroSlide3 herofade">
-                    <div class="text">
-                        <h1 class="heroHOne">Use App</h1>
-                        <h2 class="heroHTwo">Read books</h2>
-                        <h2 class="heroHTwo">ENJOY !</h2>
-                        <!-- <a class="section__a--signup" href="#signup">
-                            <h3>Sign up</h3>
-                        </a> -->
-                    </div>
-                </div> 
-
-                <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
-
-            </div>
-            <br>
-
-            <div class="dots">
-              <span class="dot" onclick="currentSlide(0)"></span> 
-              <span class="dot" onclick="currentSlide(1)"></span> 
-              <span class="dot" onclick="currentSlide(2)"></span> 
-            </div>
 
             <div class="text">
-                <!-- <h1 class="hero-first-text-line">Read your favourite books.</h1>
-                <h2>Share your thoughts.</h2>
-                <h2>Start book-swapping!</h2> -->
                 <a class="section__a--signup" href="#signup">
                     <h3>Sign up</h3>
                 </a>
             </div>
 
+            <img id="heroSlider" onmouseover="stopShow()" onmouseout="runShow()">
+
+            <br>
+
             <script>
-                // var slideIndex = 0;
-                // manualSlides(slideIndex);
+                let i = 0;
+                let timer;
+                let path = [];
 
-                // const mouse = document.querySelector('.slideshow-container');
-                const herohover = document.querySelector('.hero');
+                path[0] = "img/heroOne.png";
+                path[1] = "img/heroTwo.png";
+                path[2] = "img/heroThree.png";
 
-                herohover.addEventListener("mouseenter", manualSlides);
-                herohover.addEventListener("mouseleave", showSlides);
-                // mouse.addEventListener("mouseover", manualSlides);
+                function changeImage() {
+                document.getElementById("heroSlider").src = path[i];
 
-                // var timeOut;
-                // (function handleSlides() {
-                // const slides = Array.from(document.getElementsByClassName("heroSlides"))
-                // const dots = document.getElementsByClassName("dot");
-
-                // function changeSlide(n) {
-                // changing the slide to n on demand
-                // add CSS manipulation here
-                // slides[n].style.display = 'block'
-                // }
-
-                function plusSlides(n) {
-                showSlides(slideIndex += n);
+                if(i < path.length - 1){
+                    i++;
+                }else {
+                    i = 0;
                 }
 
-                function currentSlide(n) {
-                showSlides(slideIndex = n);
+                timer = setTimeout("changeImage()", 4000);
                 }
 
-                var slideIndex = 0;
-                showSlides(slideIndex);
-
-                function showSlides(n) {
-
-                var i;
-                var slides = document.getElementsByClassName("heroSlides");
-                var dots = document.getElementsByClassName("dot");
-                for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {slideIndex = 1}    
-                for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";  
-                dots[slideIndex-1].className += " active";
-                setTimeout(showSlides, 3000);
+                function stopShow(){
+                    clearTimeout(timer);
                 }
 
-                // this runs slides automatically
-                // handle the n incrementation
-                // setInterval(function() {
-                // iterate and n++
-                // changeSlide(n)
+                function runShow(){
+                    changeImage();
+                }
 
-                // handle the max slides!
-                // }
-                // ,6000)
-                    
-                // showSlides()
-                // addeventlistener for dots with changeSlide()
+                window.onload = runShow;
 
-               // })()
-
-                // function showSlides(n) {
-                //     var i;
-                //     var slides = document.getElementsByClassName("heroSlides");
-                //     var dots = document.getElementsByClassName("dot");
-                //     for (i = 0; i < slides.length; i++) {
-                //     slides[i].style.display = "none";  
-                //     }
-                //     slideIndex++;
-                //     if (slideIndex > slides.length) {slideIndex = 1}    
-                //     for (i = 0; i < dots.length; i++) {
-                //     dots[i].className = dots[i].className.replace(" active", "");
-                //     }
-                //     slides[slideIndex-1].style.display = "block";  
-                //     dots[slideIndex-1].className += " active";
-                //     setTimeout(showSlides, 6000);
-                // }
             </script>
 
 
