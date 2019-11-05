@@ -13,14 +13,37 @@
             width: 800px;
             margin: 5% auto;
             text-align: center;
+            position: relative;
         }
+        #canvas {
+            position: absolute;
+        }
+        #gameover {
+            position: absolute;
+            width: 400px;
+            height: 300px;
+            background-image: url(images/papyrus.png);
+            background-size: cover;
+            top: 110px;
+            left: 50px;
+            display: none;
+        }
+
     </style>
 </head>
 
 <body>
+
     <div class="wrap">
+    <div id="canvas">
         <canvas height="500" width="500" id="ctx" style="border:1px solid black"></canvas>
     </div>
+    <div id="gameover">
+
+    </div>
+    </div>
+
+
     <script type="text/javascript">
         var ctx = document.getElementById("ctx").getContext("2d");
         var catcherOne = new Image();
@@ -32,6 +55,7 @@
         var tile = new Image();
         var books = new Image();
         var bomb = new Image();
+        var papyrus1 = document.getElementById('gameover');
 
         //GLOBAL VARIABLES
         var score = 0;
@@ -244,8 +268,8 @@
                                                 500 - catcher.width) {
                                                 catcher.x += catcher.spd
                                             }
-                                            if (catcher.y > 450) {
-                                                catcher.y = 450;
+                                            if (catcher.y > 500) {
+                                                
                                                 gameover =
                                                 true; // kiedy gracz spada z kładki to gameover :P
                                             }
@@ -254,18 +278,9 @@
                                         gameOver =
                                     function () { // funkcja gameover robi reset :P
                                             
-                                            ctx.save();
-                                            ctx.globalAlpha = 0.6;
-                                            drawObject(papyrus, 100, 100, 300, 300);
-                                            ctx.globalAlpha = 1.0;
-                                            ctx.strokeStyle = "#FFFFFF";
-                                            ctx.font = "30px Calibri";
-                                            ctx.strokeText("Game Over,", 180, 200)
-                                            ctx.strokeText("Click to Restart", 160, 300);
-                                            ctx.strokeText('Highscores: '+highScores, 160, 250)
-                                            ctx.restore();
+                                            
                                             clearInterval(intervalvar);
-                                            ctx.restore();
+                                            papyrus1.style.display = 'block'
                                         }
 
                                         updatePosition = function () {
@@ -387,6 +402,7 @@
                                         }
 
                                         startGame = function () {
+                                            papyrus1.style.display = 'none'
                                             score = 0;
                                             level = 100;
                                             catcher.x = 100;
