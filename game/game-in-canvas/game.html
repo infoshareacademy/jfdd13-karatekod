@@ -91,8 +91,8 @@
                                         // when all images are loaded then the game can start
 
                                         ctx.drawImage(background, 0, 0, 500, 500);
-                                        ctx.strokeStyle = "#FFFFFF";
-                                        ctx.font = "30px Calibri";
+                                        ctx.strokeStyle = "#212121";
+                                        ctx.font = "30px Raleway";
                                         ctx.strokeText('Click here to start the game', 80, 250);
 
                                         drawObject = function (object, x, y, width,
@@ -254,11 +254,11 @@
                                     function () { // funkcja gameover robi reset :P
                                             ctx.save();
                                             ctx.globalAlpha = 0.6;
-                                            drawObject(papyrus, 100, 100, 300, 300);
+                                            drawObject(papyrus, 100, 100, 300, 200);
                                             ctx.globalAlpha = 1.0;
-                                            ctx.strokeStyle = "#FFFFFF";
-                                            ctx.font = "30px Calibri";
-                                            ctx.strokeText("Game Over,", 180, 200)
+                                            ctx.strokeStyle = "#212121";
+                                            ctx.font = "30px Raleway";
+                                            ctx.strokeText("Game Over,", 180, 180)
                                             ctx.strokeText("Click to Restart", 160, 250)
                                             ctx.restore();
                                             clearInterval(intervalvar);
@@ -366,8 +366,8 @@
                                             }
 
                                             drawObject(books, 440, 10, 20, 20);
-                                            ctx.fillStyle = "#FFFFFF";
-                                            ctx.font = "20px Calibri";
+                                            ctx.fillStyle = "#212121";
+                                            ctx.font = "20px Raleway";
                                             ctx.fillText(score, 465, 27);
                                             ctx.fillText("Level: " + (100 - level + 1), 10,
                                                 27)
@@ -418,9 +418,9 @@
                             }
                             books.src = "images/bookswapp-pic.png"
                         }
-                        catcherTwo.src = "images/tuomas.jpg"
+                        catcherTwo.src = "images/man-cart.png"
                     }
-                    catcherOne.src = "images/tuomas.jpg"
+                    catcherOne.src = "images/man-cart.png"
                 }
                 papyrus.src = "images/papyrus.png"
             }
