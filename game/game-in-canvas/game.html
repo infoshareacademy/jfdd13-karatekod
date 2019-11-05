@@ -134,6 +134,12 @@
                                             }
                                             startGame();
                                         }
+                                        papyrus1.onmousedown = function () {
+                                            if (!gameover) {
+                                                clearInterval(intervalvar);
+                                            }
+                                            startGame();
+                                        }
 
                                         document.onkeydown = function (
                                             event
