@@ -40,9 +40,11 @@
                 </a>
             </div>
 
-            <img id="heroSlider" onmouseover="stopShow()" onmouseout="runShow()">
-
-            <br>
+            <div class="heroSliderContainer">
+                <img id="heroSlider" onmouseover="stopShow()" onmouseout="runShow()">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>      
 
             <script>
                 let i = 0;
@@ -61,18 +63,14 @@
                 }else {
                     i = 0;
                 }
-
                 timer = setTimeout("changeImage()", 4000);
                 }
-
                 function stopShow(){
                     clearTimeout(timer);
                 }
-
                 function runShow(){
                     changeImage();
                 }
-
                 window.onload = runShow;
 
             </script>
