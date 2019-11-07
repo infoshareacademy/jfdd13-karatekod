@@ -6,8 +6,8 @@
 //---------------------------------------------------------functionality: flipping cards--------
 
 
-var cards = document.querySelectorAll('.card');
-    for (i=0;i<8;i++) {
+let cards = document.querySelectorAll('.card');
+    for (i=0;i<cards.length;i++) {
         flip = cards[i];
             flip.addEventListener('click', function () { 
                 if (this.classList.contains('turnAround')) {
@@ -23,51 +23,50 @@ var cards = document.querySelectorAll('.card');
 
 //------------------------------------------------------- cookies----------------
 
-    var buttonAccept1 = document.querySelector('#accept1');
-    var buttonAccept2 = document.querySelector('#accept2');
-    var buttonTerms = document.querySelector('#condition');
+    const buttonAccept1 = document.querySelector('#accept1');
+    const buttonAccept2 = document.querySelector('#accept2');
+    const buttonTerms = document.querySelector('#condition');
 
-    function modalPopup() {
-        var PopUp = document.querySelector('.modal')
-        PopUp.style.display= 'block'
-        
-    }
+    
 
-    function endOfModal1() {
-        document.querySelector('.modal').style.display='none';
-    }
+    
 
-    function endOfModal2() {
-        document.querySelector('.modal1').style.display='none';
-    }
+    
+    
 
     function checkCookies() {
-                        
+        function modalPopup() {
+            let PopUp = document.querySelector('.modal')
+            PopUp.style.display= 'block'  
+        }
         if (document.cookie.length == 0) modalPopup();
-        console.log('check cookies- onload')           
+                
     }
 
     function setCookie1() {
         document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
-        var modalBox = document.querySelector('.modal');
+        function endOfModal1() {
+            document.querySelector('.modal').style.display='none';
+        }
+        let modalBox = document.querySelector('.modal');
         modalBox.classList.add('accepted1');   
-        console.log('set cookie 1');
         setTimeout(endOfModal1, 1900);
     }
     function showTerms () {
-        var terms = document.querySelector('.terms');
+        let terms = document.querySelector('.terms');
         terms.style.display= 'block';
         document.querySelector('.modal').style.display = 'none';
         document.querySelector('.modal1').style.display = 'block';
-        console.log('show terms');
         terms.classList.add('termsShowUp');
     }
 
     function setCookie2() {
         document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
-        var modalBox = document.querySelector('.modal1');
+        function endOfModal2() {
+            document.querySelector('.modal1').style.display='none';
+        }
+        let modalBox = document.querySelector('.modal1');
         modalBox.classList.add('accepted');
-        console.log('set cookie 2');
         setTimeout(endOfModal2, 1900);
 
     }
@@ -131,25 +130,28 @@ var cards = document.querySelectorAll('.card');
     const monthPrice = document.getElementById('monthPrice');
     const stutent = document.getElementById('student');
     const nonStudent = document.getElementById('non-student');
+    const price = 5;
+    const studentPrice = price*0.95
     months.innerHTML = range.value;
     
     
     function startingValue() {
-        var x = range.value;
-        if (student.checked) {if (x<=3) {monthPrice.innerHTML = '4.75 &euro;'}
-         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.60 &euro;'} 
-         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.50 &euro;'} else {monthPrice.innerHTML = '4.41 &euro;'}} 
+        let x = range.value;
+        
+        if (student.checked) {if (x<=3) {monthPrice.innerHTML = studentPrice +'&euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = (studentPrice*0.97).toFixed(2) + '&euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = (studentPrice*0.95).toFixed(2)+'&euro;'} else {monthPrice.innerHTML = (studentPrice*0.93).toFixed(2)+'&euro;'}} 
             
         else if (nonStudent.checked) 
-        {if (x<=3) {monthPrice.innerHTML = '5 &euro;'}
-         else if (x>3 && x<=6) {monthPrice.innerHTML = '4.85 &euro;'} 
-         else if (x>6 && x<=12) {monthPrice.innerHTML = '4.75 &euro;'} else {monthPrice.innerHTML = '4.65 &euro;'}} 
+        {if (x<=3) {monthPrice.innerHTML = price + '&euro;'}
+         else if (x>3 && x<=6) {monthPrice.innerHTML = (price*0.97).toFixed(2) + '&euro;'} 
+         else if (x>6 && x<=12) {monthPrice.innerHTML = (price*0.95).toFixed(2)+'&euro;'} else {monthPrice.innerHTML = (price*0.93).toFixed(2)+'&euro;'}} 
     }
 
 
 
     
-    range.oninput = function() {
+    function changeRange() {
         months.innerHTML = this.value;
         if (this.value == 13) {
             months.innerHTML = this.value + ' and more';
@@ -159,13 +161,15 @@ var cards = document.querySelectorAll('.card');
  
     
     function changeSliderColor() {
-        var x = range.value;
-        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`
+        let x = range.value;
+        let color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`
         range.style.background = color; 
        }
 
     
     
+
+    range.addEventListener('input',changeRange)
     window.addEventListener('load', checkCookies); 
     range.addEventListener('input', changeSliderColor)
     buttonTerms.addEventListener('click', showTerms);
