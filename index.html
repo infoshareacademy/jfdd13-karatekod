@@ -32,53 +32,104 @@
     </nav>
 
     <main>
-        <section class="hero" id="hero">
+        <section id="hero">
 
-            <div class="text">
-                <a class="section__a--signup" href="#signup">
-                    <h3>Sign up</h3>
-                </a>
+
+                
+            <div class="hero hero0">
+                    <div class="image-hero">
+                            <img src="img/bookswap-text.png" alt="book-swapper">
+                        </div>
+                <div class="text text0">
+                    <h1>Read your favourite books. 1</h1>
+                    <h2>Share your thoughts.</h2>
+                    <h2>Start book-swapping!</h2>
+                    <a class="section__a--signup" href="#signup">
+                        <h3>Sign up</h3>
+                    </a>
+                </div>
             </div>
-
-            <div class="heroSliderContainer">
-                <img id="heroSlider" onmouseover="stopShow()" onmouseout="runShow()">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>      
+            <div class="hero hero1">
+                    <div class="image-hero">
+                            <img src="img/bookswap-text.png" alt="book-swapper">
+                        </div>
+                    <div class="text text0">
+                        <h1>Read your favourite books. 2</h1>
+                        <h2>Share your thoughts.</h2>
+                        <h2>Start book-swapping!</h2>
+                        <a class="section__a--signup" href="#signup">
+                            <h3>Sign up</h3>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero hero2">
+                        <div class="image-hero">
+                                <img src="img/bookswap-text.png" alt="book-swapper">
+                            </div>
+                        <div class="text text0">
+                            <h1>Read your favourite books. 3</h1>
+                            <h2>Share your thoughts.</h2>
+                            <h2>Start book-swapping!</h2>
+                            <a class="section__a--signup" href="#signup">
+                                <h3>Sign up</h3>
+                            </a>
+                        </div>
+                    </div>
+            <div class="heroSliderContainer" style="position: absolute; top: 0; left: 0; right: 0; height: 100%;">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+                  
 
             <script>
-                let i = 0;
+                let activeEl = 0;
                 let timer;
-                let path = [];
+                let elements = document.querySelectorAll('#hero .hero');
 
-                path[0] = "img/heroOne.png";
-                path[1] = "img/heroTwo.png";
-                path[2] = "img/heroThree.png";
+                document.querySelector('#hero .next').addEventListener('click', () => {
+                    activeEl += 1;
+                    changeImage();
+                });
+                document.querySelector('#hero .prev').addEventListener('click', () => {
+                    activeEl -= 1;
+                    changeImage();
+                });
 
+                const heroSection = document.querySelector('#hero');
+                heroSection.addEventListener('mouseenter', () => {
+                    stopShow();
+                })
+                heroSection.addEventListener('mouseleave', () => {
+                    runShow();
+                })
+    
                 function changeImage() {
-                document.getElementById("heroSlider").src = path[i];
-
-                if(i < path.length - 1){
-                    i++;
-                }else {
-                    i = 0;
+                    if(activeEl > elements.length - 1){
+                        activeEl = 0;
+                    }
+                    if (activeEl < 0) {
+                        activeEl = elements.length - 1;
+                    }
+                    elements.forEach((element) => {
+                        element.style.display = "none";
+                    });
+                    elements[activeEl].style.display = 'block';
                 }
-                timer = setTimeout("changeImage()", 4000);
+
+                function autoRotate() {
+                    activeEl += 1;
+                    changeImage();
                 }
                 function stopShow(){
                     clearTimeout(timer);
                 }
                 function runShow(){
-                    changeImage();
+                    clearTimeout(timer);
+                    timer = setTimeout(autoRotate, 4000);
                 }
                 window.onload = runShow;
 
             </script>
-
-
-            <div class="image-hero">
-                <img src="img/bookswap-text.png" alt="book-swapper">
-            </div>
 
         </section>
 

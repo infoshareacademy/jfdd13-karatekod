@@ -11,18 +11,34 @@ html{
     color: #212121;  
 }
 
-section.hero{
-    background: url('img/side-books.jpg') no-repeat;
-    background-size: cover; 
-    background-position-y: 40%;
-    background-position-x: 70%; 
-    background-repeat: no-repeat;
+#hero {
     font-weight: 800; 
-    padding: 6rem 1rem 3rem 1rem; 
     text-align: center;
     width: 100%; 
     overflow: hidden;
     position: relative;
+}
+
+section .hero { 
+    padding: 6rem 1rem 3rem 1rem;
+    display: none;
+    background-size: cover; 
+    background-position-y: 40%;
+    background-position-x: 70%; 
+    background-repeat: no-repeat;
+    
+}
+
+section .hero0 { 
+    display: block;
+    background-image: url(img/side-books.jpg);
+}
+section .hero1 { 
+    background-image: url(img/b2.jpg);
+}
+section .hero2 { 
+    background-image: url(img/b1.jpg);
+
 }
 
 .heroSliderContainer {
