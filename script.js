@@ -27,7 +27,14 @@ let cards = document.querySelectorAll('.card');
 const buttonAccept1 = document.querySelector('#accept1');
 const buttonAccept2 = document.querySelector('#accept2');
 const buttonTerms = document.querySelector('#condition');
-
+const range = document.getElementById('range');
+const months = document.getElementById('months');
+const monthPrice = document.getElementById('monthPrice');
+const stutent = document.getElementById('student');
+const nonStudent = document.getElementById('non-student');
+const price = 5;
+const studentPrice = price*0.95
+months.innerHTML = range.value;
 
 
 
@@ -125,14 +132,7 @@ function setCookie2() {
 
 ///------------------------------------------------------------slider
 
-const range = document.getElementById('range');
-const months = document.getElementById('months');
-const monthPrice = document.getElementById('monthPrice');
-const stutent = document.getElementById('student');
-const nonStudent = document.getElementById('non-student');
-const price = 5;
-const studentPrice = price*0.95
-months.innerHTML = range.value;
+
 
 
 function startingValue() {
@@ -161,9 +161,6 @@ function startingValue() {
     } 
 }
 
-
-
-
 function changeRange() {
     months.innerHTML = this.value;
     if (this.value == 13) {
@@ -178,24 +175,7 @@ function changeSliderColor() {
     let color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`
     range.style.background = color; 
 }
-
-
-
-
-range.addEventListener('input',changeRange)
-window.addEventListener('load', checkCookies); 
-range.addEventListener('input', changeSliderColor)
-buttonTerms.addEventListener('click', showTerms);
-buttonAccept1.addEventListener('click', setCookie1);
-buttonAccept2.addEventListener('click', setCookie2);
-student.addEventListener('click', startingValue);
-nonStudent.addEventListener('click', startingValue);
-startingValue();
-
-
-
-
-    
+   
     
     //SCRIPT FOR ANIMATED PICTURES //
 
@@ -245,4 +225,16 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 }    
 }
 }
+
+
 document.addEventListener('scroll', checkPosition)
+range.addEventListener('input',changeRange)
+window.addEventListener('load', checkCookies); 
+range.addEventListener('input', changeSliderColor)
+buttonTerms.addEventListener('click', showTerms);
+buttonAccept1.addEventListener('click', setCookie1);
+buttonAccept2.addEventListener('click', setCookie2);
+student.addEventListener('click', startingValue);
+nonStudent.addEventListener('click', startingValue);
+startingValue();
+
