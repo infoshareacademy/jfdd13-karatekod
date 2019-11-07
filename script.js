@@ -1,12 +1,18 @@
-
-
-
-
-
-//---------------------------------------------------------functionality: flipping cards--------
-
-
+const buttonAccept1 = document.querySelector('#accept1');
+const buttonAccept2 = document.querySelector('#accept2');
+const buttonTerms = document.querySelector('#condition');
+const range = document.getElementById('range');
+const months = document.getElementById('months');
+const monthPrice = document.getElementById('monthPrice');
+const stutent = document.getElementById('student');
+const nonStudent = document.getElementById('non-student');
+const price = 5;
+const studentPrice = price*0.95
 let cards = document.querySelectorAll('.card');
+months.innerHTML = range.value;
+
+
+function cardChange () {
     for (i=0;i<cards.length;i++) {
         flip = cards[i];
             flip.addEventListener('click', function () { 
@@ -18,28 +24,7 @@ let cards = document.querySelectorAll('.card');
             }
         );
     }       
-
-
-
-
-//------------------------------------------------------- cookies----------------
-
-const buttonAccept1 = document.querySelector('#accept1');
-const buttonAccept2 = document.querySelector('#accept2');
-const buttonTerms = document.querySelector('#condition');
-const range = document.getElementById('range');
-const months = document.getElementById('months');
-const monthPrice = document.getElementById('monthPrice');
-const stutent = document.getElementById('student');
-const nonStudent = document.getElementById('non-student');
-const price = 5;
-const studentPrice = price*0.95
-months.innerHTML = range.value;
-
-
-
-
-
+}
 
 
 function checkCookies() {
@@ -236,5 +221,6 @@ buttonAccept1.addEventListener('click', setCookie1);
 buttonAccept2.addEventListener('click', setCookie2);
 student.addEventListener('click', startingValue);
 nonStudent.addEventListener('click', startingValue);
+window.addEventListener('load', cardChange)
 startingValue();
 
