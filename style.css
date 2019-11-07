@@ -1,3 +1,7 @@
+/*
+    UWAGI AS: SPACJE, ENTERY, TABULACJE! 
+*/
+
 html{
     scroll-behavior: smooth;
         }
@@ -906,8 +910,10 @@ width: 112px;
   } 
 }
 
-
-@media all and (max-width: 599px) {
+/* 
+UWAGI AS: @media all and (max-width: 599px)  juz występuje w kodzie! uspojnic do jednej sekcji
+*/
+@media all and (max-width: 599px) { 
 
 
 #functionality {
@@ -1060,6 +1066,9 @@ width: 112px;
 }
 /* -------------------------------------------modal window---------------------------------------------------- */
 
+/* 
+UWAGI AS: @media all and (min-width: 600px) juz występuje w kodzie! uspojnic do jednej sekcji
+*/
 @media all and (min-width: 600px){
  .terms {
     min-width: 500px;

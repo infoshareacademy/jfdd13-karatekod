@@ -1,31 +1,38 @@
+// UWAGI AS: SPACJE, ENTERY, TABULACJE!
+// UWAGI AS: Opakować kod w funkcje zamowykonującą się - ograniczy to ilosc zmiennych na window 
+/*
+(function(){
+    //tu jest wasz kod
+})();
+*/
 
-
-
+// UWAGI AS: brak konsekwencji w stosowaniu średników, albo ich uzywacie wszedzie, albo nigdzie
 
 
 //---------------------------------------------------------functionality: flipping cards--------
 
-
+// UWAGI AS: NIE UZYWAMY VAR
+// UWAGI AS: dozwolony 'let' albo 'const'
 var cards = document.querySelectorAll('.card');
-    for (i=0;i<8;i++) {
+    for (i=0;i<8;i++) { // UWAGI AS: literujemy po dlugosci tablicy, a nie stałej liczbie - cards.length
         flip = cards[i];
             flip.addEventListener('click', function () { 
                 if (this.classList.contains('turnAround')) {
             this.classList.remove('turnAround')
         } else {
-    this.classList.add('turnAround')}
+    this.classList.add('turnAround')} // UWAGI AS: tabulacje!
             }
         );
     }       
-
+// UWAGI AS: ENTERY
 
 
 
 //------------------------------------------------------- cookies----------------
 
-    var buttonAccept1 = document.querySelector('#accept1');
-    var buttonAccept2 = document.querySelector('#accept2');
-    var buttonTerms = document.querySelector('#condition');
+    var buttonAccept1 = document.querySelector('#accept1');// UWAGI AS: var powinno byc const
+    var buttonAccept2 = document.querySelector('#accept2');// UWAGI AS: var
+    var buttonTerms = document.querySelector('#condition');// UWAGI AS: var
 
     function modalPopup() {
         var PopUp = document.querySelector('.modal')
@@ -63,6 +70,8 @@ var cards = document.querySelectorAll('.card');
         terms.classList.add('termsShowUp');
     }
 
+    // UWAGI AS: niepotrzebna duplikacja kodu? 2 metody które robią prawie to samo
+
     function setCookie2() {
         document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
         var modalBox = document.querySelector('.modal1');
@@ -72,7 +81,7 @@ var cards = document.querySelectorAll('.card');
 
     }
 
-
+// UWAGI AS: ENTERY
 
 
     
@@ -85,7 +94,7 @@ var cards = document.querySelectorAll('.card');
      window.addEventListener('scroll', function () {
         const currentPosition = window.scrollY + window.outerHeight / 2;
 
-        var navButtons = document.getElementsByClassName('colored');
+        var navButtons = document.getElementsByClassName('colored'); // UWAGI AS: var
 
         const howItWorks = document.getElementById('how-it-works');
 
@@ -93,7 +102,7 @@ var cards = document.querySelectorAll('.card');
 
         const about = document.getElementById('about');
 
-        for (var i = 0; i < navButtons.length; i++) {
+        for (var i = 0; i < navButtons.length; i++) { // UWAGI AS: var
             navButtons[i].classList.remove('active')
         }
         if (currentPosition  >= howItWorks.offsetTop && currentPosition < signUp.offsetTop) {
@@ -108,8 +117,8 @@ var cards = document.querySelectorAll('.card');
 
 
     //pojawianie się buttona "top" 
-    toTheTopButton = document.querySelector('.toTheTopButton');
-    var navButtons = document.getElementsByClassName('colored');
+    toTheTopButton = document.querySelector('.toTheTopButton'); // UWAGI AS: brak deklaracji zmiennej, przez co wpada na window
+    var navButtons = document.getElementsByClassName('colored'); // UWAGI AS: var
 
     window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -135,7 +144,8 @@ var cards = document.querySelectorAll('.card');
     
     
     function startingValue() {
-        var x = range.value;
+        var x = range.value; // UWAGI AS: var
+        // UWAGI AS: sztywny algorytm... nie pozwala na zmiane ceny.. powinno być to liczone na biezaco
         if (student.checked) {if (x<=3) {monthPrice.innerHTML = '4.75 &euro;'}
          else if (x>3 && x<=6) {monthPrice.innerHTML = '4.60 &euro;'} 
          else if (x>6 && x<=12) {monthPrice.innerHTML = '4.50 &euro;'} else {monthPrice.innerHTML = '4.41 &euro;'}} 
@@ -148,21 +158,21 @@ var cards = document.querySelectorAll('.card');
 
 
 
-    
+    // UWAGI AS: unikamy zakładania eventow w ten sposob, stosujemy addEventListener
     range.oninput = function() {
         months.innerHTML = this.value;
         if (this.value == 13) {
             months.innerHTML = this.value + ' and more';
         }
         startingValue();
-        }
+        } // UWAGI AS: zbedna tabulacja
  
     
     function changeSliderColor() {
         var x = range.value;
-        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`
+        var color = `linear-gradient(90deg, rgb(196, 57, 92) ${x*7.6-5}%, rgb(245, 187, 208) ${x*7.6}%)`// UWAGI AS:  co to ma na celu? przenieśc do css
         range.style.background = color; 
-       }
+       }// UWAGI AS: zbedne spacje
 
     
     
@@ -175,7 +185,7 @@ var cards = document.querySelectorAll('.card');
     nonStudent.addEventListener('click', startingValue);
     startingValue();
 
-
+// UWAGI AS: entery i tabulacje ponizej... caly kod do poprawy wcięć
 
 
     
