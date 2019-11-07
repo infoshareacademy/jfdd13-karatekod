@@ -115,10 +115,6 @@ function setCookie2() {
         document.documentElement.scrollTop = 0;
     })
 
-///------------------------------------------------------------slider
-
-
-
 
 function startingValue() {
     let x = range.value;
