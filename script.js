@@ -12,29 +12,29 @@ let cards = document.querySelectorAll('.card');
 months.innerHTML = range.value;
 
 
-function cardChange () {
+(function cardChange () {
     for (i=0;i<cards.length;i++) {
         flip = cards[i];
             flip.addEventListener('click', function () { 
                 if (this.classList.contains('turnAround')) {
-                        this.classList.remove('turnAround')
+                        this.classList.remove('turnAround');
                 } else {
                     this.classList.add('turnAround')
                 }
             }
         );
     }       
-}
+})();
 
-
-function checkCookies() {
-    function modalPopup() {
-        let PopUp = document.querySelector('.modal')
-        PopUp.style.display= 'block'  
-        }
+function modalPopup() {
+    let PopUp = document.querySelector('.modal');
+    PopUp.style.display= 'block'  
+    }
+(function checkCookies() {
+    
     if (document.cookie.length == 0) modalPopup();
             
-}
+})()
 
 function setCookie1() {
     document.cookie = "name=www.bookswap.com; expires=Thu, 23 Jan 2020 06:00:00 UTC; path=/";
@@ -212,13 +212,11 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 
 document.addEventListener('scroll', checkPosition)
 range.addEventListener('input',changeRange)
-window.addEventListener('load', checkCookies); 
 range.addEventListener('input', changeSliderColor)
 buttonTerms.addEventListener('click', showTerms);
 buttonAccept1.addEventListener('click', setCookie1);
 buttonAccept2.addEventListener('click', setCookie2);
 student.addEventListener('click', startingValue);
 nonStudent.addEventListener('click', startingValue);
-window.addEventListener('load', cardChange)
 startingValue();
 
