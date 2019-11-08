@@ -89,6 +89,7 @@ html{
     background-repeat: no-repeat;
     background-position: center;
     height: 50%;    
+    display: block;
 }
 .linkedinButton:hover{
     opacity: 0.8;
@@ -100,6 +101,7 @@ html{
     background-repeat: no-repeat;
     background-position: center;
     height: 50%;  
+    display: block;
 }
 .githubButton:hover{
     opacity: 0.8;
