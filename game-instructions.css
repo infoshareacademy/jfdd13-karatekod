@@ -32,7 +32,9 @@
     width: 80%;
     height: 100%;
     margin-top: 15px;
-    border: 1px solid black;
+    border: 1px solid rgba(255, 238, 249, 0.493);
+    background: rgba(255, 238, 249, 0.89);
+    border-radius: 30px;
 }
 
 .game-instructions{
@@ -241,7 +243,10 @@ a:hover{
 }
 
 }
-
+.arrow {
+    width: 30px;
+    height: 30px
+}
 
 
 
