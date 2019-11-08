@@ -63,21 +63,12 @@ function setCookie2() {
     setTimeout(endOfModal2, 1900);
 }
 
-
-// UWAGI AS: ENTERY
-
-
-    
-
-    
-    
-
     
      //podświetlanie się buttonów w sekcji "nav" po scrollowaniu na konkretną sekcję
      window.addEventListener('scroll', function () {
         const currentPosition = window.scrollY + window.outerHeight / 2;
 
-        var navButtons = document.getElementsByClassName('colored'); // UWAGI AS: var
+        const navButtons = document.getElementsByClassName('colored'); 
 
         const howItWorks = document.getElementById('how-it-works');
 
@@ -85,7 +76,7 @@ function setCookie2() {
 
         const about = document.getElementById('about');
 
-        for (var i = 0; i < navButtons.length; i++) { // UWAGI AS: var
+        for (let i = 0; i < navButtons.length; i++) { 
             navButtons[i].classList.remove('active')
         }
         if (currentPosition  >= howItWorks.offsetTop && currentPosition < signUp.offsetTop) {
@@ -100,8 +91,8 @@ function setCookie2() {
 
 
     //pojawianie się buttona "top" 
-    toTheTopButton = document.querySelector('.toTheTopButton'); // UWAGI AS: brak deklaracji zmiennej, przez co wpada na window
-    var navButtons = document.getElementsByClassName('colored'); // UWAGI AS: var
+    const toTheTopButton = document.querySelector('.toTheTopButton'); 
+    const navButtons = document.getElementsByClassName('colored');
 
     window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
