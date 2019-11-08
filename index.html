@@ -1,30 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- UWAGI AS: bardzo duzo niepotrzebnych enterow, brak tabulacji, generalnie potrzeba poprawić formatowanie kodu! -->
-
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-
 
     <title>Book-Swap-App</title>
     <link rel="stylesheet" href="fontello-08258d8a/css/fontello.css"> <!-- UWAGI AS: Po co to? -->
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/png" href="img/bookswapp-pic.png">
-
-
 </head>
 
 <body>
-
-
-
 
     <nav class="nav">
         <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text"
@@ -38,22 +27,103 @@
     </nav>
 
     <main>
-        <section class="hero" id="hero">
-            <div class="text">
-                <h1>Read your favourite books.</h1>
-                <h2>Share your thoughts.</h2>
-                <h2>Start book-swapping!</h2>
-                <a class="section__a--signup" href="#signup">
-                    <h3>Sign up</h3>
-                </a>
+        <section id="hero">
+
+            <div class="hero hero0">
+                <div class="image-hero">
+                    <img src="img/bookswap-text.png" alt="book-swapper">
+                </div>
+                <div class="text text0">
+                    <h1>Register</h1>
+                    <h2>Specify your book prefs</h2>
+                    <h2>Setup your location</h2>
+                    <a class="section__a--signup" href="#signup">
+                        <h3>Sign up</h3>
+                    </a>
+                </div>
             </div>
-            <div class="image-hero">
-                <img src="img/bookswap-text.png" alt="book-swapper">
+
+            <div class="hero hero1">
+                <div class="image-hero">
+                    <img src="img/bookswap-text.png" alt="book-swapper">
+                </div>
+                <div class="text text0">
+                    <h1>Download BookswApp</h1>
+                    <h2>Add your books</h2>
+                    <h2>Search for books</h2>
+                    <a class="section__a--signup" href="#signup">
+                        <h3>Sign up</h3>
+                    </a>
+                </div>
             </div>
 
+            <div class="hero hero2">
+                <div class="image-hero">
+                    <img src="img/bookswap-text.png" alt="book-swapper">
+                </div>
+                <div class="text text0">
+                    <h1>Use BookswApp</h1>
+                    <h2>Read books</h2>
+                    <h2>ENJOY !!!</h2>
+                    <a class="section__a--signup" href="#signup">
+                        <h3>Sign up</h3>
+                    </a>
+                </div>
+            </div>
 
+            <div class="heroSliderContainer" style="position: absolute; top: 0; left: 0; right: 0; height: 100%;">
+                <a class="prev">&#10094;</a>
+                <a class="next">&#10095;</a>
+            </div>
+                  
+            <script>
+                let activeEl = 0;
+                let timer;
+                let elements = document.querySelectorAll('#hero .hero');
 
+                document.querySelector('#hero .next').addEventListener('click', () => {
+                    activeEl += 1;
+                    changeImage();
+                });
+                document.querySelector('#hero .prev').addEventListener('click', () => {
+                    activeEl -= 1;
+                    changeImage();
+                });
 
+                const heroSection = document.querySelector('#hero');
+                heroSection.addEventListener('mouseenter', () => {
+                    stopShow();
+                })
+                heroSection.addEventListener('mouseleave', () => {
+                    runShow();
+                })
+    
+                function changeImage() {
+                    if(activeEl > elements.length - 1){
+                        activeEl = 0;
+                    }
+                    if (activeEl < 0) {
+                        activeEl = elements.length - 1;
+                    }
+                    elements.forEach((element) => {
+                        element.style.display = "none";
+                    });
+                    elements[activeEl].style.display = 'block';
+                }
+
+                function autoRotate() {
+                    activeEl += 1;
+                    changeImage();
+                }
+                function stopShow(){
+                    clearTimeout(timer);
+                }
+                function runShow(){
+                    clearTimeout(timer);
+                    timer = setTimeout(autoRotate, 4000);
+                }
+                window.onload = runShow;
+            </script>
 
         </section>
 
@@ -96,7 +166,6 @@
                 </div>
             </div>
         </section>
-
 
         <section id="functionality">
 
