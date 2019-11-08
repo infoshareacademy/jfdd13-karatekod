@@ -17,12 +17,13 @@
 <body>
 
     <nav class="nav">
-        <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text" src="img/bookswap-text.png" alt="teext"></a>
+        <a class="nav__a--logo" href="#hero"><img src="img/bookswapp-pic.png" alt="book-swapper"><img id="bookswap-text"
+                src="img/bookswap-text.png" alt="teext"></a>
         <a class="nav__a--logo" href="#hero"></a>
         <div class="nav__menu">
-            <a href="#how-it-works">Features</a>
-            <a href="#about">About</a>
-            <a class="nav__a--signup" href="#signup">Sign up</a>
+            <div class="colored"><a href="#how-it-works">Features</a></div>
+            <div class="colored"><a href="#about">About</a></div>
+            <div class="colored"><a class="nav__a--signup" href="#signup">Sign up</a></div>
         </div>
     </nav>
 
@@ -174,7 +175,7 @@
             <div class="container">
 
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/chat.svg" alt="chat cloud"></div>
                         <p>CHAT WITH OTHERS</p>
@@ -186,7 +187,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/localisation.svg" alt="globe"></div>
                         <p>LOOK AROUND YOU</p>
@@ -198,7 +199,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/wishlist 1.svg" alt="list"></div>
                         <p>MAKE A WISH LIST</p>
@@ -210,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/network.svg" alt="social network"></div>
                         <p>MAKE IT SOCIAL</p>
@@ -222,7 +223,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/trophy1.svg" alt="trophy"></div>
                         <p>ARE YOU A SUPER READER?</p>
@@ -234,7 +235,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/notification.svg" alt="bell"></div>
                         <p>GET NOTIFIED</p>
@@ -246,7 +247,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/evaluate.svg" alt="ratings"></div>
                         <p>RATE A USER</p>
@@ -258,7 +259,7 @@
                     </div>
                 </div>
 
-                <div class="card" onclick="func(this, 'turnAround')">
+                <div class="card" >
                     <div class="front">
                         <div class="photo"><img src="img/pen.svg" alt="pen"></div>
                         <p>BECOME A CRITIC</p>
@@ -280,92 +281,159 @@
 
 
 
+        <div id="formCalculator">
+            <div class="newsletter-form" id="signup">
+                <form class="news-form">
+                    <div class="newsletter-form-text">
+                        <h1 class="sign-in">SIGN UP!</h1>
+                        <p class="sign-in-text">We will send you an e-mail with notification after our app is published.</p>
+                        <p class="sign-in-text-info">You will get only one e-mail with notification.</P>
+                    </div>
 
-        <div class="newsletter-form" id="signup">
-            <form class="news-form">
-                <div class="newsletter-form-text">
-                    <h1 class="sign-in">SIGN UP!</h1>
-                    <p class="sign-in-text">We will send you an e-mail with notification after our app is published.</p>
-                    <p class="sign-in-text-info">You will get only one e-mail with notification.</P>
+                    <div class="newsletter-form-input">
+                        <input type="email" name="email" class="sign-in-contact-input" placeholder="Your email adress...">
+
+                        <label for="scales" class="terms-of-service-text">All your data is completely safe ;)</label>
+                    </div>
+
+
+                    <button type="submit" class="newsletter-button">Send</button>
+                </form>
+
+                
+
+            </div>
+     <!-- ----------------------------------------calculator--------------------------------------------------- -->
+            <div id="calculator">
+                <div class="innerCalculator"> 
+                    <div id="calc-descritpion">
+                        <p>Calculate your discount</p>
+                        <p>If you choose your membership for more than 3 months, you will get a discount, accordingly to 
+                            the time of declared membership. Students and pensioners get 5% off on top of that. Select the number 
+                            of months and check, how cheap is your monthly acces to BookSwapp
+                        </p>
+                    </div>
+                    <div id="radio-selector">
+                        <label class="radioRange">student/pensioner
+                            <input type="radio" id="student" name="radio">
+                        </label>
+                        <label class="radioRange">not a student/pensioner
+                            <input type="radio" id="non-student" name="radio" checked>
+                        </label>
+                       
+    
+                    </div>
+                    <div id="calc-amount">Your monthly price is:</div>
+                    <div id="promotion"><span id="monthPrice"></span></div>
+                    <div id="calc-slider">
+                        <input type="range" min="1" max="13" value="1" class="range-slider" id="range">
+                        <p style="text-align: center;">Number of months: <span id="months"></span></p>
+                    </div>
                 </div>
-
-                <div class="newsletter-form-input">
-                    <input type="email" name="email" class="sign-in-contact-input" placeholder="Your email adress...">
-
-                    <label for="scales" class="terms-of-service-text">All your data is completely safe ;)</label>
-                </div>
-
-
-                <button type="submit" class="newsletter-button">Send</button>
-            </form>
-
-
-
+            </div> <!--     ---------------------------------------------------------------------------------------- -->
+            
         </div>
+        
 
         <div class="team-info" id="about">
             <h1 class="our-team">OUR TEAM</h1>
             <div class="team-info-photos">
 
 
-                <figure><img src="img/portrait2.jpg" class="emoji1" alt="Karol">
+
+
+
+                <figure>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/portrait2.jpg" class="emoji1" alt="Karol Antonowicz">
+                        </div>
+                        <div class="two">
+                            <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/">
+                                <div class="linkedinButton"></div>
+                            </a>
+
+                            <a href="https://github.com/karol-antonowicz">
+                                <div class="githubButton"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
                     <figcaption>
                         <p>Karol Antonowicz</p>
-                        <div class="lnkd-gh-icons">
-                            <a href="https://www.linkedin.com/in/karol-antonowicz-387758152/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/karol-antonowicz"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
-
-
                     </figcaption>
-
                 </figure>
 
 
-                <figure><img src="img/portrait3.jpg" class="emoji1" alt="Karolina">
+
+                <figure>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/portrait3.jpg" class="emoji1" alt="Karolina Michalak">
+                        </div>
+                        <div class="two">
+                            <a href="https://www.linkedin.com/in/karolina-michalak-94b394196/">
+                                <div class="linkedinButton"></div>
+                            </a>
+
+                            <a href="https://github.com/karolina-michalak">
+                                <div class="githubButton"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
                     <figcaption>
                         <p>Karolina Michalak</p>
-                        <div class="lnkd-gh-icons">
-
-                            <a href="https://www.linkedin.com/in/karolina-michalak-94b394196/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/karolina-michalak"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
-
                 </figure>
 
 
 
-                <figure><img src="img/tuomas.jpg" class="emoji1" alt="Tuomas">
+                <figure>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/tuomas.jpg" class="emoji1" alt="Tuomas Juhanila">
+                        </div>
+                        <div class="two">
+                            <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/">
+                                <div class="linkedinButton"></div>
+                            </a>
+
+                            <a href="https://github.com/TuomasJuhanila">
+                                <div class="githubButton"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
                     <figcaption>
                         <p>Tuomas Juhanila</p>
-                        <div class="lnkd-gh-icons">
-
-                            <a href="https://www.linkedin.com/in/tuomas-juhanila-20232635/"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/TuomasJuhanila"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
                     </figcaption>
                 </figure>
 
-                <figure class=><img src="img/portrait1.jpg" class="emoji1" alt="Karol">
+
+
+                <figure>
+                    <div class="mirror">
+                        <div class="one">
+                            <img src="img/portrait1.jpg" class="emoji1" alt="Karol Andracki">
+                        </div>
+                        <div class="two">
+                            <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181">
+                                <div class="linkedinButton"></div>
+                            </a>
+
+                            <a href="https://github.com/karol-andracki">
+                                <div class="githubButton"></div>
+                            </a>
+                        </div>
+                    </div>
+                    </a>
                     <figcaption>
                         <p>Karol Andracki</p>
-                        <div class="lnkd-gh-icons">
-
-                            <a href="https://pl.linkedin.com/in/karol-andracki-b60a35181"><img src="img/lnkd1.png"
-                                    class="lnkd" alt="linkedin"></a>
-                            <a href="https://github.com/Karol-Andracki"><img src="img/gh1.png" class="gh"
-                                    alt="github"></a>
-                        </div>
-
                     </figcaption>
                 </figure>
+
+
 
 
             </div>
@@ -383,8 +451,10 @@
                 <img src="img/bookswapp_logo-13.png" class="logo-squish-footer">
 
                 <div class="media">
-                    <a href="#"><img class="facelogo" src="img/face1.png"></a>
-                    <a href="#"><img class="instalogo" src="img/insta1.png"></a>
+                    <a href="https://www.facebook.com/BookSwapp-110938070331360/?modal=admin_todo_tour"><img
+                            class="facelogo" src="img/face1.png"></a>
+                    <a href="https://www.instagram.com/book___swapp/?hl=pl"><img class="instalogo"
+                            src="img/insta1.png"></a>
                 </div>
 
 
@@ -396,7 +466,6 @@
                 <form action="#" method="post">
 
                     <h2 class="h2-footer-right">Any questions? Contact us!</h2>
-                    <br>
                     <div class="inputs">
                         <input type="email" name="email" class="contact-input" placeholder="Your email adress...">
 
@@ -415,23 +484,55 @@
             <p class="footer-bottom-copyright">Copyright: &copy; BookSwapp 2019 | created by KarateKod</p>
         </div>
 
+        <button class="toTheTopButton" title="Go to top">Top</button>
 
 
     </footer>
-    <script>
-        function func(el, trn) {
+    
+    <!-- ----------------------------------------modal window for cookies--------------------------------------------- -->
+    
+    <div class="modal fadeIn">
+        <div class="modal-content fadeInTop">
+            <p class="cookiePolicy">We use cookies and similar technologies to recognize your repeat visits and preferences, as well as to measure the effectiveness of campaigns and analyze traffic. To learn more about cookies, including how to disable them, view our Cookie Policy.
+                By clicking “I accept” or using our site, you consent to the use of cookies unless you have disabled them.
+            </p>
 
-            if (el.classList.contains('turnAround')) {
-                el.classList.remove('turnAround')
-            } else {
-                el.classList.add(trn)
-            }
+            <div action="" class="ModalButtons">       
+                <button id="condition" type="button">Learn More</button>
+                <button id="accept1" type="button">Accept</button>
+            </div>
+        </div>
+    </div>
+       
+    <div class="modal1">
 
-        }
-    </script>
+        <div class="terms">
+            <p class="cookiePolicy1">
+                <b>Cookies Policy</b> <br>
+                    <em>How We Use Cookies</em><br>
+                    
+                    The cookies we use do not store personally identifiable information nor can they harm your computer. We want our website to be informative, personal, and as user friendly as possible and cookies help us to achieve that goal.
+                    
+                    By using our website, you agree to the use of cookies. We appreciate some users may like more individual control over their visit to our website and can adjust their settings accordingly. You can read all about this here: <a href="https://www.allaboutcookies.org/manage-cookies/clear-cookies-installed.html" class="link-to-cookies" target="_blank"> "How to control and delete cookies"</a>. If you do not agree to such use, please refrain from using the website. <br>
+                    
+                    <em>What are Cookies?</em><br>
+                    
+                    A cookie is a small file and holds a certain amount of data, which our website can send to your browser. It may then be stored on your computer's hard drive and can be accessed by our web server. This cookie data can then be retrieved and can allow us to customise our web pages and services accordingly. It is important to clarify that cookies do not collect any personal data stored on your hard drive or computer.
+            </p>
+            <br>
+
+            <div class="ModalButtons1">
+                <button id="accept2" type="button">Accept Cookie</button>
+            </div>
+        </div>
+    </div>
+
+<!-- ----------------------------------------------end of modal---------------------------------------------------------- -->
+    <script src="script.js"></script>
+
+    
 
 
-
-</body>
+  </body>
 
 </html>
