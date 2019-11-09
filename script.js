@@ -12,7 +12,6 @@ let cards = document.querySelectorAll('.card');
 months.innerHTML = range.value;
 
 
-
 function cardChange () {
     for (i=0;i<cards.length;i++) {
         flip = cards[i];
@@ -91,8 +90,8 @@ function setCookie2() {
 
 
     //pojawianie się buttona "top" 
-    toTheTopButton = document.querySelector('.toTheTopButton');
-    var navButtons = document.getElementsByClassName('colored');
+    let toTheTopButton = document.querySelector('.toTheTopButton');
+    let navButtons = document.getElementsByClassName('colored');
 
     window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -203,20 +202,25 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 //kliknięcie "send" przekierowuje na stronę startową gry
 const sendButton = document.querySelector('.newsletter-button')
 
+let mailValidation = function () {
+    const inputValue = document.querySelector('.sign-in-contact-input').value;
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-let gameRedirect = function (e) {
-    let inputValue = document.querySelector('.sign-in-contact-input').value;
-    e.preventDefault();
-
-    if(inputValue.includes('@')){
-    window.location.replace("game-instructions.html");
+    if (re.test(String(inputValue).toLowerCase()) === true){
+        return true;
     }
-    
+    else{
+        return false
+    }
   };
 
 
-
-
+  function gameRedirect(e){
+    e.preventDefault();
+    if (mailValidation() === true){
+        window.location.replace("game-instructions.html");
+    }
+};
 
 
 document.addEventListener('scroll', checkPosition)
