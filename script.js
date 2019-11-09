@@ -223,7 +223,7 @@ let mailValidation = () => {
 };
 
 //alert wyświetla się po wysłaniu wiadomości za pomocą formularza w footerze
-let footerBtn = document.querySelector('.footer-button');
+const footerBtn = document.querySelector('.footer-button');
 
 let footerMailValidation = () => {
     const footerMail = document.querySelector('.contact-input');
