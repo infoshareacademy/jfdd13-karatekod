@@ -222,6 +222,32 @@ let mailValidation = () => {
     }
 };
 
+//alert wyświetla się po wysłaniu wiadomości za pomocą formularza w footerze
+let footerBtn = document.querySelector('.footer-button');
+
+let footerMailValidation = () => {
+    const footerMail = document.querySelector('.contact-input');
+    const footerMsg = document.querySelector('.message-input');
+    const footerMailValue = footerMail.value;
+    const footerMsgValue = footerMsg.value;
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if ((regex.test(String(footerMailValue).toLowerCase()) === true) && (footerMsgValue)){
+        return true
+    }
+    else{
+        return false
+    }
+  };
+
+  let showThanksPopup = (e) => {
+      e.preventDefault();
+      if (footerMailValidation() === true){
+          alert('Thank you for message! We will contact you as soon as possible.')
+      }
+
+  }
+
 
 document.addEventListener('scroll', checkPosition)
 range.addEventListener('input',changeRange)
@@ -234,5 +260,6 @@ student.addEventListener('click', startingValue);
 nonStudent.addEventListener('click', startingValue);
 window.addEventListener('load', cardChange)
 startingValue();
-sendButton.addEventListener('click', gameRedirect)
+sendButton.addEventListener('click', gameRedirect);
+footerBtn.addEventListener('click', showThanksPopup)
 
