@@ -133,9 +133,14 @@
                                         // when all images are loaded then the game can start
 
                                         ctx.drawImage(background, 0, 0, 500, 500);
-                                        ctx.strokeStyle = "#FFFFFF";
-                                        ctx.font = "30px Calibri";
-                                        ctx.strokeText('Click here to start the game', 80, 250);
+                                        ctx.fillStyle = "#e91e63";
+                                        ctx.font = "20px Calibri";
+                                        ctx.strokeText('Use ← & → to move and ↑ to jump.', 110, 70)
+                                        ctx.strokeText('Beware the bombs.', 170, 100)
+                                        ctx.strokeText('Catch all the books!', 165, 130)
+                                        ctx.strokeStyle = "#FFF";
+                                        ctx.font = "40px Calibri";
+                                        ctx.strokeText('Click here to start the game', 25, 290);
 
                                         drawObject = function (object, x, y, width,
                                             height
@@ -300,8 +305,15 @@
 
                                         gameOver =
                                     function () { // funkcja gameover robi reset :P
-                                            
-                                            
+                                            ctx.save();
+                                            ctx.globalAlpha = 0.6;
+                                            drawObject(papyrus, 100, 100, 300, 200);
+                                            ctx.globalAlpha = 1.0;
+                                            ctx.strokeStyle = "#212121";
+                                            ctx.font = "30px Raleway";
+                                            ctx.strokeText("Game Over,", 180, 180)
+                                            ctx.strokeText("Click to Restart", 160, 250)
+                                            ctx.restore();
                                             clearInterval(intervalvar);
                                             papyrus1.style.display = 'flex'
                                         }
