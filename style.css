@@ -101,6 +101,9 @@ html{
 
 }
 
+.hero {
+    background-attachment: fixed;
+}
 
 section.hero{
     background-image: url(img/side-books\ \(copy\).jpg); 
@@ -108,7 +111,7 @@ section.hero{
     background-position-y: 40%;
     background-position-x: 70%; 
     background-repeat: no-repeat;
-
+    
     font-weight: 800; 
     text-align: center;
     width: 100%; 
