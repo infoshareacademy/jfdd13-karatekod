@@ -2,15 +2,14 @@ html{
     scroll-behavior: smooth;
         }
 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    
-    
+    color: #212121;  
 }
+
 
 
 .toTheTopButton {
@@ -109,11 +108,166 @@ section.hero{
     background-position-y: 40%;
     background-position-x: 70%; 
     background-repeat: no-repeat;
+
     font-weight: 800; 
-    padding: 6rem 1rem 3rem 1rem; 
     text-align: center;
     width: 100%; 
+    overflow: hidden;
+    position: relative;
 }
+
+section .hero { 
+    padding: 6rem 1rem 3rem 1rem;
+    display: none;
+    background-size: cover; 
+    background-position-y: 40%;
+    background-position-x: 70%; 
+    background-repeat: no-repeat;  
+}
+
+section .hero0 { 
+    display: block;
+    background-image: url(img/side-books.jpg);
+}
+section .hero1 { 
+    background-image: url(img/b2.jpg);
+}
+section .hero2 { 
+    background-image: url(img/b1.jpg);
+}
+
+.heroSliderContainer {
+    height: 300%;
+}
+
+#heroSlider {
+    height: 100%;
+}
+
+.hero {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+  
+    @-webkit-keyframes fade {
+        from {opacity: .7} 
+        to {opacity: 1}
+    }
+  
+    @keyframes fade {
+        from {opacity: .7} 
+        to {opacity: 1}
+    }
+/* 
+  .heroHOne {
+    -webkit-animation-name: herocolorchange;
+    -webkit-animation-duration: 3s;
+    animation-name: herocolorchange;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes herocolorchange {
+    from {color: #212121;}
+    to {color: #c2185b;}
+  }
+  
+  @keyframes herocolorchange {
+    from {color: #212121;}
+    to {color: #c2185b;}
+  }
+
+  .heroHTwo {
+    -webkit-animation-name: herocolorchange2;
+    -webkit-animation-duration: 4s;
+    animation-name: herocolorchange2;
+    animation-duration: 4s;
+  }
+
+  @-webkit-keyframes herocolorchange2 {
+    from {color: #c2185b;}
+    to {color: #212121;}
+  }
+  
+  @keyframes herocolorchange2 {
+    from {color: #c2185b;}
+    to {color: #212121;}
+  } */
+
+  /* .section__a--signup {
+    -webkit-animation-name: herocolorchange3;
+    -webkit-animation-duration: 3s;
+    animation-name: herocolorchange3;
+    animation-duration: 3s;
+  }
+
+  @-webkit-keyframes herocolorchange3 {
+    from {background-color: #212121;}
+    to {background-color: #c2185b;}
+  }
+  
+  @keyframes herocolorchange3 {
+    from {background-color: #212121;}
+    to {background-color: #c2185b;}
+  } */
+  
+.prev, .next {
+    z-index: 1;
+    cursor: crosshair;
+    position: absolute;
+    top: 60%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #c2185b;
+    font-weight: bold;
+    font-size: 38px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    padding:20px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    padding:20px;
+  }
+  
+  .prev:hover {
+    background-color: #212121;
+  }
+
+  .next:hover {
+    background-color: #212121;
+  }
+
+/* .dots{
+    position: relative;
+    z-index: 3;
+    width: 60%;
+}
+
+.dot{
+    height: 25px;
+    width: 25px;
+    margin: 0 10px;
+    background-color:  #c2185b;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+    background-color: black;
+} */
 
 
 .active{
@@ -353,6 +507,40 @@ width: 112px;
     
     
 
+    .description p:first-child{
+        font-size: 20px;
+        font-weight: 800;
+        letter-spacing: 2px;
+       
+    }
+    .description p:nth-child(2){
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+
+    }
+
+    div.flex {
+        display: flex;
+        /* background-color: #f5bbd0; */
+        border-radius: 30px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        justify-content: space-between;
+        border: 1px solid black;
+    }
+    
+    .flex .img {
+        flex-basis: 25%;
+        width: 100%;
+        padding: 10px;
+    }
+    .flex div.description {
+        flex-basis: 70%;
+    }
+    }
+
+
     .facelogo, .instalogo{
         width: 40px;
         height: 40px;
@@ -376,16 +564,17 @@ width: 112px;
         width: 100%;
         background-color: white;
         height: 100vh; 
-
-        }
+    }
 
     .text {
-        width: 100%; 
+        width: 100%;
+        height:80%; 
         display: flex; 
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-bottom: 0;
+        z-index: 2;
+        background: rgba(250, 247, 247, 0.6); border-radius: 30px;
     }
 
     .text h1 {
@@ -404,7 +593,6 @@ width: 112px;
         font-size: 1.5rem;   
     }
 
-
     .text h3 {
         align-self: flex-start;
         align-self: center;
@@ -413,17 +601,17 @@ width: 112px;
 
     .image-hero {
         width: 100%;
-        padding-bottom: 2rem;
+        margin-bottom: 2rem;
         justify-content: center;
+        z-index: 1;
+        background: rgba(250, 247, 247, 0.6); border-radius: 30px;
     }
 
     .image-hero img {
         height: 80%;
         width: 80%;
         max-height: 450px;
-        max-width: 450px;
-        
-        
+        max-width: 450px;  
     }
 
     .section__a--signup {
@@ -433,9 +621,10 @@ width: 112px;
         color: white;
         background-color: #c2185b;
         border-radius: 20px;
-        margin-top: 3rem;
         padding: 0.5rem;
+        margin-top: 2rem;
     }
+
     .section__a--signup:hover {
         background-color: #FF9800;
         color: black;
@@ -452,6 +641,7 @@ width: 112px;
         min-height: 68px; 
         text-align: center;
         box-shadow: 0px 1px 10px;
+        z-index: 3;
     }
 
     .HowItWorks {
@@ -509,7 +699,7 @@ width: 112px;
         }
 
     .nav__menu{
-            display: flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
         font-size: 1.5rem;
@@ -670,59 +860,61 @@ width: 112px;
     justify-content: space-between;
 }
 
-    .nav__a--logo  {
-        display: initial;
-        align-self: left;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
+.nav__a--logo  {
+    /* width: 35%; */
+    display: initial;
+    align-self: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    }
+
+
+    .image-hero {
+        width: 60%;
+        justify-content: center;
+        height:auto;
+    }
+
+    .heroSliderContainer {
+        padding-left: 17.5%;
+        justify-content: center;
+    }
+
+    /* #heroSlider {
+        padding-left: 17.5%;
+        justify-content: center;
+    } */
+    
+    .nav__a--logo img{
+        max-width: 100%;
+        max-height: 100%;
+        padding-top: 0.2rem;
+        padding-bottom: 0.2rem;
+        width: 60px;             
+    }
+    
+    #bookswap-text {
+        max-height: 50px;
+        width: 140px;
+    }
+
+    .nav__menu {
+                    display: flex;
+        justify-content: flex-end;
         align-items: center;
-        display: flex;
-        
-        }
-
-        .image-hero {
-            width: 60%;
-            justify-content: center;
-            height:auto;
-            
-        }
-        
-        .nav__a--logo img{
-            max-width: 100%;
-            max-height: 100%;
-            padding-top: 0.2rem;
-            padding-bottom: 0.2rem;
-            width: 60px;
-                        
-        }
-        
-        #bookswap-text {
-            max-height: 50px;
-            width: 140px;
-        }
-
-        .nav__menu {
-                      display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            width: 60%;
-            padding-right: 0px;
-            padding-left: 0px;
-                  
-            
-        }
-        
-
-        
-   
-        
-
+        width: 60%;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
 
     .text {
-        margin-top: 0rem;
+        margin-top: 3rem;
         width: 60%;
-        
+        height: 75%;
+        padding-bottom: 3rem;
     }
 
     .text h1 {
@@ -731,17 +923,14 @@ width: 112px;
         margin-top: 2rem;
         margin-bottom: 2rem;
         font-size: 3.6rem;
-        
-        
-       }
+    }
 
-       .text h2 {
-           font-size: 2.0rem;
-       }
-    
-       .section__a--signup {
-        margin-top: 1.8rem;
-                
+    .text h2 {
+        font-size: 2.0rem;
+    }
+
+    .section__a--signup {
+    margin-top: 1rem;       
     }
 
     .text h3 {
@@ -1025,7 +1214,7 @@ div.flex {
 }
 .back {
     display: flex;
-    background-color: #f5bbd0;
+    background-color: #f2a8ce;
     transform: rotateX(180deg);
     
    
