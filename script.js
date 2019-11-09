@@ -201,15 +201,19 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 
 
 //kliknięcie "send" przekierowuje na stronę startową gry
-const sendButton = document.querySelector('.newsletter-button');
+const sendButton = document.querySelector('.newsletter-button')
 
-let gameRedirect = function () {
-    let inputValue = document.querySelector('.sign-in-contact-input').value
+
+let gameRedirect = function (e) {
+    let inputValue = document.querySelector('.sign-in-contact-input').value;
+    e.preventDefault();
+
     if(inputValue.includes('@')){
-window.location.replace("game-instructions.html");
+    window.location.replace("game-instructions.html");
     }
     
   };
+
 
 
 
