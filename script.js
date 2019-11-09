@@ -12,6 +12,7 @@ let cards = document.querySelectorAll('.card');
 months.innerHTML = range.value;
 
 
+
 function cardChange () {
     for (i=0;i<cards.length;i++) {
         flip = cards[i];
@@ -63,20 +64,11 @@ function setCookie2() {
     setTimeout(endOfModal2, 1900);
 }
 
-
-
-
-    
-
-    
-    
-
-    
      //podświetlanie się buttonów w sekcji "nav" po scrollowaniu na konkretną sekcję
      window.addEventListener('scroll', function () {
         const currentPosition = window.scrollY + window.outerHeight / 2;
 
-        var navButtons = document.getElementsByClassName('colored');
+        const navButtons = document.getElementsByClassName('colored');
 
         const howItWorks = document.getElementById('how-it-works');
 
@@ -208,6 +200,21 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 }
 
 
+//kliknięcie "send" przekierowuje na stronę startową gry
+const sendButton = document.querySelector('.newsletter-button');
+
+let gameRedirect = function () {
+    let inputValue = document.querySelector('.sign-in-contact-input').value
+    if(inputValue.includes('@')){
+window.location.replace("game-instructions.html");
+    }
+    
+  };
+
+
+
+
+
 document.addEventListener('scroll', checkPosition)
 range.addEventListener('input',changeRange)
 window.addEventListener('load', checkCookies); 
@@ -219,4 +226,5 @@ student.addEventListener('click', startingValue);
 nonStudent.addEventListener('click', startingValue);
 window.addEventListener('load', cardChange)
 startingValue();
+sendButton.addEventListener('click', gameRedirect)
 
