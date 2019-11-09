@@ -202,11 +202,11 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 //kliknięcie "send" przekierowuje na stronę startową gry
 const sendButton = document.querySelector('.newsletter-button')
 
-let mailValidation = function () {
+let mailValidation = () => {
     const inputValue = document.querySelector('.sign-in-contact-input').value;
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    if (re.test(String(inputValue).toLowerCase()) === true){
+    if (regex.test(String(inputValue).toLowerCase()) === true){
         return true;
     }
     else{
@@ -215,7 +215,7 @@ let mailValidation = function () {
   };
 
 
-  function gameRedirect(e){
+  let gameRedirect = (e) => {
     e.preventDefault();
     if (mailValidation() === true){
         window.location.replace("game-instructions.html");
