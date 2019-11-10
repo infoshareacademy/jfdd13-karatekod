@@ -101,6 +101,9 @@ html{
 
 }
 
+.hero {
+    background-attachment: fixed;
+}
 
 section.hero{
     background-image: url(img/side-books\ \(copy\).jpg); 
@@ -108,7 +111,7 @@ section.hero{
     background-position-y: 40%;
     background-position-x: 70%; 
     background-repeat: no-repeat;
-
+    
     font-weight: 800; 
     text-align: center;
     width: 100%; 
@@ -127,13 +130,14 @@ section .hero {
 
 section .hero0 { 
     display: block;
-    background-image: url(img/side-books.jpg);
+    background-image: url(img/herophoto1.jpg);
 }
 section .hero1 { 
-    background-image: url(img/b2.jpg);
+    background-image: url(img/herophoto2.jpg);
 }
 section .hero2 { 
-    background-image: url(img/b1.jpg);
+    background-image: url(img/herophoto3.jpg);
+    /* Photo by Jilbert Ebrahimi on Unsplash */
 }
 
 .heroSliderContainer {
@@ -144,28 +148,11 @@ section .hero2 {
     height: 100%;
 }
 
-.hero {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 3s;
-    animation-name: fade;
-    animation-duration: 3s;
-}
-  
-    @-webkit-keyframes fade {
-        from {opacity: .7} 
-        to {opacity: 1}
-    }
-  
-    @keyframes fade {
-        from {opacity: .7} 
-        to {opacity: 1}
-    }
-/* 
-  .heroHOne {
+  .herotext0 {
     -webkit-animation-name: herocolorchange;
-    -webkit-animation-duration: 3s;
+    -webkit-animation-duration: 2s;
     animation-name: herocolorchange;
-    animation-duration: 3s;
+    animation-duration: 2s;
   }
 
   @-webkit-keyframes herocolorchange {
@@ -178,6 +165,23 @@ section .hero2 {
     to {color: #c2185b;}
   }
 
+  .hero {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+  
+    @-webkit-keyframes fade {
+        from {opacity: .7} 
+        to {opacity: 1}
+    }
+  
+    @keyframes fade {
+        from {opacity: .7} 
+        to {opacity: 1}
+    }
+/* 
   .heroHTwo {
     -webkit-animation-name: herocolorchange2;
     -webkit-animation-duration: 4s;
@@ -539,7 +543,7 @@ width: 112px;
     .flex div.description {
         flex-basis: 70%;
     }
-    }
+    
 
 
     .facelogo, .instalogo{
@@ -581,15 +585,16 @@ width: 112px;
     .text h1 {
         align-self: center;
         letter-spacing: 1px; 
-        color: #c2185b;
+        color: #212121;
         font-size: 2.1rem;
         padding-bottom: 1.8rem; 
+        text-align: center;
    }
 
    .text h2 {
         align-self: center;
         letter-spacing: 1px;
-        color: black;
+        color: #212121;
         margin-bottom: 0.8rem;
         font-size: 1.5rem;   
     }
@@ -604,6 +609,7 @@ width: 112px;
         width: 100%;
         margin-bottom: 2rem;
         justify-content: center;
+        text-align: center;
         z-index: 1;
         background: rgba(250, 247, 247, 0.6); border-radius: 30px;
     }
@@ -624,6 +630,7 @@ width: 112px;
         border-radius: 20px;
         padding: 0.5rem;
         margin-top: 2rem;
+        z-index: 2;
     }
 
     .section__a--signup:hover {
@@ -795,8 +802,8 @@ width: 112px;
     }
 
     .nav__a--signup:hover {
-        background-color: #c2185b;
-        color: #c2185b;  
+        background-color: #FF9800;
+        color: black; 
         
     }
 
