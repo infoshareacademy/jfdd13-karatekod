@@ -130,13 +130,14 @@ section .hero {
 
 section .hero0 { 
     display: block;
-    background-image: url(img/side-books.jpg);
+    background-image: url(img/herophoto1.jpg);
 }
 section .hero1 { 
-    background-image: url(img/b2.jpg);
+    background-image: url(img/herophoto2.jpg);
 }
 section .hero2 { 
-    background-image: url(img/b1.jpg);
+    background-image: url(img/herophoto3.jpg);
+    /* Photo by Jilbert Ebrahimi on Unsplash */
 }
 
 .heroSliderContainer {
@@ -801,7 +802,7 @@ width: 112px;
 
     .nav__a--signup:hover {
         background-color: #FF9800;
-        color: #c2185b;  
+        color: black; 
         
     }
 
