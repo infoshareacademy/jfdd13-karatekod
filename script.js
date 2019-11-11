@@ -63,20 +63,11 @@ function setCookie2() {
     setTimeout(endOfModal2, 1900);
 }
 
-
-
-
-    
-
-    
-    
-
-    
      //podświetlanie się buttonów w sekcji "nav" po scrollowaniu na konkretną sekcję
      window.addEventListener('scroll', function () {
         const currentPosition = window.scrollY + window.outerHeight / 2;
 
-        var navButtons = document.getElementsByClassName('colored');
+        const navButtons = document.getElementsByClassName('colored');
 
         const howItWorks = document.getElementById('how-it-works');
 
@@ -99,8 +90,8 @@ function setCookie2() {
 
 
     //pojawianie się buttona "top" 
-    toTheTopButton = document.querySelector('.toTheTopButton');
-    var navButtons = document.getElementsByClassName('colored');
+    let toTheTopButton = document.querySelector('.toTheTopButton');
+    let navButtons = document.getElementsByClassName('colored');
 
     window.addEventListener('scroll', function () {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -208,6 +199,56 @@ document.querySelectorAll('.mirror')[index].addEventListener('mouseleave', funct
 }
 
 
+//kliknięcie "send" przekierowuje na stronę startową gry
+const sendButton = document.querySelector('.newsletter-button')
+
+let mailValidation = () => {
+    const inputValue = document.querySelector('.sign-in-contact-input').value;
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (regex.test(String(inputValue).toLowerCase()) === true){
+        return true;
+    }
+    else{
+        return false
+    }
+  };
+
+
+  let gameRedirect = (e) => {
+    e.preventDefault();
+    if (mailValidation() === true){
+        window.location.replace("game-instructions.html");
+    }
+};
+
+//alert wyświetla się po wysłaniu wiadomości za pomocą formularza w footerze
+const footerBtn = document.querySelector('.footer-button');
+
+let footerMailValidation = () => {
+    const footerMail = document.querySelector('.contact-input');
+    const footerMsg = document.querySelector('.message-input');
+    const footerMailValue = footerMail.value;
+    const footerMsgValue = footerMsg.value;
+    const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if ((regex.test(String(footerMailValue).toLowerCase()) === true) && (footerMsgValue)){
+        return true
+    }
+    else{
+        return false
+    }
+  };
+
+  let showThanksPopup = (e) => {
+      e.preventDefault();
+      if (footerMailValidation() === true){
+          alert('Thank you for message! We will contact you as soon as possible.')
+      }
+
+  }
+
+
 document.addEventListener('scroll', checkPosition)
 range.addEventListener('input',changeRange)
 window.addEventListener('load', checkCookies); 
@@ -219,4 +260,6 @@ student.addEventListener('click', startingValue);
 nonStudent.addEventListener('click', startingValue);
 window.addEventListener('load', cardChange)
 startingValue();
+sendButton.addEventListener('click', gameRedirect);
+footerBtn.addEventListener('click', showThanksPopup)
 
