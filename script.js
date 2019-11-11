@@ -163,15 +163,15 @@ if (fliped === 'back') {                                // jesli stan jest back 
 el1.style.transform = `rotateY(180deg)`;            // zmienia style.transform na rotateY180
 } else {
 el1.style.transform = StyleTransform1                  //w inntn wypadku zmienia styl transform na ""
-console.log(el1.style.transform)
+
 }
 
 if (fliped === 'back') {                                // jesli styl jest back to 
 el2.style.transform = `rotateY(0)`;                    // zmienia style.transform na rotateY0
-console.log(el2.style.transform)                    
+           
 } else {
 el2.style.transform = StyleTransform2               // w innym wypadku zmienia styl transform na ""
-console.log(el2.style.transform)
+
 }
 }
 const figura = document.getElementsByTagName('figure')      // lapie elementy o tagu figure [tablica]
