@@ -155,6 +155,12 @@ section .hero2 {
     animation-duration: 2s;
   }
 
+
+  
+
+
+
+
   @-webkit-keyframes herocolorchange {
     from {color: #212121;}
     to {color: #c2185b;}
@@ -1538,3 +1544,42 @@ animation: accepted 2s;
       padding-bottom: 20px;
       text-shadow: #757575;
   }
+
+.msg-info-container {
+    display: none; 
+    position: fixed; 
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+
+}
+
+.msg-info {
+    bottom: 0%;
+    margin-right: auto;
+    margin-left: auto; 
+    padding: 10px;
+    border: 1px solid #c4395c;
+    background: white;
+    width: 500px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .wrong-email{
+      font-size: 16px;
+      color: red;
+      font-weight: bold;
+      display: none
+
+  }
+
+
+  
+
+
