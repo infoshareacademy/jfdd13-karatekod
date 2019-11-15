@@ -130,13 +130,13 @@ section .hero {
 
 section .hero0 { 
     display: block;
-    background-image: url(img/herophoto1.jpg);
+    background-image: url(img/herophoto1small.jpg);
 }
 section .hero1 { 
-    background-image: url(img/herophoto2.jpg);
+    background-image: url(img/herophoto2small.jpg);
 }
 section .hero2 { 
-    background-image: url(img/herophoto3.jpg);
+    background-image: url(img/herophoto3small.jpg);
     /* Photo by Jilbert Ebrahimi on Unsplash */
 }
 
