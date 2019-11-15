@@ -211,7 +211,7 @@ let mailValidation = () => {
     }
     else{
         return false,
-        document.querySelector('.wrong-email').style.display = 'block';
+        document.querySelector('.wrong-email').style.display= 'block';
     }
   };
 
