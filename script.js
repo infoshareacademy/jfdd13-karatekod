@@ -210,7 +210,8 @@ let mailValidation = () => {
         return true;
     }
     else{
-        return false
+        return false,
+        document.querySelector('.wrong-email').style.display = 'block';
     }
   };
 
@@ -243,7 +244,8 @@ let footerMailValidation = () => {
   let showThanksPopup = (e) => {
       e.preventDefault();
       if (footerMailValidation() === true){
-          alert('Thank you for message! We will contact you as soon as possible.')
+          document.querySelector('.msg-info-container').style.display = 'block'
+        //   alert('Thank you for your message! We will contact you ass soon as possible.')
       }
 
   }
