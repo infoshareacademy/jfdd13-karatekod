@@ -29,7 +29,7 @@
             position: absolute;
             width: 400px;
             height: 300px;
-            background-image:url('./images/papyrus.png');
+            background-image: url('./images/papyrus.png');
             background-size: cover;
             top: 110px;
             left: 50px;
@@ -70,7 +70,7 @@
 
     <script>
         let ctx = document.getElementById("ctx").getContext("2d");
-        let catcherTwo = new Image();       // mcreating <img instances
+        let catcherTwo = new Image(); // mcreating <img instances
         let catcherThree = new Image();
         let catcherFour = new Image();
         let background = new Image();
@@ -95,31 +95,31 @@
         let highScores = localStorage.getItem('userhighscore') || 0;
 
 
-        let tileObject = {
+        let tileObject = {  // kafelki
             'width': 50,
             'height': 20
         };
 
-        let booksObject = {
+        let booksObject = { //ksiazki
             'width': 50,
             'height': 50,
             'spd': 3
         };
 
-        let bombObject = {
+        let bombObject = {  // bomby
             'width': 50,
             'height': 50,
-            'spd': 2
+            'spd': 2    // bomby slower 
         };
 
-        let catcher = {
+        let catcher = { // bookswapper
             'x': 100,
             'y': 350,
             'width': 30,
             'height': 50,
             'jump': 0,
             'jumpUnit': 5,
-            'onair': false,
+            'onair': false, 
             'spd': 0,
             'leftPressed': false,
             'rightPressed': false,
@@ -131,368 +131,368 @@
         background.onload =
             function () { // when background image is loaded i will load another image, and then another, and another..
                 papyrus.onload = function () {
-                        catcherTwo.onload = function () {
-                            books.onload = function () {
-                                bomb.onload = function () {
-                                    tile.onload = function () {
-                                        // when all images are loaded then the game can start
+                    catcherTwo.onload = function () {
+                        books.onload = function () {
+                            bomb.onload = function () {
+                                tile.onload = function () {
+                                    // when all images are loaded then the game can start
 
-                                        ctx.drawImage(background, 0, 0, 500, 500);
-                                        ctx.fillStyle = "Black";
-                                        ctx.font = "20px Arial";
-                                        ctx.fillText('Use ← & → to move and ↑ to jump.', 105,70)
-                                        ctx.fillText('Beware of the bombs.', 158, 100)
-                                        ctx.fillText('Catch all the books!', 165, 130)
-                                        ctx.strokeStyle = "#FFF";
-                                        ctx.font = "40px Calibri";
-                                        ctx.fillText('Click here to start the game', 25, 290);
+                                    ctx.drawImage(background, 0, 0, 500, 500);
+                                    ctx.fillStyle = "Black";
+                                    ctx.font = "20px Arial";
+                                    ctx.fillText('Use ← & → to move and ↑ to jump.', 105, 70)
+                                    ctx.fillText('Beware of the bombs.', 158, 100)
+                                    ctx.fillText('Catch all the books!', 165, 130)
+                                    ctx.strokeStyle = "#FFF";
+                                    ctx.font = "40px Calibri";
+                                    ctx.fillText('Click here to start the game', 25, 290);
 
-                                        drawObject = function (object, x, y, width,
-                                            height
-                                        ) { // this is for drawing stuff like background, character etc
-                                            ctx.drawImage(object, x, y, width,
-                                                height);
-                                        }
+                                    drawObject = function (object, x, y, width,
+                                        height
+                                    ) { // this is for drawing stuff like background, character etc
+                                        ctx.drawImage(object, x, y, width,
+                                            height);
+                                    }
 
-                                        document.getElementById("ctx").onmousedown =
-                                            function () {
-                                                if (!gameover) {
-                                                    clearInterval(intervalvar);
-                                                }
-                                                startGame();
-                                            }
-                                        papyrus1.onmousedown = function () {
+                                    document.getElementById("ctx").onmousedown =
+                                        function () {
                                             if (!gameover) {
                                                 clearInterval(intervalvar);
                                             }
                                             startGame();
                                         }
+                                    papyrus1.onmousedown = function () {
+                                        if (!gameover) {
+                                            clearInterval(intervalvar);
+                                        }
+                                        startGame();
+                                    }
 
-                                        document.onkeydown = function (
-                                            event
-                                        ) { // eventlistener when u press down left arrow
-                                            if (event.keyCode == 37 && catcher.x >
-                                                0
-                                            ) { // if u press down left arrow and if the catcher is not on the very left side of the box (so it will not go outside the box)
-                                                catcher.spd = -
-                                                    5; // decrases the spd property by 5
-                                                catcher.leftPressed =
-                                                    true; // this property is true when u press down lft arrow
-
-                                            }
-
-                                            if (event.keyCode == 39 && catcher.x <
-                                                500 - catcher.width
-                                            ) { // just like above
-                                                catcher.spd = 5;
-                                                catcher.rightPressed = true;
-
-                                            }
-
-                                            if (event.keyCode == 38 && !catcher.onair &&
-                                                catcher.y == 350
-                                            ) { // when u press down up arrow and if the catcher is not on air (false) and if the catcher y position is 350 (it stands on the tiles
-                                                catcher.jump = 100;
-                                                catcher.onair = true;
-                                            }
+                                    document.onkeydown = function (
+                                        event
+                                    ) { // eventlistener when u press down left arrow
+                                        if (event.keyCode == 37 && catcher.x >
+                                            0
+                                        ) { // if u press down left arrow and if the catcher is not on the very left side of the box (so it will not go outside the box)
+                                            catcher.spd = -
+                                                5; // decrases the spd property by 5
+                                            catcher.leftPressed =
+                                                true; // this property is true when u press down lft arrow
 
                                         }
 
-                                        document.onkeyup = function (event) {
-                                            if (event.keyCode == 37) {
-                                                catcher.leftPressed = false;
-
-                                            }
-
-                                            if (event.keyCode == 39) {
-                                                catcher.rightPressed = false;
-
-                                            }
+                                        if (event.keyCode == 39 && catcher.x <
+                                            500 - catcher.width
+                                        ) { // just like above
+                                            catcher.spd = 5;
+                                            catcher.rightPressed = true;
 
                                         }
 
-                                        booksCatcherCollision = function (book) {
-                                            return ((book.x < catcher.x + catcher.width) &&
-                                                (catcher.x < book.x + booksObject
-                                                    .width) &&
-                                                (book.y < catcher.y + catcher.height) &&
-                                                (catcher.y < book.y + booksObject
-                                                    .height));
+                                        if (event.keyCode == 38 && !catcher.onair &&
+                                            catcher.y == 350
+                                        ) { // when u press down up arrow and if the catcher is not on air (false) and if the catcher y position is 350 (it stands on the tiles
+                                            catcher.jump = 100;
+                                            catcher.onair = true;
                                         }
 
-                                        bombCatcherCollision = function (bomb) {
-                                            return ((bomb.x < catcher.x + catcher.width) &&
-                                                (catcher.x < bomb.x + bombObject
-                                                    .width) &&
-                                                (bomb.y < catcher.y + catcher.height) &&
-                                                (catcher.y < bomb.y + bombObject
-                                                    .height));
-                                        }
+                                    }
 
-                                        booksTileCollision = function (book, tiles) {
-
-                                            return ((book.x < tiles.x + tileObject.width) &&
-                                                (tiles.x < book.x + booksObject
-                                                    .width) &&
-                                                (book.y < tiles.y + tileObject
-                                                    .height) &&
-                                                (tiles.y < book.y + booksObject.height))
-                                        }
-
-                                        catcherTileCollision = function (tiles) {
-                                            return ((catcher.x <= tiles.x + tileObject
-                                                    .width) &&
-                                                (tiles.x <= catcher.x + catcher
-                                                    .width) &&
-                                                (catcher.y + catcher.height <= tiles.y))
-
-                                        }
-
-
-
-                                        jump = function () {
-                                            // moving up
-                                            if (catcher.jump > 0 && catcher
-                                                .onair
-                                            ) { // this requirements are met when u press down up arrow key
-                                                catcher.y -= catcher.jumpUnit
-                                                catcher.jump -= catcher.jumpUnit;
-                                                // so then it changes the y position of the character making it 'jump'
-                                            }
-
-                                            if (catcher.jump <= 0 && catcher.jump > -100 &&
-                                                catcher.onair) {
-                                                catcher.y += catcher.jumpUnit;
-                                                catcher.jump -= catcher.jumpUnit;
-
-                                            }
-                                            // catcher back at the position
-                                            if (catcher.jump <= -100 && catcher.onair) {
-                                                catcher.onair = false;
-                                            }
-
-                                        }
-
-                                        updateBookPosition = function () {
-                                            for (let i in bookList) {
-                                                if (bookList[i].y > 500) {
-                                                    bookList.splice(i, 1);
-                                                } else {
-                                                    bookList[i].y += booksObject.spd;
-                                                }
-                                            }
-                                        }
-
-                                        updateBombPosition = function () {
-                                            for (let i in bombList) {
-                                                if (bombList[i].y > 500) {
-                                                    bombList.splice(i, 1);
-                                                } else {
-                                                    bombList[i].y += bombObject.spd;
-                                                }
-                                            }
-                                        }
-
-                                        updateCatcherPosition = function () {
-                                            if (catcher.leftPressed && catcher.x >
-                                                0) {
-                                                catcher.x += catcher.spd
-                                            }
-                                            if (catcher.rightPressed && catcher.x <
-                                                500 - catcher.width) {
-                                                catcher.x += catcher.spd
-                                            }
-                                            if (catcher.y > 500) {
-
-                                                gameover =
-                                                    true; // kiedy gracz spada z kładki to gameover :P
-                                            }
-                                        }
-
-                                        gameOver =
-                                            function () { // funkcja gameover robi reset :P
-                                                ctx.save();
-                                                ctx.globalAlpha = 0.6;
-                                                ctx.globalAlpha = 1.0;
-                                                ctx.strokeStyle = "#212121";
-                                                ctx.font = "30px Raleway";
-                                                ctx.strokeText("Game Over,", 180, 180)
-                                                ctx.strokeText("Click to Restart", 160, 250)
-                                                ctx.restore();
-                                                clearInterval(intervalvar);
-                                                papyrus1.style.display = 'flex'
-                                            }
-
-                                        updatePosition = function () {
-                                            ctx.clearRect(0, 0, 500, 500);
-                                            drawObject(background, 0, 0, 500, 500);
-
-                                            bookTimer++; // drawing the books
-                                            if (bookTimer > level) {
-                                                bookList.push({
-                                                    'x': booksDrop[Math.round(Math
-                                                        .random() * 9)],
-                                                    'y': 0
-                                                });
-                                                bookTimer = 0;
-                                            }
-
-                                            bombTimer = bombTimer +
-                                                0.2; // drawing the bombs
-                                            if (bombTimer > level) {
-                                                bombList.push({
-                                                    'x': bombDrop[Math.round(Math
-                                                        .random() * 9)],
-                                                    'y': 0
-                                                });
-                                                bombTimer = 0;
-                                            }
-
-                                            if (gameover) {
-                                                gameOver();
-                                            }
-
-                                            drawObject(catcherTwo, catcher.x,
-                                                catcher.y, catcher.width,
-                                                catcher.height)
-
-                                            for (let i in bookList) {
-                                                drawObject(books, bookList[i].x, bookList[i]
-                                                    .y, booksObject.width, booksObject
-                                                    .height)
-
-                                            }
-
-                                            for (let i in bombList) {
-                                                drawObject(bomb, bombList[i].x, bombList[i]
-                                                    .y, bombObject.width, bombObject
-                                                    .height)
-
-                                            }
-
-
-                                            for (let i in bookList) {
-                                                for (let j in tileList) {
-                                                    if (booksTileCollision(bookList[i],
-                                                            tileList[j])) {
-                                                        tileList.splice(j, 1);
-                                                    }
-                                                }
-                                            }
-
-                                            for (let i = 0; i < tileList
-                                                .length; i++
-                                            ) { // tiles drawn updatePosition
-                                                drawObject(tile, tileList[i].x,
-                                                    tileList[i].y, tileObject
-                                                    .width, tileObject.height)
-
-                                            }
-
-                                            for (let i in bookList) {
-                                                if (booksCatcherCollision(bookList[i])) {
-                                                    score++
-                                                    if (score > highScores) {
-                                                        highScores = score;
-                                                        localStorage.setItem(
-                                                            'userhighscore', highScores)
-                                                    }
-                                                    if (score % 2 ==
-                                                        0
-                                                    ) { // co 2 złapania wzrasta poziom gry
-                                                        level--;
-                                                    }
-
-                                                    bookList.splice(i, 1);
-
-                                                }
-                                            }
-
-                                            for (let i in bombList) {
-                                                if (bombCatcherCollision(bombList[i])) {
-                                                    gameover = true;
-
-                                                }
-                                            }
-
-
-                                            if (!catcher.onair) {
-                                                for (let i in tileList) {
-                                                    if (catcherTileCollision(tileList[i])) {
-                                                        catcher.safe = true;
-                                                        break;
-                                                    }
-                                                    catcher.safe = false;
-                                                }
-
-                                                if (!catcher.safe) {
-                                                    catcher.y += catcher.gravity;
-                                                }
-                                            }
-
-                                            drawObject(books, 440, 10, 20, 20);
-                                            ctx.fillStyle = "#FFFFFF";
-                                            ctx.font = "20px Calibri";
-                                            ctx.fillText(score, 465, 27);
-                                            ctx.fillText("Level: " + (100 - level + 1), 10,
-                                                27)
-                                            ctx.fillText('HighScores: ' + highScores, 200,
-                                                27)
-
-                                            updateBombPosition();
-                                            updateBookPosition();
-                                            updateCatcherPosition();
-                                            jump();
-                                        }
-
-                                        startGame = function () {
-                                            papyrus1.style.display = 'none'
-                                            score = 0;
-                                            level = 100;
-                                            catcher.x = 100;
-                                            catcher.y = 350;
-                                            catcher.onair = false;
+                                    document.onkeyup = function (event) {
+                                        if (event.keyCode == 37) {
                                             catcher.leftPressed = false;
+
+                                        }
+
+                                        if (event.keyCode == 39) {
                                             catcher.rightPressed = false;
-                                            catcher.safe = true;
-                                            animation = 0;
-                                            bookTimer = 0;
-                                            bombTimer = 0;
-                                            gameover = false;
-                                            tileList = [];
-                                            bookList = [];
-                                            bombList = [];
-
-                                            for (let i = 0; i <=
-                                                9; i++
-                                            ) { // pushes objects with x and y keys to the array
-                                                tileList.push({
-                                                    'x': i * 50,
-                                                    'y': 400
-                                                });
-                                            }
-
-                                            intervalvar = setInterval(
-                                                updatePosition, 10);
-
-
 
                                         }
 
                                     }
-                                    tile.src = "images/tile.png"
+
+                                    booksCatcherCollision = function (book) {
+                                        return ((book.x < catcher.x + catcher.width) &&
+                                            (catcher.x < book.x + booksObject
+                                                .width) &&
+                                            (book.y < catcher.y + catcher.height) &&
+                                            (catcher.y < book.y + booksObject
+                                                .height));
+                                    }
+
+                                    bombCatcherCollision = function (bomb) {
+                                        return ((bomb.x < catcher.x + catcher.width) &&
+                                            (catcher.x < bomb.x + bombObject
+                                                .width) &&
+                                            (bomb.y < catcher.y + catcher.height) &&
+                                            (catcher.y < bomb.y + bombObject
+                                                .height));
+                                    }
+
+                                    booksTileCollision = function (book, tiles) {
+
+                                        return ((book.x < tiles.x + tileObject.width) &&
+                                            (tiles.x < book.x + booksObject
+                                                .width) &&
+                                            (book.y < tiles.y + tileObject
+                                                .height) &&
+                                            (tiles.y < book.y + booksObject.height))
+                                    }
+
+                                    catcherTileCollision = function (tiles) {
+                                        return ((catcher.x <= tiles.x + tileObject
+                                                .width) &&
+                                            (tiles.x <= catcher.x + catcher
+                                                .width) &&
+                                            (catcher.y + catcher.height <= tiles.y))
+
+                                    }
+
+
+
+                                    jump = function () {
+                                        // moving up
+                                        if (catcher.jump > 0 && catcher
+                                            .onair
+                                        ) { // this requirements are met when u press down up arrow key
+                                            catcher.y -= catcher.jumpUnit
+                                            catcher.jump -= catcher.jumpUnit;
+                                            // so then it changes the y position of the character making it 'jump'
+                                        }
+
+                                        if (catcher.jump <= 0 && catcher.jump > -100 &&
+                                            catcher.onair) {
+                                            catcher.y += catcher.jumpUnit;
+                                            catcher.jump -= catcher.jumpUnit;
+
+                                        }
+                                        // catcher back at the position
+                                        if (catcher.jump <= -100 && catcher.onair) {
+                                            catcher.onair = false;
+                                        }
+
+                                    }
+
+                                    updateBookPosition = function () {
+                                        for (let i in bookList) {
+                                            if (bookList[i].y > 500) {
+                                                bookList.splice(i, 1);
+                                            } else {
+                                                bookList[i].y += booksObject.spd;
+                                            }
+                                        }
+                                    }
+
+                                    updateBombPosition = function () {
+                                        for (let i in bombList) {
+                                            if (bombList[i].y > 500) {
+                                                bombList.splice(i, 1);
+                                            } else {
+                                                bombList[i].y += bombObject.spd;
+                                            }
+                                        }
+                                    }
+
+                                    updateCatcherPosition = function () {
+                                        if (catcher.leftPressed && catcher.x >
+                                            0) {
+                                            catcher.x += catcher.spd
+                                        }
+                                        if (catcher.rightPressed && catcher.x <
+                                            500 - catcher.width) {
+                                            catcher.x += catcher.spd
+                                        }
+                                        if (catcher.y > 500) {
+
+                                            gameover =
+                                                true; // kiedy gracz spada z kładki to gameover :P
+                                        }
+                                    }
+
+                                    gameOver =
+                                        function () { // funkcja gameover robi reset :P
+                                            ctx.save();
+                                            ctx.globalAlpha = 0.6;
+                                            ctx.globalAlpha = 1.0;
+                                            ctx.strokeStyle = "#212121";
+                                            ctx.font = "30px Raleway";
+                                            ctx.strokeText("Game Over,", 180, 180)
+                                            ctx.strokeText("Click to Restart", 160, 250)
+                                            ctx.restore();
+                                            clearInterval(intervalvar);
+                                            papyrus1.style.display = 'flex'
+                                        }
+
+                                    updatePosition = function () {
+                                        ctx.clearRect(0, 0, 500, 500);
+                                        drawObject(background, 0, 0, 500, 500);
+
+                                        bookTimer++; // drawing the books
+                                        if (bookTimer > level) {
+                                            bookList.push({
+                                                'x': booksDrop[Math.round(Math
+                                                    .random() * 9)],
+                                                'y': 0
+                                            });
+                                            bookTimer = 0;
+                                        }
+
+                                        bombTimer = bombTimer +
+                                            0.2; // drawing the bombs
+                                        if (bombTimer > level) {
+                                            bombList.push({
+                                                'x': bombDrop[Math.round(Math
+                                                    .random() * 9)],
+                                                'y': 0
+                                            });
+                                            bombTimer = 0;
+                                        }
+
+                                        if (gameover) {
+                                            gameOver();
+                                        }
+
+                                        drawObject(catcherTwo, catcher.x,
+                                            catcher.y, catcher.width,
+                                            catcher.height)
+
+                                        for (let i in bookList) {
+                                            drawObject(books, bookList[i].x, bookList[i]
+                                                .y, booksObject.width, booksObject
+                                                .height)
+
+                                        }
+
+                                        for (let i in bombList) {
+                                            drawObject(bomb, bombList[i].x, bombList[i]
+                                                .y, bombObject.width, bombObject
+                                                .height)
+
+                                        }
+
+
+                                        for (let i in bookList) {
+                                            for (let j in tileList) {
+                                                if (booksTileCollision(bookList[i],
+                                                        tileList[j])) {
+                                                    tileList.splice(j, 1);
+                                                }
+                                            }
+                                        }
+
+                                        for (let i = 0; i < tileList
+                                            .length; i++
+                                        ) { // tiles drawn updatePosition
+                                            drawObject(tile, tileList[i].x,
+                                                tileList[i].y, tileObject
+                                                .width, tileObject.height)
+
+                                        }
+
+                                        for (let i in bookList) {
+                                            if (booksCatcherCollision(bookList[i])) {
+                                                score++
+                                                if (score > highScores) {
+                                                    highScores = score;
+                                                    localStorage.setItem(
+                                                        'userhighscore', highScores)
+                                                }
+                                                if (score % 2 ==
+                                                    0
+                                                ) { // co 2 złapania wzrasta poziom gry
+                                                    level--;
+                                                }
+
+                                                bookList.splice(i, 1);
+
+                                            }
+                                        }
+
+                                        for (let i in bombList) {
+                                            if (bombCatcherCollision(bombList[i])) {
+                                                gameover = true;
+
+                                            }
+                                        }
+
+
+                                        if (!catcher.onair) {
+                                            for (let i in tileList) {
+                                                if (catcherTileCollision(tileList[i])) {
+                                                    catcher.safe = true;
+                                                    break;
+                                                }
+                                                catcher.safe = false;
+                                            }
+
+                                            if (!catcher.safe) {
+                                                catcher.y += catcher.gravity;
+                                            }
+                                        }
+
+                                        drawObject(books, 440, 10, 20, 20);
+                                        ctx.fillStyle = "#FFFFFF";
+                                        ctx.font = "20px Raleway";
+                                        ctx.fillText(score, 465, 27);
+                                        ctx.fillText("Level: " + (100 - level + 1), 10,
+                                            27)
+                                        ctx.fillText('HighScores: ' + highScores, 200,
+                                            27)
+
+                                        updateBombPosition();
+                                        updateBookPosition();
+                                        updateCatcherPosition();
+                                        jump();
+                                    }
+
+                                    startGame = function () {
+                                        papyrus1.style.display = 'none'
+                                        score = 0;
+                                        level = 100;
+                                        catcher.x = 100;
+                                        catcher.y = 350;
+                                        catcher.onair = false;
+                                        catcher.leftPressed = false;
+                                        catcher.rightPressed = false;
+                                        catcher.safe = true;
+                                        animation = 0;
+                                        bookTimer = 0;
+                                        bombTimer = 0;
+                                        gameover = false;
+                                        tileList = [];
+                                        bookList = [];
+                                        bombList = [];
+
+                                        for (let i = 0; i <=
+                                            9; i++
+                                        ) { // pushes objects with x and y keys to the array
+                                            tileList.push({
+                                                'x': i * 50,
+                                                'y': 400
+                                            });
+                                        }
+
+                                        intervalvar = setInterval(
+                                            updatePosition, 10);
+
+
+
+                                    }
+
                                 }
-                                bomb.src = "images/bomb.png"
+                                tile.src = "images/tile.png"
                             }
-                            books.src = "images/bookswapp-pic.png"
+                            bomb.src = "images/bomb.png"
                         }
-                        catcherTwo.src = "images/man-cart.png"
-                    
-                    
+                        books.src = "images/bookswapp-pic.png"
+                    }
+                    catcherTwo.src = "images/man-cart.png"
+
+
                 }
-                papyrus.src = "images/papyrus.png"
+                papyrus.src = "images/background.png"
             }
-        background.src = "images/background.png"
+        background.src = "images/book-site.jpg"
     </script>
 </body>
 
