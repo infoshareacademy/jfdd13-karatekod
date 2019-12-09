@@ -127,7 +127,7 @@
             'safe': true,
         };
 
-        sound = function(src) {
+        let Sound = function(src) {
             this.sound=document.createElement("audio");
             this.sound.src=src;
             this.sound.setAttribute("preload", "auto");
@@ -143,6 +143,10 @@
                 this.sound.pause()
             }
         }
+
+        let bookCatchSound = new Sound("sound/catch.mp3");
+        let bookDropSound = new Sound ("sound/drop.mp3")
+        let bombCatchSound = new Sound ("sound/bomb.mp3")
 
         
 
