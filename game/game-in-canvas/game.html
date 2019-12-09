@@ -145,7 +145,6 @@
         }
 
         let bookCatchSound = new Sound("sound/catch.mp3");
-        let bookDropSound = new Sound ("sound/drop.mp3")
         let bombCatchSound = new Sound ("sound/bomb.mp3")
 
         
@@ -414,6 +413,7 @@
                                         for (let i in bookList) {
                                             if (booksCatcherCollision(bookList[i])) {
                                                 score++
+                                                //bookCatchSound.play()
                                                 if (score > highScores) {
                                                     highScores = score;
                                                     localStorage.setItem(
@@ -432,6 +432,7 @@
 
                                         for (let i in bombList) {
                                             if (bombCatcherCollision(bombList[i])) {
+                                                //bombCatchSound.play()
                                                 gameover = true;
 
                                             }
