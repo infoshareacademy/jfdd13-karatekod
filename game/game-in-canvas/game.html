@@ -29,7 +29,7 @@
             position: absolute;
             width: 400px;
             height: 300px;
-            background-image:url(./images/papyrus.png);
+            background-image:url('./images/papyrus.png');
             background-size: cover;
             top: 110px;
             left: 50px;
@@ -313,7 +313,6 @@
                                             function () { // funkcja gameover robi reset :P
                                                 ctx.save();
                                                 ctx.globalAlpha = 0.6;
-                                                drawObject(papyrus, 100, 100, 300, 200);
                                                 ctx.globalAlpha = 1.0;
                                                 ctx.strokeStyle = "#212121";
                                                 ctx.font = "30px Raleway";
