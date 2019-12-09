@@ -127,6 +127,24 @@
             'safe': true,
         };
 
+        sound = function(src) {
+            this.sound=document.createElement("audio");
+            this.sound.src=src;
+            this.sound.setAttribute("preload", "auto");
+            this.sound.setAttribute("controls", "none");
+            this.sound.style.display = "none";
+            document.body.appendChild(this.sound)
+
+            this.play = () => {
+                this.sound.play()
+            }
+
+            this.pause = () => {
+                this.sound.pause()
+            }
+        }
+
+        
 
         background.onload =
             function () { // when background image is loaded i will load another image, and then another, and another..
