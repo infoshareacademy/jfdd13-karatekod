@@ -145,7 +145,8 @@
         }
 
         let bookCatchSound = new Sound("sound/catch.mp3");
-        let bombCatchSound = new Sound ("sound/bomb.mp3")
+        let bombCatchSound = new Sound ("sound/bomb.mp3");
+        let catcherDrop = new Sound("sound/drop.mp3")
 
         
 
@@ -324,7 +325,7 @@
                                             catcher.x += catcher.spd
                                         }
                                         if (catcher.y > 500) {
-
+                                            catcherDrop.play();
                                             gameover =
                                                 true; // kiedy gracz spada z kładki to gameover :P
                                         }
